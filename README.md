@@ -77,7 +77,7 @@
 ## About OpenRAM
 ## Custom Cells
 
-# Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
+# Pre-Layout Schematic and Simulations
 
 1. 6T SRAM Cell
 
@@ -85,11 +85,11 @@
 
 ### Read Operation
 
-    <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
+  <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
 
 ### Write Operation
 
-    <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
+  <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
 
 ### Static Noise Margin
 
