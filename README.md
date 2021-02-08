@@ -109,28 +109,49 @@
 * **N-Curve**
   N-curve is a metric used for inline testers. It gives information for both voltage and current, and in addition it has no voltage scaling delimiter as found in SNM approach. It also has the complete information about the SRAM stability and also write ability in a single plot. N-curve can be further extended to power metrics in which both the voltage and current information are taken into consideration to provide better stability analysis of the SRAM cell.
 
-  1. Static Voltage Noise Margin (SVNM): It is the voltage difference between point A and B. It indicates the maximum tolerable DC noise voltage of the cell before its content changes.
+  1. **Static Voltage Noise Margin (SVNM):** It is the voltage difference between point A and B. It indicates the maximum tolerable DC noise voltage of the cell before its content changes.
 
-  2. Static Current Noise Margin (SINM): It is the additional current information provided by the N-curve, namely the peak current located between point A and B. It can also be used to characterize the cell read stability.
+  2. **Static Current Noise Margin (SINM):** It is the additional current information provided by the N-curve, namely the peak current located between point A and B. It can also be used to characterize the cell read stability.
 
   **Note:** For better read stability, SVNM and SINM must be high value.
 
-  3. Write-Trip Voltage (WTV): It is the voltage difference between point C and B. It is the voltage drop needed to flip the internal node “1” of the cell with both the bit-lines clamped to VDD.
+  3. **Write-Trip Voltage (WTV):** It is the voltage difference between point C and B. It is the voltage drop needed to flip the internal node “1” of the cell with both the bit-lines clamped to VDD.
   
-  4. Write-Trip Current (WTI): It is the negative current peak between point C and B. It is the amount of current needed to write the cell when both bit-lines are kept at VDD.
+  4. **Write-Trip Current (WTI):** It is the negative current peak between point C and B. It is the amount of current needed to write the cell when both bit-lines are kept at VDD.
 
 
 ## 2. Sense Amplifier
+  Sense Amplifiers in SRAM generally a Differential Voltage Amplifier. They form a very important part of SRAM memory as these amplifiers define the robustness of the bit-lines sensing. The function of sense amplifier is to amplify the very small analog differential voltage between the bit-lines during a read operation and provide a digital output. This effectively reduces the time required for the read operation, as each individual cell need not fully discharge the bit line.
+  * if bit > bit_bar, output is 1
+  * if bit < bit_bar, output is 0
+
+  Shown below is the schematic and simulation of a Sense Amplifier.
+
+  <img src="">
 
 ## 3. Write Driver
+  As discussed in read operation, the bit-lines are pre-charged to Vdd during the read operation. If a write operation occurs, one of the bit-lines should driven back to low logic before enabling access transistors. Write drivers are used for this purpose.
+
+  Shown below is the schematic and simulation of a Write Driver.
+
+  <img src="">
 
 ## 4. Tri-State Buffer
+  Tri-state buffer is a normal buffer with an extra enable input. Whenever, the enable input is high, tri-state buffer behaves as a normal buffer, otherwise it will either give high impedance or low logic as output.
+
+  Shown below is the schematic and simulation of a Tri-State Buffer.
+
+  <img src="">
 
 ## 5. D-Flip-Flop
+  Shown below is the schematic and simulation of a Positive Edge triggered D-Flip-Flop.
 
-## 6. Write Driver
+  <img src="">  
 
 ## 1-bit SRAM
+  1-bit SRAM comprises of a 6T SRAM cell, a sense amplifier, a write driver and a pre-charge circuit.
+
+  <img src="sram_1bit_block_diagram.JPG">
 
 # Future Work
   
