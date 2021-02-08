@@ -13,19 +13,11 @@
       - [Custom Cells](#custom-cells)
   - [Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
       1. [6T SRAM Cell](#1-6t-sram-cell)
-<<<<<<< HEAD
       2. [Sense Amplifier](#2-sense-amplifier)
       3. [Write Driver](#3-write-driver)
       4. [Tri-State Buffer](#4-tri-state-buffer)      
       5. [D-Flip-Flop](#5-d-flip-flop)      
       6. [Write Driver](#6-write-driver)      
-=======
-      2. [Sense Amplifier](#sense-amplifier)
-      3. [Write Driver](#write-driver)
-      4. [Tri-State Buffer](#tri-state-buffer)      
-      5. [D-Flip-Flop](#d-flip-flop)      
-      6. [Write Driver](#write-driver)      
->>>>>>> 664a1a05b85df0f33179387af2fb95af7fa86dad
       - [1-bit SRAM](#1-bit-sram)
   - [Future Work](#future-work)
   - [References](#references)
@@ -85,7 +77,6 @@
   
 ## About OpenRAM
 ## Custom Cells
-<<<<<<< HEAD
 
 # Pre-Layout Schematic and Simulations
 
@@ -129,7 +120,6 @@
   4. Write-Trip Current (WTI): It is the negative current peak between point C and B. It is the amount of current needed to write the cell when both bit-lines are kept at VDD.
 
 
-
 ## 2. Sense Amplifier
 
 ## 3. Write Driver
@@ -140,41 +130,6 @@
 
 ## 6. Write Driver
 
-=======
-
-# Pre-Layout Schematic and Simulations
-
-## 1. 6T SRAM Cell
-
-### Schematic
-
-### Read Operation
-
-  <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
-
-### Write Operation
-
-  <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
-
-### Static Noise Margin
-
-  * Hold SNM
-  * Read SNM
-  * Write SNM
-
-### N-Curve 
-
-2. Sense Amplifier
-
-3. Write Driver
-
-4. Tri-State Buffer
-
-5. D-Flip-Flop
-
-6. Write Driver
-
->>>>>>> 664a1a05b85df0f33179387af2fb95af7fa86dad
 ## 1-bit SRAM
 
 # Future Work
