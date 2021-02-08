@@ -12,7 +12,7 @@
       - [About OpenRAM](#about-openram)
       - [Custom Cells](#custom-cells)
   - [Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
-      - [1. 6T SRAM Cell](#1.-6t-sram-cell)
+      1. [6T SRAM Cell](#1-6t-sram-cell)
       2. [Sense Amplifier](#sense-amplifier)
       3. [Write Driver](#write-driver)
       4. [Tri-State Buffer](#tri-state-buffer)      
