@@ -31,79 +31,85 @@
 # Setting Up Environment
   This repository mentioned multiple open-source circuit schematic design, layout design, SPICE simulations tools and memory compiler. The tools used and their installation is explained in details below. The complete environemnt setup for the open-source OpenLANE RTL2GDS flow can be found [here](https://github.com/ShonTaware/openlane_environment_setup).
 
-  ## Open-Source Tools Used
-    | Name of Tool | Description |
-    | --- | --- |
-    | [NGSPICE](https://github.com/imr/ngspice) | An open-source mixed-level/mixed-signal electronic spice circuit simulator. |
-    | [Xschem](https://github.com/StefanSchippers/xschem) | A schematic editor for VLSI/Asic/Analog custom designs, netlist backends for VHDL, Spice and Verilog. |
-    | [Magic](https://github.com/RTimothyEdwards/magic) | An open-source VLSI Layout Tool with easy DRC options. |
+## Open-Source Tools Used
+  | Name of Tool | Description |
+  | --- | --- |
+  | [NGSPICE](https://github.com/imr/ngspice) | An open-source mixed-level/mixed-signal electronic spice circuit simulator. |
+  | [Xschem](https://github.com/StefanSchippers/xschem) | A schematic editor for VLSI/Asic/Analog custom designs, netlist backends for VHDL, Spice and Verilog. |
+  | [Magic](https://github.com/RTimothyEdwards/magic) | An open-source VLSI Layout Tool with easy DRC options. |
 
-  ## Cloning and Installing
-    For properly installing all the above mentioned tools and supporting tools to their updated version follow the below mentioned steps.(Only for Ubuntu Operating System)
+## Cloning and Installing
+  For properly installing all the above mentioned tools and supporting tools to their updated version follow the below mentioned steps.(Only for Ubuntu Operating System)
 
-        $    sudo apt-get install git
-        $    git clone https://github.com/ShonTaware/SRAM_SKY130.git
-        $    cd SRAM_SKY130
-        $    chmod +777 setup_environment.sh
-        $    ./setup_environment.sh
+      $    sudo apt-get install git
+      $    git clone https://github.com/ShonTaware/SRAM_SKY130.git
+      $    cd SRAM_SKY130
+      $    chmod +777 setup_environment.sh
+      $    ./setup_environment.sh
 
-  ## Independent Installation
-    1. NGSPICE: Following commands can be used for installing only the NGSPICE tool.
+## Independent Installation
+  1. NGSPICE: Following commands can be used for installing only the NGSPICE tool.
 
-        $    sudo apt-get install ngspice
+      $    sudo apt-get install ngspice
 
-    2. Xschem: Following commands can be used for installing only the Xschem Schematic Editor tool.
+  2. Xschem: Following commands can be used for installing only the Xschem Schematic Editor tool.
 
-        $    sudo apt-get install git
-        $    git clone https://github.com/StefanSchippers/xschem.git
-        $    cd xschem
-        $    ./configure
-        $    make
-        $    make install
+      $    sudo apt-get install git
+      $    git clone https://github.com/StefanSchippers/xschem.git
+      $    cd xschem
+      $    ./configure
+      $    make
+      $    make install
 
-    3. Magic: Following commands can be used for installing only the Magic Layout tool.
+  3. Magic: Following commands can be used for installing only the Magic Layout tool.
 
-        $    sudo apt-get install git
-        $    git clone https://github.com/RTimothyEdwards/magic.git
-        $    cd magic
-        $    ./configure
-        $    make
-        $    make install      
+      $    sudo apt-get install git
+      $    git clone https://github.com/RTimothyEdwards/magic.git
+      $    cd magic
+      $    ./configure
+      $    make
+      $    make install      
 
 # SRAM Memory Architecture
 
 # Custom Cell for OpenRAM
   
-  ## About OpenRAM
-  ## Custom Cells
+## About OpenRAM
+## Custom Cells
 
 # Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
-  1. 6T SRAM Cell
 
-    ### Schematic
+1. 6T SRAM Cell
 
-    ### Read Operation
+### Schematic
 
-      <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
+### Read Operation
 
-    ### Write Operation
+    <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
 
-      <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
+### Write Operation
 
-    ### Static Noise Margin
+    <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
 
-      * Hold SNM
-      * Read SNM
-      * Write SNM
+### Static Noise Margin
 
-    ### N-Curve 
+  * Hold SNM
+  * Read SNM
+  * Write SNM
 
-  2. Sense Amplifier
-  3. Write Driver
-  4. Tri-State Buffer
-  5. D-Flip-Flop
-  6. Write Driver
-  ## 1-bit SRAM
+### N-Curve 
+
+2. Sense Amplifier
+
+3. Write Driver
+
+4. Tri-State Buffer
+
+5. D-Flip-Flop
+
+6. Write Driver
+
+## 1-bit SRAM
 
 # Future Work
   
