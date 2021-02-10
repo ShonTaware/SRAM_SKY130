@@ -51,32 +51,47 @@
 ## Independent Installation
   1. NGSPICE: Following commands can be used for installing only the NGSPICE tool.
 
-      $    sudo apt-get install ngspice
+        $    sudo apt-get install ngspice
 
   2. Xschem: Following commands can be used for installing only the Xschem Schematic Editor tool.
 
-      $    sudo apt-get install git
-      $    git clone https://github.com/StefanSchippers/xschem.git
-      $    cd xschem
-      $    ./configure
-      $    make
-      $    make install
+        $    sudo apt-get install git
+        $    git clone https://github.com/StefanSchippers/xschem.git
+        $    cd xschem
+        $    ./configure
+        $    make
+        $    make install
 
   3. Magic: Following commands can be used for installing only the Magic Layout tool.
 
-      $    sudo apt-get install git
-      $    git clone https://github.com/RTimothyEdwards/magic.git
-      $    cd magic
-      $    ./configure
-      $    make
-      $    make install      
+        $    sudo apt-get install git
+        $    git clone https://github.com/RTimothyEdwards/magic.git
+        $    cd magic
+        $    ./configure
+        $    make
+        $    make install      
 
 # SRAM Memory Architecture
+  SRAM Memory is a block which designed by integrating several sub-blocks. This SRAM memory architecture for a multi-port SRAM memory is shown in the diagram below.
+
+  <img src="Diagrams/sram_arch.png">
 
 # Custom Cell for OpenRAM
   
 ## About OpenRAM
+  OpenRAM is an open-source Python framework to create the layout, netlists, timing and power models, placement and routing models, and other views necessary to use SRAMs in ASIC design. It supports integration in both commercial and open-source flows with both predictive and fabricable technologies.
+
 ## Custom Cells
+  OpenRAM facilitates to convert any custom design cells and design rules to various IP deliverables or formats.
+
+  <img src="Diagrams/custom_cells_openram.png">
+
+  OpenRAM uses some custom-designed library primitives as technology input. Since density is extremely important, the following cells are pre-designed in each technology: 
+  * 6T cell
+  * Sense amplifier
+  * Master-slave flip-flop 
+  * Tri-state gate 
+  * Write driver
 
 # Pre-Layout Schematic and Simulations
 
@@ -106,33 +121,33 @@
 
   Static noise margin (SNM) is a key figure of merit for an SRAM cell. It can be extracted by nesting the largest possible square in the two voltage transfer curves (VTC) of the two CMOS inverters involved. The SNM is defined as the side-length of the square (i.e. diagonal-length), given in volts. When an external DC noise is larger than the SNM, the state of the SRAM cell can change and data is lost.
 
-  1. **Hold SNM**
+1. **Hold SNM**
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_hold_snm.png">
 
-      $    ngspice hold_snm.spice
+        $    ngspice hold_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_hold_snm_waveform.JPG">
-  SNM<sub>high</sub> = 
-  SNM<sub>low</sub> =
+  SNM<sub>high</sub> =  <br />
+  SNM<sub>low</sub> =  <br />
   Hold SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) = 
 
-  2. **Read SNM**
+2. **Read SNM**
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_read_snm.png">
 
-      $    ngspice read_snm.spice
+        $    ngspice read_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_read_snm_waveform.JPG">
-  SNM<sub>high</sub> = 
-  SNM<sub>low</sub> =
+  SNM<sub>high</sub> =  <br />
+  SNM<sub>low</sub> =  <br />
   Read SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) = 
 
-  3. **Write SNM**
+3. **Write SNM**
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_write_snm.png">
 
-      $    ngspice write_snm.spice
+        $    ngspice write_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_write_snm_waveform.JPG">
   Write SNM =  
@@ -142,7 +157,7 @@
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_n_curve.png">
 
-      $    ngspice n_curve.spice
+        $    ngspice n_curve.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_n_curve_waveform.JPG">
 
@@ -176,7 +191,7 @@
 
   <img src="Prelayout/Schematic/xschem_sense_amplifier.png">
 
-      $    ngspice sense_amplifier.spice
+        $    ngspice sense_amplifier.spice
 
   <img src="Prelayout/Simulations/sense_amplifier_waveform.JPG">
 
@@ -214,25 +229,28 @@
 ## 1-bit SRAM
   1-bit SRAM comprises of a 6T SRAM cell, a sense amplifier, a write driver and a pre-charge circuit.
 
-  <img src="Prelayout/Diagrams/sram_1bit_block_diagram.JPG">
+  <img src="Prelayout/Diagrams/sram_1bit_block_diagram.jpg">
 
   * Read Operation
 
-      $    ngspice sram_1bit_read.spice
+        $    ngspice sram_1bit_read.spice
 
   <img src="Prelayout/Simulations/sram_1bit_cell_read_waveform.JPG">
 
   * Write Operation
 
-      $    ngspice sram_1bit_write.spice
+        $    ngspice sram_1bit_write.spice
 
   <img src="Prelayout/Simulations/sram_1bit_cell_write_waveform.JPG">
 
 # Future Work
-  
+  Perform post-layout design and simulations. Also, configure the OpenRAM for new Sky130 PDKs and custom cells.
 
 # References
   - VLSI System Design: https://www.vlsisystemdesign.com/
+  - Efabless OpenLANE: https://github.com/efabless/openlane
+  - OpenRAM: https://vlsida.github.io/OpenRAM/
+  - M. Guthaus et al., “OpenRAM: An open-source memory compiler,” *2016 IEEE/ACM International Conference on Computer-Aided Design(ICCAD)*, Austin, TX, 2016, pp. 1-6.
 
 # Acknowledgement
   - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
