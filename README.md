@@ -8,7 +8,7 @@
       - [Cloning and Installing](#cloning-and-installing)
       - [Independent Installation](#independent-installation)
   - [SRAM Memory Architecture](#sram-memory-architecture)
-  - [Custom Cell for OpenRAM](#custom-cells-for-openram)
+  - [Custom Cells for OpenRAM](#custom-cells-for-openram)
       - [About OpenRAM](#about-openram)
       - [Custom Cells](#custom-cells)
   - [Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
@@ -51,32 +51,32 @@
 ## Independent Installation
   1. NGSPICE: Following commands can be used for installing only the NGSPICE tool.
 
-        $    sudo apt-get install ngspice
+          $    sudo apt-get install ngspice
 
   2. Xschem: Following commands can be used for installing only the Xschem Schematic Editor tool.
 
-        $    sudo apt-get install git
-        $    git clone https://github.com/StefanSchippers/xschem.git
-        $    cd xschem
-        $    ./configure
-        $    make
-        $    make install
+          $    sudo apt-get install git
+          $    git clone https://github.com/StefanSchippers/xschem.git
+          $    cd xschem
+          $    ./configure
+          $    make
+          $    make install
 
   3. Magic: Following commands can be used for installing only the Magic Layout tool.
 
-        $    sudo apt-get install git
-        $    git clone https://github.com/RTimothyEdwards/magic.git
-        $    cd magic
-        $    ./configure
-        $    make
-        $    make install      
+          $    sudo apt-get install git
+          $    git clone https://github.com/RTimothyEdwards/magic.git
+          $    cd magic
+          $    ./configure
+          $    make
+          $    make install      
 
 # SRAM Memory Architecture
   SRAM Memory is a block which designed by integrating several sub-blocks. This SRAM memory architecture for a multi-port SRAM memory is shown in the diagram below.
 
   <img src="Diagrams/sram_arch.png">
 
-# Custom Cell for OpenRAM
+# Custom Cells for OpenRAM
   
 ## About OpenRAM
   OpenRAM is an open-source Python framework to create the layout, netlists, timing and power models, placement and routing models, and other views necessary to use SRAMs in ASIC design. It supports integration in both commercial and open-source flows with both predictive and fabricable technologies.
@@ -84,7 +84,7 @@
 ## Custom Cells
   OpenRAM facilitates to convert any custom design cells and design rules to various IP deliverables or formats.
 
-  <img src="Diagrams/custom_cells_openram.png">
+  <img src="Diagrams/custom_cell_openram.png">
 
   OpenRAM uses some custom-designed library primitives as technology input. Since density is extremely important, the following cells are pre-designed in each technology: 
   * 6T cell
@@ -128,9 +128,9 @@
         $    ngspice hold_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_hold_snm_waveform.JPG">
-  SNM<sub>high</sub> =  <br />
-  SNM<sub>low</sub> =  <br />
-  Hold SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) = 
+  SNM<sub>high</sub> = 1.0879 V <br />
+  SNM<sub>low</sub> = 1.1112 V <br />
+  Hold SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) = 1.0879 V  <br /><br />
 
 2. **Read SNM**
 
@@ -139,9 +139,9 @@
         $    ngspice read_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_read_snm_waveform.JPG">
-  SNM<sub>high</sub> =  <br />
-  SNM<sub>low</sub> =  <br />
-  Read SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) = 
+  SNM<sub>high</sub> = 0.5511 V <br />
+  SNM<sub>low</sub> = 0.4294 V <br />
+  Read SNM = min(SNM<sub>high</sub>, SNM<sub>low</sub>) =  0.4294 V <br /><br />
 
 3. **Write SNM**
 
@@ -150,7 +150,7 @@
         $    ngspice write_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_write_snm_waveform.JPG">
-  Write SNM =  
+  Write SNM = 1.3494 V  <br /><br />
 
 * **N-Curve**
   N-curve is a metric used for inline testers. It gives information for both voltage and current, and in addition it has no voltage scaling delimiter as found in SNM approach. It also has the complete information about the SRAM stability and also write ability in a single plot. N-curve can be further extended to power metrics in which both the voltage and current information are taken into consideration to provide better stability analysis of the SRAM cell.
@@ -162,14 +162,18 @@
   <img src="Prelayout/Simulations/sram_cell_6T_n_curve_waveform.JPG">
 
   1. **Static Voltage Noise Margin (SVNM):** It is the voltage difference between point A and B. It indicates the maximum tolerable DC noise voltage of the cell before its content changes.
+  <br /> SVNM = 0.5644 V
 
   2. **Static Current Noise Margin (SINM):** It is the additional current information provided by the N-curve, namely the peak current located between point A and B. It can also be used to characterize the cell read stability.
+  <br /> SINM = 122.6 uA
 
   **Note:** For better read stability, SVNM and SINM must be high value.
 
   3. **Write-Trip Voltage (WTV):** It is the voltage difference between point C and B. It is the voltage drop needed to flip the internal node “1” of the cell with both the bit-lines clamped to VDD.
+  <br /> WTV = 0.9422 V
   
   4. **Write-Trip Current (WTI):** It is the negative current peak between point C and B. It is the amount of current needed to write the cell when both bit-lines are kept at VDD.
+  <br /> WTI = -30.869 uA
 
 ## 2. Pre-charge Circuit
   This circuit block is used to pre-charge the bit-lines to Vdd or high logic during a read operation.
