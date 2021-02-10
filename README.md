@@ -49,11 +49,11 @@
       $    ./setup_environment.sh
 
 ## Independent Installation
-  1. NGSPICE: Following commands can be used for installing only the NGSPICE tool.
+  1. **NGSPICE:** Following commands can be used for installing only the NGSPICE tool.
 
           $    sudo apt-get install ngspice
 
-  2. Xschem: Following commands can be used for installing only the Xschem Schematic Editor tool.
+  2. **Xschem:** Following commands can be used for installing only the Xschem Schematic Editor tool.
 
           $    sudo apt-get install git
           $    git clone https://github.com/StefanSchippers/xschem.git
@@ -62,7 +62,7 @@
           $    make
           $    make install
 
-  3. Magic: Following commands can be used for installing only the Magic Layout tool.
+  3. **Magic:** Following commands can be used for installing only the Magic Layout tool.
 
           $    sudo apt-get install git
           $    git clone https://github.com/RTimothyEdwards/magic.git
