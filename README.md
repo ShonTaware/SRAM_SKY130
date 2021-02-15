@@ -254,6 +254,13 @@
 
   <img src="Prelayout/Simulations/sram_1bit_cell_write_waveform.JPG">
 
+# Layout and Post-Layout Simulations
+
+## 6T SRAM Cell
+
+  <img src="Postlayout/Layouts/magic_sram_6t_cell_read.JPG">
+  <img src="Postlayout/Simulations/sram_6t_cell_read.JPG">
+
 # Future Work
   Perform post-layout design and simulations. Also, configure the OpenRAM for new Sky130 PDKs and custom cells.
 
