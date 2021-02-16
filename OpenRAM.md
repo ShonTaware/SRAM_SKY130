@@ -210,8 +210,8 @@ The `technology` directory should contains following information.
 ```
   # spice model info
   spice         = {}
-  spice["nmos"] = "n"
-  spice["pmos"] = "p"
+  spice["sky130_fd_pr__nfet_01v8"] = "nmos"
+  spice["sky130_fd_pr__pfet_01v8"] = "pmos"
   
 ```
 
