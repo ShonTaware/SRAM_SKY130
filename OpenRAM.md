@@ -6,7 +6,7 @@ This page enlists the methodology and challenges in configuring the OpenRAM memo
 # OpenRAM Directory Structure
 
 ```
-├── OpenRAM 
+  ├── OpenRAM 
   |  ├── compiler
   |  ├── technologies
   |     ├── freepdk45  (available with compiler)
@@ -53,7 +53,7 @@ The `technology` directory should contains following information.
   This directory contains all the NMOS and PMOS models for temperatures, voltages and process corners as per requirement. This repository contains the nfet and pfet models for all process corners operating at 1.8 V. 
 
 ## layers.map
-  This file contains the layer description for gds layers. It needs to be generated from the SKY130 PDK document provided by SkyWater. You can find the document [here].(https://docs.google.com/spreadsheets/d/1oL6ldkQdLu-4FEQE0lX6BcgbqzYfNnd1XA8vERe0vpE/edit#gid=0)
+  This file contains the layer description for gds layers. It needs to be generated from the SKY130 PDK document provided by SkyWater. You can find the document [here](https://docs.google.com/spreadsheets/d/1oL6ldkQdLu-4FEQE0lX6BcgbqzYfNnd1XA8vERe0vpE/edit#gid=0).
 
   The `layers.map` should be organized in a specific syntax. Here, each layer is given on a separate line in below mentioned format:
 ```
@@ -61,13 +61,14 @@ The `technology` directory should contains following information.
 ```
 ## `tech/` Directory
 
-### tech/sky130A.tech
+### `tech/sky130A.tech`
   This is the technology file provided by SkyWater in the SKY130 PDKs. It needs to copied to this `tech` directory.
   The `sky130A.tech` technology file is added to the repository.
 
-### tech/tech.py
+### `tech/tech.py`
   This python file contains all the technology related configuration. It conatins information about below mentioned paramaters.
-  **Note: ** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits will correct and appropriate values for Sky130 process node. 
+  
+**Note:** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits will correct and appropriate values for Sky130 process node. 
 
 1. **Custom modules**
 ```
@@ -153,7 +154,7 @@ The `technology` directory should contains following information.
 
 9. **DRC/LVS Rules Setup**
   
-  ** Note: ** Drc rules are required for all the layers mentioned in the interconnect stacks.
+**Note:** Drc rules are required for all the layers mentioned in the interconnect stacks.
 
 ```
   drclvs_home=os.environ.get("DRCLVS_HOME")
