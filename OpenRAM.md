@@ -122,33 +122,52 @@ The `technology` directory should contains following information.
                           "m4": "V"}
 ```
 6. **Power grid**
+  By default, the power grid is set to m3_stack i.e. it uses m3 and m4 layers for power grid.
 ```
   power_grid = m1_stack  # Use m1 and m2 for power grid
 ```
 7. **GDS Layer Map**
 ```
-  layer={}
-  layer["pwell"]          = (41, 0)
-  layer["nwell"]          = (42, 0)
-  layer["active"]         = (43, 0)
-  layer["pimplant"]       = (44, 0)
-  layer["nimplant"]       = (45, 0)
-  layer["poly"]           = (46, 0)
-  layer["poly_contact"]   = (47, 0)
-  layer["active_contact"] = (48, 0)
-  layer["m1"]         = (49, 0)
+  layer["diff"]        = (65, 20)
+  layer["tap"]         = (65, 44)
+  layer["nwell"]       = (64, 20)
+  layer["dnwell"]      = (64, 18)
+  layer["npc"]         = (95, 20)
+  layer["licon"]       = (66, 44)
+  layer["li"]          = (67, 20)
+  layer["mcon"]        = (67, 44)
+  layer["m1"]          = (68, 20)
+  layer["via"]         = (68, 44)
+  layer["m2"]          = (69, 20)
+  layer["via2"]        = (69, 44)
+  layer["m3"]          = (70, 20)
+  layer["via3"]        = (70, 44)
+  layer["m4"]          = (71, 20)
+  layer["via4"]        = (71, 44)
+  layer["m5"]          = (72, 20)
   ...
 ```
 
 8. **Layer names for external PDKs**
 ```
   layer_names = {}
-  layer_names["active"]  = "active"
-  layer_names["pwell"]   = "pwell"
-  layer_names["nwell"]   = "nwell"
-  layer_names["nimplant"]= "nimplant"
-  layer_names["pimplant"]= "pimplant"
-  layer_names["poly"]    = "poly"
+  layer["diff"]        = "active"
+  layer["tap"]         = "tap"
+  layer["nwell"]       = "nwell"
+  layer["dnwell"]      = "dnwell"
+  layer["npc"]         = "npc"
+  layer["licon"]       = "licon"
+  layer["li"]          = "li"
+  layer["mcon"]        = "mcon"
+  layer["m1"]          = "m1"
+  layer["via"]         = "via"
+  layer["m2"]          = "m2"
+  layer["via2"]        = "via2"
+  layer["m3"]          = "m3"
+  layer["via3"]        = "via3"
+  layer["m4"]          = "m4"
+  layer["via4"]        = "via4"
+  layer["m5"]          = "m5"
   ...
 ```
 
@@ -292,4 +311,48 @@ The `technology` directory should contains following information.
   lvs_name = "netgen"
   pex_name = "magic"
 
+```
+
+# Usage of OpenRAM
+  A configuration file need to be generated in python which contains all parameters required for the compiler. Every parameter mentioned in the configuration file overrides the default value of the parameter. If a parameter is not mentioned in the file, compiler will take a default value.
+  
+A template file named `myconfig_sky130.py` is added in the repository. The file contains parameters as given below.
+
+```
+  # Data word size
+  word_size = 32
+  # Number of words in the memory
+  num_words = 1024
+
+  # Technology to use in $OPENRAM_TECH
+  tech_name = "sky130A"
+  
+  # You can use the technology nominal corner only
+  #nominal_corner_only = True
+  # Or you can specify particular corners
+  # Process corners to characterize
+  process_corners = ["SS", "TT", "FF"]
+  # process_corners = ["TT"]
+  # Voltage corners to characterize
+  supply_voltages = [ 1.8 ]
+  # supply_voltages = [ 3.0, 3.3, 3.5 ]
+  # Temperature corners to characterize
+  # temperatures = [ 0, 25 100]
+
+  # Output directory for the results
+  output_path = "temp"
+  # Output file base name
+  output_name = "sram_{0}_{1}_{2}".format(word_size,num_words,tech_name)
+
+  # Disable analytical models for full characterization (WARNING: slow!)
+  # analytical_delay = False
+```
+
+OpenRAM is invoked using the following command
+```
+  python3 $OPENRAM_HOME/openram.py myconfig_sky130
+  
+  or
+  
+  python3 $OPENRAM_HOME/openram.py myconfig_sky130.py
 ```
