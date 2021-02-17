@@ -356,3 +356,36 @@ OpenRAM is invoked using the following command
   
   python3 $OPENRAM_HOME/openram.py myconfig_sky130.py
 ```
+
+# Issues, Challenges and Fixes in configuring OpenRAM for SKY130
+
+1. By default, OpenRAM comes with a contact named `poly_contact` between the polysilicon and metal1. But SKY130 does not have a direct contact available between polysilicon and metal1 layers. Instead, it has a `pcontact` between polysilicon and locali (local interconnect) and further, contact `licon` between locali and metal1.
+
+Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` along with `poly_contact` and `active_contact`.
+
+```
+  poly_stack = ("poly", "pcontact", "li")
+  li_stack = ("li", "licon", "m1")
+  
+  # The FEOL stacks get us up to m1
+  feol_stacks = [poly_stack,
+                 li_stack,
+                 active_stack]
+
+```
+
+2. The default `active` layer corresponds to `diff` (active diffusion) layer in SKY130. Similarly, the default `active_contact` layer corresponds to  `tap` layer in SKY130.
+
+```
+  layer["diff"]        = (65, 20)
+  layer["tap"]         = (65, 44)
+
+  layer["diff"]        = "active" 
+  layer["tap"]         = "tap"
+
+```
+
+3. One of the major issue is, the SKY130 PDK do not have boundary layer for drawing purpose in the GDS layer description provided by SkyWater. But OpenRAM compiler expects a boundary layer to compute the cell area and to avoid overlapping of cells.
+
+**Note:** We are currently working on resolving this issue. The solution will be updated to repository soon.
+

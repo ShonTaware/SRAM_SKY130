@@ -11,6 +11,7 @@
   - [Custom Cells for OpenRAM](#custom-cells-for-openram)
       - [About OpenRAM](#about-openram)
       - [Custom Cells](#custom-cells)
+  - [OpenRAM Configuration For SkyWater SKY130 PDKs](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM.md)
   - [Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
       1. [6T SRAM Cell](#1-6t-sram-cell)
       2. [Pre-charge Circuit](#2-pre-charge-circuit)
@@ -99,6 +100,9 @@
   * Master-slave flip-flop 
   * Tri-state gate 
   * Write driver
+
+# OpenRAM Configuration For SkyWater SKY130 PDKs
+  The detailed OpenRAM configuration and usage for SKY130 pdk can be found [here](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM.md).
 
 # Pre-Layout Schematic and Simulations
 
