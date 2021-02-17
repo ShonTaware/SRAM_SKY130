@@ -226,69 +226,68 @@ The `technology` directory should contains following information.
 11. **Spice Simulation Parameters**
   
     1. **Spice model info**
-```
-  # spice model info
-  spice         = {}
-  spice["sky130_fd_pr__nfet_01v8"] = "nmos"
-  spice["sky130_fd_pr__pfet_01v8"] = "pmos"
-  
-```
-
+    ```
+      # spice model info
+      spice         = {}
+      spice["sky130_fd_pr__nfet_01v8"] = "nmos"
+      spice["sky130_fd_pr__pfet_01v8"] = "pmos"
+      
+    ```
     2. **Map of corners to model files**
-```
-  # This is a map of corners to model files
-  SPICE_MODEL_DIR=os.environ.get("SPICE_MODEL_DIR")
-  spice["fet_models"] = {"TT": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
-                         "FF": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
-                         "FS": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
-                         "SF": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
-                         "SS": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
-                         "ST": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
-                         "TS": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
-                         "FT": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
-                         "TF": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
-                         }
+    ```
+      # This is a map of corners to model files
+      SPICE_MODEL_DIR=os.environ.get("SPICE_MODEL_DIR")
+      spice["fet_models"] = {"TT": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                             "FF": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
+                             "FS": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                             "SF": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
+                             "SS": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                             "ST": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                             "TS": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                             "FT": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                             "TF": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
+                             }
 
-```
+    ```
 
     3. **Spice stimulus related variables**
-```
-  spice["feasible_period"]    = 10              # estimated feasible period in ns
-  spice["supply_voltages"]    = [4.5, 5.0, 5.5] # Supply voltage corners in [Volts]
-  spice["nom_supply_voltage"] = 5.0             # Nominal supply voltage in [Volts]
-  spice["rise_time"]          = 0.05            # rise time in [Nano-seconds]
-  spice["fall_time"]          = 0.05            # fall time in [Nano-seconds]
-  spice["temperatures"]       = [0, 25, 100]    # Temperature corners (celcius)
-  spice["nom_temperature"]    = 25              # Nominal temperature (celcius)
+    ```
+      spice["feasible_period"]    = 10              # estimated feasible period in ns
+      spice["supply_voltages"]    = [4.5, 5.0, 5.5] # Supply voltage corners in [Volts]
+      spice["nom_supply_voltage"] = 5.0             # Nominal supply voltage in [Volts]
+      spice["rise_time"]          = 0.05            # rise time in [Nano-seconds]
+      spice["fall_time"]          = 0.05            # fall time in [Nano-seconds]
+      spice["temperatures"]       = [0, 25, 100]    # Temperature corners (celcius)
+      spice["nom_temperature"]    = 25              # Nominal temperature (celcius)
 
-```
+    ```
 
     4. **Analytical delay parameters**
-```
-  spice["nom_threshold"]  = 1.3    # Nominal Threshold voltage in Volts
-  spice["wire_unit_r"]    = 0.075  # Unit wire resistance in ohms/square
-  spice["wire_unit_c"]    = 0.64   # Unit wire capacitance ff/um^2
-  spice["min_tx_drain_c"] = 0.7    # Minimum transistor drain capacitance in ff
-  spice["min_tx_gate_c"]  = 0.1    # Minimum transistor gate capacitance in ff
-  spice["dff_setup"]      = 9      # DFF setup time in ps
-  spice["dff_hold"]       = 1      # DFF hold time in ps
-  spice["dff_in_cap"]     = 9.8242 # Input capacitance (D) [Femto-farad]
-  spice["dff_out_cap"]    = 2      # Output capacitance (Q) [Femto-farad]
+    ```
+      spice["nom_threshold"]  = 1.3    # Nominal Threshold voltage in Volts
+      spice["wire_unit_r"]    = 0.075  # Unit wire resistance in ohms/square
+      spice["wire_unit_c"]    = 0.64   # Unit wire capacitance ff/um^2
+      spice["min_tx_drain_c"] = 0.7    # Minimum transistor drain capacitance in ff
+      spice["min_tx_gate_c"]  = 0.1    # Minimum transistor gate capacitance in ff
+      spice["dff_setup"]      = 9      # DFF setup time in ps
+      spice["dff_hold"]       = 1      # DFF hold time in ps
+      spice["dff_in_cap"]     = 9.8242 # Input capacitance (D) [Femto-farad]
+      spice["dff_out_cap"]    = 2      # Output capacitance (Q) [Femto-farad]
 
-```
+    ```
 
     5. **Analytical power parameters**
-```
-  spice["bitcell_leakage"] = 1 # Leakage power of a single bitcell in nW
-  spice["inv_leakage"]     = 1 # Leakage power of inverter in nW
-  spice["nand2_leakage"]   = 1 # Leakage power of 2-input nand in nW
-  spice["nand3_leakage"]   = 1 # Leakage power of 3-input nand in nW
-  spice["nand4_leakage"]   = 1 # Leakage power of 4-input nand in nW
-  spice["nor2_leakage"]    = 1 # Leakage power of 2-input nor in nW
-  spice["dff_leakage"]     = 1 # Leakage power of flop in nW
-  
-  spice["default_event_frequency"] = 100 # Default event activity of every gate. MHz
-```
+    ```
+      spice["bitcell_leakage"] = 1 # Leakage power of a single bitcell in nW
+      spice["inv_leakage"]     = 1 # Leakage power of inverter in nW
+      spice["nand2_leakage"]   = 1 # Leakage power of 2-input nand in nW
+      spice["nand3_leakage"]   = 1 # Leakage power of 3-input nand in nW
+      spice["nand4_leakage"]   = 1 # Leakage power of 4-input nand in nW
+      spice["nor2_leakage"]    = 1 # Leakage power of 2-input nor in nW
+      spice["dff_leakage"]     = 1 # Leakage power of flop in nW
+      
+      spice["default_event_frequency"] = 100 # Default event activity of every gate. MHz
+    ```
 
 12. **Logical Effort relative values for the Handmade cells**
 ```
