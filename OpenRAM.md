@@ -2,6 +2,14 @@
 This page enlists the methodology and challenges in configuring the OpenRAM memory compiler for the Google SkyWater Sky130 PDKs.
 
 # Table of Contents
+  - [OpenRAM Directory Structure](#openram-directory-structure)
+  - [Porting SKY130 to OpenRAM](#porting-sky130-to-openram)
+    - [gds_lib directory](#openram-directory-structure)
+    - [sp_lib directory](#openram-directory-structure)
+    - [layers.map](#layersmap)
+    - [tech Directory](#tech-directory)
+  - [Usage of OpenRAM](#usage-of-openram)
+  - [Issues, Challenges and Fixes in configuring OpenRAM for SKY130](#issues-challenges-and-fixes-in-configuring-openram-for-sky130)
 
 # OpenRAM Directory Structure
 
@@ -47,18 +55,21 @@ The `technology` directory should contains following information.
   6. dummy_cell_6t.gds 
 
 ## `sp_lib` directory
-  This directory contains all the spice netlsits of custom premade library cells in `.sp` file format. 
+This directory contains all the spice netlsits of custom premade library cells in `.sp` file format. 
 
 ## `models` directory
-  This directory contains all the NMOS and PMOS models for temperatures, voltages and process corners as per requirement. This repository contains the nfet and pfet models for all process corners operating at 1.8 V. 
+This directory contains all the NMOS and PMOS models for temperatures, voltages and process corners as per requirement. This repository contains the nfet and pfet models for all process corners operating at 1.8 V. 
 
-## layers.map
-  This file contains the layer description for gds layers. It needs to be generated from the SKY130 PDK document provided by SkyWater. You can find the document [here](https://docs.google.com/spreadsheets/d/1oL6ldkQdLu-4FEQE0lX6BcgbqzYfNnd1XA8vERe0vpE/edit#gid=0).
+## `layers.map`
+This file contains the layer description for gds layers. It needs to be generated from the SKY130 PDK document provided by SkyWater. You can find the document [here](https://docs.google.com/spreadsheets/d/1oL6ldkQdLu-4FEQE0lX6BcgbqzYfNnd1XA8vERe0vpE/edit#gid=0).
+  
+The `layers.map` should be organized in a specific syntax. Here, each layer is given on a separate line in below mentioned format:
 
-  The `layers.map` should be organized in a specific syntax. Here, each layer is given on a separate line in below mentioned format:
 ```
   <layer-name> <purpose-of-layer> <GDS-layer> <GDS-purpose>
 ```
+The `layers.map` file is added to the repository and can be found [here](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/sky130A/layers.map).  
+
 ## `tech/` Directory
 
 ### `tech/sky130A.tech`
