@@ -102,7 +102,7 @@
   * Write driver
 
 # OpenRAM Configuration For SkyWater SKY130 PDKs
-  The detailed OpenRAM configuration, usage and issues for SKY130 pdk can be found [here](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM.md).
+The detailed OpenRAM configuration, usage and issues for SKY130 pdk is documented on a separate page ([OpenRAM.md](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM.md)). It can be found [here](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM.md).
 
 # Pre-Layout Schematic and Simulations
 

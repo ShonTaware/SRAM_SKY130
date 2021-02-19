@@ -2,6 +2,7 @@
 This page enlists the methodology and challenges in configuring the OpenRAM memory compiler for the Google SkyWater Sky130 PDKs.
 
 # Table of Contents
+  - [Installation and Setup of OpenRAM](#installation-and-setup-of-openram)
   - [OpenRAM Directory Structure](#openram-directory-structure)
   - [Porting SKY130 to OpenRAM](#porting-sky130-to-openram)
     - [gds_lib directory](#openram-directory-structure)
@@ -11,8 +12,31 @@ This page enlists the methodology and challenges in configuring the OpenRAM memo
   - [Usage of OpenRAM](#usage-of-openram)
   - [Issues, Challenges and Fixes in configuring OpenRAM for SKY130](#issues-challenges-and-fixes-in-configuring-openram-for-sky130)
 
-# OpenRAM Directory Structure
+# Installation and Setup of OpenRAM
+The detailed OpenRAM project can be found [here](https://github.com/VLSIDA/OpenRAM). The steps to the installation and setup are mentioned below.
 
+1. **Clone the OpenRAM project**
+```
+  $    git clone https://github.com/VLSIDA/OpenRAM.git
+
+```
+
+2. **Configure Path**
+  Add following lines in `.bashrc` file.
+```
+  $    export OPENRAM_HOME="$HOME/openram/compiler"
+  $    export OPENRAM_TECH="$HOME/openram/technology"
+
+  # Add Python Path of OpenRAM compiler
+  $    export PYTHONPATH="$PYTHONPATH:$OPENRAM_HOME"
+
+  # Set Path to PDKs
+  $    export SKY130A="/path-to-pdks/sky130"
+
+```
+
+# OpenRAM Directory Structure
+  After the installation is properly done. The directory structure of OpenRAM directory looks similar to that of mentioned. 
 ```
   ├── OpenRAM 
   |  ├── compiler
@@ -22,9 +46,9 @@ This page enlists the methodology and challenges in configuring the OpenRAM memo
   |     ├── sky130A 
 
 ```
+  The `sky130A` directory is not available by default. You need to create it in order to add support for SkyWater PDK Sky130. The detailed contents and their description is explained further in the document. Also, the configure `sky130A` directory is included in the repository for reference. It can be found at [OpenRAM/sky130A/](https://github.com/ShonTaware/SRAM_SKY130/tree/main/OpenRAM/sky130A)
 
 # Porting SKY130 to OpenRAM
-
 The OpenRAM compiler is currently available for two technologies, namely - SCMOS and FreePDK45.
 For adding a new technology support to OpenRAM, a directory with name of process node should be created in `technology` directory of OpenRAM.
 
@@ -79,7 +103,7 @@ The `layers.map` file is added to the repository and can be found [here](https:/
 ### `tech/tech.py`
   This python file contains all the technology related configuration. It conatins information about below mentioned paramaters.
   
-**Note:** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits will correct and appropriate values for Sky130 process node. 
+**Note:** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits with correct and appropriate values for Sky130 process node. 
 
 1. **Custom modules**
 ```
@@ -100,6 +124,7 @@ The `layers.map` file is added to the repository and can be found [here](https:/
   GDS["zoom"] = 0.5
 ```
 5. **Interconnect stacks**
+  This defines the contacts and preferred directions of the metal, poly and active diffusion layers.
 ```
   poly_stack = ("poly", "poly_contact", "m1")
   active_stack = ("active", "active_contact", "m1")
@@ -138,6 +163,7 @@ The `layers.map` file is added to the repository and can be found [here](https:/
   power_grid = m1_stack  # Use m1 and m2 for power grid
 ```
 7. **GDS Layer Map**
+  The values are similar to those listed in the `layers.map` file.
 ```
   layer["diff"]        = (65, 20)
   layer["tap"]         = (65, 44)
