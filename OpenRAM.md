@@ -101,164 +101,172 @@ The `layers.map` file is added to the repository and can be found [here](https:/
   The `sky130A.tech` technology file is added to the repository.
 
 ### `tech/tech.py`
-  This python file contains all the technology related configuration. It conatins information about below mentioned paramaters.
+  This python file contains all the technology related configuration. It contains information about below mentioned paramaters.
   
 **Note:** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits with correct and appropriate values for Sky130 process node. 
 
 1. **Custom modules**
-```
-  tech_modules = module_type()
-```
+  ```
+    tech_modules = module_type()
+  ```
+
 2. **Custom cell properties**
-```
-  cell_properties = cell_properties()
-```
+  ```
+    cell_properties = cell_properties()
+  ```
+
 3. **Layer properties**
-```
-  layer_properties = layer_properties()
-```
+  ```
+    layer_properties = layer_properties()
+  ```
+
 4. **GDS file info**
-```
-  GDS={}
-  GDS["unit"]=(0.001,1e-6)
-  GDS["zoom"] = 0.5
-```
+  ```
+    GDS={}
+    GDS["unit"]=(0.001,1e-6)
+    GDS["zoom"] = 0.5
+  ```
+
 5. **Interconnect stacks**
+  
   This defines the contacts and preferred directions of the metal, poly and active diffusion layers.
-```
-  poly_stack = ("poly", "poly_contact", "m1")
-  active_stack = ("active", "active_contact", "m1")
-  m1_stack = ("m1", "via1", "m2")
-  m2_stack = ("m2", "via2", "m3")
-  m3_stack = ("m3", "via3", "m4")
-  
-  layer_indices = {"poly": 0,
-                   "active": 0,
-                   "m1": 1,
-                   "m2": 2,
-                   "m3": 3,
-                   "m4": 4}
-  
-  # The FEOL stacks get us up to m1
-  feol_stacks = [poly_stack,
-                 active_stack]
-  
-  # The BEOL stacks are m1 and up
-  beol_stacks = [m1_stack,
-                 m2_stack,
-                 m3_stack]
-  
-  layer_stacks = feol_stacks + beol_stacks
-  
-  preferred_directions = {"poly": "V",
-                          "active": "V",
-                          "m1": "H",
-                          "m2": "V",
-                          "m3": "H",
-                          "m4": "V"}
-```
+  ```
+    poly_stack = ("poly", "poly_contact", "m1")
+    active_stack = ("active", "active_contact", "m1")
+    m1_stack = ("m1", "via1", "m2")
+    m2_stack = ("m2", "via2", "m3")
+    m3_stack = ("m3", "via3", "m4")
+    
+    layer_indices = {"poly": 0,
+                     "active": 0,
+                     "m1": 1,
+                     "m2": 2,
+                     "m3": 3,
+                     "m4": 4}
+    
+    # The FEOL stacks get us up to m1
+    feol_stacks = [poly_stack,
+                   active_stack]
+    
+    # The BEOL stacks are m1 and up
+    beol_stacks = [m1_stack,
+                   m2_stack,
+                   m3_stack]
+    
+    layer_stacks = feol_stacks + beol_stacks
+    
+    preferred_directions = {"poly": "V",
+                            "active": "V",
+                            "m1": "H",
+                            "m2": "V",
+                            "m3": "H",
+                            "m4": "V"}
+  ```
+
 6. **Power grid**
+  
   By default, the power grid is set to m3_stack i.e. it uses m3 and m4 layers for power grid.
-```
-  power_grid = m1_stack  # Use m1 and m2 for power grid
-```
+  ```
+    power_grid = m1_stack  # Use m1 and m2 for power grid
+  ```
+
 7. **GDS Layer Map**
+  
   The values are similar to those listed in the `layers.map` file.
-```
-  layer["diff"]        = (65, 20)
-  layer["tap"]         = (65, 44)
-  layer["nwell"]       = (64, 20)
-  layer["dnwell"]      = (64, 18)
-  layer["npc"]         = (95, 20)
-  layer["licon"]       = (66, 44)
-  layer["li"]          = (67, 20)
-  layer["mcon"]        = (67, 44)
-  layer["m1"]          = (68, 20)
-  layer["via"]         = (68, 44)
-  layer["m2"]          = (69, 20)
-  layer["via2"]        = (69, 44)
-  layer["m3"]          = (70, 20)
-  layer["via3"]        = (70, 44)
-  layer["m4"]          = (71, 20)
-  layer["via4"]        = (71, 44)
-  layer["m5"]          = (72, 20)
-  ...
-```
+  ```
+    layer["diff"]        = (65, 20)
+    layer["tap"]         = (65, 44)
+    layer["nwell"]       = (64, 20)
+    layer["dnwell"]      = (64, 18)
+    layer["npc"]         = (95, 20)
+    layer["licon"]       = (66, 44)
+    layer["li"]          = (67, 20)
+    layer["mcon"]        = (67, 44)
+    layer["m1"]          = (68, 20)
+    layer["via"]         = (68, 44)
+    layer["m2"]          = (69, 20)
+    layer["via2"]        = (69, 44)
+    layer["m3"]          = (70, 20)
+    layer["via3"]        = (70, 44)
+    layer["m4"]          = (71, 20)
+    layer["via4"]        = (71, 44)
+    layer["m5"]          = (72, 20)
+    ...
+  ```
 
 8. **Layer names for external PDKs**
-```
-  layer_names = {}
-  layer["diff"]        = "active"
-  layer["tap"]         = "tap"
-  layer["nwell"]       = "nwell"
-  layer["dnwell"]      = "dnwell"
-  layer["npc"]         = "npc"
-  layer["licon"]       = "licon"
-  layer["li"]          = "li"
-  layer["mcon"]        = "mcon"
-  layer["m1"]          = "m1"
-  layer["via"]         = "via"
-  layer["m2"]          = "m2"
-  layer["via2"]        = "via2"
-  layer["m3"]          = "m3"
-  layer["via3"]        = "via3"
-  layer["m4"]          = "m4"
-  layer["via4"]        = "via4"
-  layer["m5"]          = "m5"
-  ...
-```
+  ```
+    layer_names = {}
+    layer["diff"]        = "active"
+    layer["tap"]         = "tap"
+    layer["nwell"]       = "nwell"
+    layer["dnwell"]      = "dnwell"
+    layer["npc"]         = "npc"
+    layer["licon"]       = "licon"
+    layer["li"]          = "li"
+    layer["mcon"]        = "mcon"
+    layer["m1"]          = "m1"
+    layer["via"]         = "via"
+    layer["m2"]          = "m2"
+    layer["via2"]        = "via2"
+    layer["m3"]          = "m3"
+    layer["via3"]        = "via3"
+    layer["m4"]          = "m4"
+    layer["via4"]        = "via4"
+    layer["m5"]          = "m5"
+    ...
+  ```
 
 9. **DRC/LVS Rules Setup**
   
-**Note:** Drc rules are required for all the layers mentioned in the interconnect stacks.
-
-```
-  drclvs_home=os.environ.get("DRCLVS_HOME")
-  
-  drc = design_rules("sky130A")
-  
-  #grid size is 1/2 a lambda
-  drc["grid"]=0.5*_lambda_
-  
-  #DRC/LVS test set_up
-  drc["drc_rules"] = drclvs_home+"/calibreDRC_sky130A.rul"  # Replace it with "None" to skip it
-  drc["lvs_rules"] = drclvs_home+"/calibreLVS_sky130A.rul"  # Replace it with "None" to skip it
-  drc["layer_map"] = os.environ.get("OPENRAM_TECH")+"/scn3me_subm/layers.map"
-  
-  # minwidth_tx with contact (no dog bone transistors)
-  drc["minwidth_tx"] = 4*_lambda_
-  drc["minlength_channel"] = 2*_lambda_
-  
-  # Minimum spacing between wells of different type (if both are drawn)
-  drc["pwell_to_nwell"] = 0
-  
-  # Minimum width
-  drc.add_layer("nwell",
-                width = 12*_lambda_,
-                spacing = 6*_lambda_)
-  
-  # Enclosure
-  drc.add_enclosure("m1",
-                  layer = "via1",
-                  enclosure = _lambda_)
-  ...
-```
+  **Note:** Drc rules are required for all the layers mentioned in the interconnect stacks.
+  ```
+    drclvs_home=os.environ.get("DRCLVS_HOME")
+    
+    drc = design_rules("sky130A")
+    
+    #grid size is 1/2 a lambda
+    drc["grid"]=0.5*_lambda_
+    
+    #DRC/LVS test set_up
+    drc["drc_rules"] = drclvs_home+"/calibreDRC_sky130A.rul"  # Replace it with "None" to skip it
+    drc["lvs_rules"] = drclvs_home+"/calibreLVS_sky130A.rul"  # Replace it with "None" to skip it
+    drc["layer_map"] = os.environ.get("OPENRAM_TECH")+"/scn3me_subm/layers.map"
+    
+    # minwidth_tx with contact (no dog bone transistors)
+    drc["minwidth_tx"] = 4*_lambda_
+    drc["minlength_channel"] = 2*_lambda_
+    
+    # Minimum spacing between wells of different type (if both are drawn)
+    drc["pwell_to_nwell"] = 0
+    
+    # Minimum width
+    drc.add_layer("nwell",
+                  width = 12*_lambda_,
+                  spacing = 6*_lambda_)
+    
+    # Enclosure
+    drc.add_enclosure("m1",
+                    layer = "via1",
+                    enclosure = _lambda_)
+    ...
+  ```
 
 10. **Technology parameter**
-```
-  _lambda_ = 0.2
+  ```
+    _lambda_ = 0.2
 
-  #technology parameter
-  parameter                = {}
-  parameter["min_tx_size"] = 4*_lambda_
-  parameter["beta"]        = 2
-  
-  # These 6T sizes are used in the parameterized bitcell.
-  parameter["6T_inv_nmos_size"] = 8*_lambda_
-  parameter["6T_inv_pmos_size"] = 3*_lambda_
-  parameter["6T_access_size"]   = 4*_lambda_
+    #technology parameter
+    parameter                = {}
+    parameter["min_tx_size"] = 4*_lambda_
+    parameter["beta"]        = 2
+    
+    # These 6T sizes are used in the parameterized bitcell.
+    parameter["6T_inv_nmos_size"] = 8*_lambda_
+    parameter["6T_inv_pmos_size"] = 3*_lambda_
+    parameter["6T_access_size"]   = 4*_lambda_
 
-```
+  ```
 
 11. **Spice Simulation Parameters**
   
@@ -327,27 +335,27 @@ The `layers.map` file is added to the repository and can be found [here](https:/
     ```
 
 12. **Logical Effort relative values for the Handmade cells**
-```
-  parameter["le_tau"]              = 18.17         # In pico-seconds.
-  parameter["min_inv_para_delay"]  = 2.07          # In relative delay units
-  parameter["cap_relative_per_ff"] = .91           # Units of Relative Capacitance/ Femto-Farad
-  parameter["dff_clk_cin"]         = 27.5          # In relative capacitance units
-  parameter["6tcell_wl_cin"]       = 2             # In relative capacitance units
-  parameter["sa_en_pmos_size"]     = 24 * _lambda_
-  parameter["sa_en_nmos_size"]     = 9 * _lambda_
-  parameter["sa_inv_pmos_size"]    = 18 * _lambda_
-  parameter["sa_inv_nmos_size"]    = 9 * _lambda_
-  parameter["bitcell_drain_cap"]   = 0.2           # In Femto-Farad, approximation of drain capacitance
+  ```
+    parameter["le_tau"]              = 18.17         # In pico-seconds.
+    parameter["min_inv_para_delay"]  = 2.07          # In relative delay units
+    parameter["cap_relative_per_ff"] = .91           # Units of Relative Capacitance/ Femto-Farad
+    parameter["dff_clk_cin"]         = 27.5          # In relative capacitance units
+    parameter["6tcell_wl_cin"]       = 2             # In relative capacitance units
+    parameter["sa_en_pmos_size"]     = 24 * _lambda_
+    parameter["sa_en_nmos_size"]     = 9 * _lambda_
+    parameter["sa_inv_pmos_size"]    = 18 * _lambda_
+    parameter["sa_inv_nmos_size"]    = 9 * _lambda_
+    parameter["bitcell_drain_cap"]   = 0.2           # In Femto-Farad, approximation of drain capacitance
 
-```
+  ```
 
 13. **Technology Tool Preferences**
-```
-  drc_name = "magic"
-  lvs_name = "netgen"
-  pex_name = "magic"
+  ```
+    drc_name = "magic"
+    lvs_name = "netgen"
+    pex_name = "magic"
 
-```
+  ```
 
 # Usage of OpenRAM
   A configuration file need to be generated in python which contains all parameters required for the compiler. Every parameter mentioned in the configuration file overrides the default value of the parameter. If a parameter is not mentioned in the file, compiler will take a default value.
