@@ -196,12 +196,16 @@ The `layers.map` should be organized in a specific syntax. Here, each layer is g
 The `layers.map` file is added to the repository and can be found [here](https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/sky130A/layers.map).  
 
 ### `tech/` Directory
+  This directory should contains two mandatory file listed below. Any other optional scripts can also be included if required.
 
-* `tech/sky130A.tech`
+  * `tech/sky130A.tech`
+  * `tech/tech.py`
+
+### `tech/sky130A.tech`
   This is the technology file provided by SkyWater in the SKY130 PDKs. It needs to copied to this `tech` directory.
   The `sky130A.tech` technology file is added to the repository.
 
-* `tech/tech.py`
+### `tech/tech.py`
   This python file contains all the technology related configuration. It contains information about below mentioned paramaters.
   
 **Note:** The values for any parameters given below are only for reference and not the actual values. It will be replaced in future commits with correct and appropriate values for Sky130 process node. 
