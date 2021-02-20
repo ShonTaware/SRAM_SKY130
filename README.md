@@ -508,16 +508,19 @@ A template file named `myconfig_sky130.py` is added in the repository. The file 
   python3 $OPENRAM_HOME/openram.py myconfig_sky130.py
 ```
 
+  <img src="OpenRAM/images/sram_1024_32_1.JPG">
+
 ## Issues, Challenges and Fixes in configuring OpenRAM for SKY130
 
-1. By default, OpenRAM comes with a contact named `poly_contact` between the polysilicon and metal1. But SKY130 does not have a direct contact available between polysilicon and metal1 layers. Instead, it has a `pcontact` between polysilicon and locali (local interconnect) and further, contact `licon` between locali and metal1.
-
-Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` along with `poly_contact` and `active_contact`.
+### FEOL Stack
+The FEOL(Front-End-of-line) in default configuration of OpenRAM includes a contact named `poly_contact` present between the polysilicon and metal1 layers. But SKY130 does not have a direct contact available between polysilicon and metal1 layers. Instead, it has a `pcontact` between polysilicon and locali (local interconnect) and further, contact `licon` between locali and metal1.
+  
+Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` along with `poly_contact` and `active_contact`. Each entry in the `feol_stack` is a three entry tuple data-structure in python given by `(<lower-layer>, <contact-from-lower-to-upper>, <upper-layer>)`
 
 ```
   poly_stack = ("poly", "pcontact", "li")
   li_stack = ("li", "licon", "m1")
-  
+    
   # The FEOL stacks get us up to m1
   feol_stacks = [poly_stack,
                  li_stack,
@@ -525,7 +528,8 @@ Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` al
 
 ```
 
-2. The default `active` layer corresponds to `diff` (active diffusion) layer in SKY130. Similarly, the default `active_contact` layer corresponds to  `tap` layer in SKY130.
+### Active Layer and Active Contact
+The default `active` layer corresponds to `diff` (active diffusion) layer in SKY130. Similarly, the default `active_contact` layer corresponds to  `tap` layer in SKY130.
 
 ```
   layer["diff"]        = (65, 20)
@@ -536,7 +540,10 @@ Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` al
 
 ```
 
-3. One of the major issue is, the SKY130 PDK do not have boundary layer for drawing purpose in the GDS layer description provided by SkyWater. But OpenRAM compiler expects a boundary layer to compute the cell area and to avoid overlapping of cells.
+### Missing Boundary layer definition
+One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have boundary layer definition for drawing purpose in the [GDS layer description provided by SkyWater](https://docs.google.com/spreadsheets/d/1oL6ldkQdLu-4FEQE0lX6BcgbqzYfNnd1XA8vERe0vpE/edit#gid=0). But OpenRAM compiler expects a boundary layer to compute the cell area and to avoid overlapping of cells.
+
+  <img src="OpenRAM/images/openram_boundary_issue.JPG">
 
 **Note:** We are currently working on resolving this issue. The solution will be updated to repository soon.
 
