@@ -529,6 +529,7 @@ Therefore, `feol_stacks` mentioned above will have an extra entry for `licon` al
 ```
 
 ### Active Layer and Active Contact
+Sky130 do not consist any layer named `active` or `active_contact` as that in case of other default technologies.
 The default `active` layer corresponds to `diff` (active diffusion) layer in SKY130. Similarly, the default `active_contact` layer corresponds to  `tap` layer in SKY130.
 
 ```
