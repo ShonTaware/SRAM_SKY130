@@ -1,0 +1,26 @@
+Tri-State Buffer
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+XM1 inbar in gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM2 inbar in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+XM3 net1 inbar vdd vdd sky130_fd_pr__pfet_01v8 w=1.26 l=0.21
+XM4 out enbar net1 vdd sky130_fd_pr__pfet_01v8 w=1.26 l=0.21
+
+XM5 out en net2 gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM6 net2 inbar gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+
+V1 vdd gnd dc 1.8v
+Vin in gnd pulse 0 1.8 0 10ps 10ps 5ns 10ns
+Ven en gnd pulse 0 1.8 0 10ps 10ps 20ns 40ns
+Venb enbar 0 pulse 1.8 0 0 10ps 10ps 20ns 40ns
+
+.tran 0.1n 100n
+.control 
+run  
+plot V(en)+6 V(enbar)+4 V(in)+2 V(out)
+.endc
+.end
+

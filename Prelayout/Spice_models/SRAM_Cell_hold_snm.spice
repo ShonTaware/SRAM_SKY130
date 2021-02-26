@@ -1,0 +1,24 @@
+SRAM Cell Hold SNM
+* Static Noise Margin
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+*** Inverter 1
+XM1 qbar1 q1 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM2 qbar1 q1 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+*** Inverter 2 
+XM3 q2 qbar2 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM4 q2 qbar2 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+V1 vdd gnd dc 1.8V
+V2 q1 gnd dc 1.8V
+V3 qbar2 gnd dc 1.8V
+.dc V2 0 1.8 0.01 V3 0 1.8 0.01
+.control
+run
+plot V(qbar1) vs V(q1) V(qbar2) vs V(q2) 
+.endc
+.end
+
+

@@ -1,0 +1,35 @@
+D Flip Flop
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+XM1 clkb clk vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM2 clkb clk gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM3 1 clk D vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM4 1 clkb D gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21 
+XM5 2 1 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM6 2 1 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM7 3 2 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM8 3 2 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM9 1 clkb 3 vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM10 1 clk 3 gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM11 4 clkb 2 vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM12 4 clk 2 gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM13 Q 4 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM14 Q 4 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM15 5 Q vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM16 5 Q gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM17 4 clk 5 vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM18 4 clkb 5 gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+V1 vdd gnd dc 1.8V
+V2 D gnd pulse 0 1.8 2.5ns 60ps 60ps 15ns 30ns
+V3 clk gnd pulse 0 1.8 0 60ps 60ps 5ns 10ns
+
+.tran 0.1ns 100ns
+.control 
+run
+plot V(Q) V(D)+2 V(clk)+4
+.endc
+.end
+
+

@@ -1,0 +1,72 @@
+SRAM 1-bit Cell Write Operation
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+
+****************** 6T SRAM Cell ***********************
+*** Inverter 1
+XM1 q qbar gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM2 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+*** Inverter 2 
+XM3 qbar q gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM4 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+*** Access Transistors
+XM5 q wl bl gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM6 qbar wl blbar gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+********************
+
+.subckt inv ip op vdd gnd
+XM1 op ip vdd vdd sky130_fd_pr__pfet_01v8 w=0.42 l=0.21
+XM2 op ip gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+.ends inv
+
+
+***************** Sense Amplifier **********************
+XM7 net1 blbar net2 net2 sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM8 dout1 bl net2 net2 sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+XM9 net1 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=0.42 l=0.21
+XM10 dout1 net1 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+XM11 net2 rd_en gnd gnd sky130_fd_pr__nfet_01v8 w=1.26 l=0.21
+
+xinv dout1 dout vdd gnd inv
+
+***************** Write Driver ************************
+.subckt nor_gate in1 in2 out vdd gnd
+XM1 out in1 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM2 out in2 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM3 out in1 temp vdd sky130_fd_pr__pfet_01v8 w=0.42 l=0.21
+XM4 temp in2 vdd vdd sky130_fd_pr__pfet_01v8 w=0.42 l=0.21
+.ends nor_gate
+
+
+*Precharge circuit
+XM14 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM15 blbar gnd vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+xinv1 din dinb vdd gnd inv
+xinv2 dinb dinbb vdd gnd inv
+xnor1 wr_en dinb out1 vdd gnd nor_gate
+xnor2 wr_en dinbb out2 vdd gnd nor_gate
+XM16 blbar out1 gnd gnd sky130_fd_pr__nfet_01v8 w=1.26 l=0.21
+XM17 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 w=1.26 l=0.21
+
+*******************************************************
+
+V1 vdd gnd dc 1.8V
+Vwl wl gnd pulse 0 1.8 0 60ps 60ps 5ns 10ns
+Vwr_en wr_en gnd pulse 1.8 0 0 60ps 60ps 5ns 10ns
+Vdin din gnd pulse 0 1.8 0 60ps 60ps 1ns 2ns 
+Vrd_en rd_en gnd dc 0V
+
+.tran 0.1p 20n
+.control
+run
+plot V(bl)+6 V(blbar)+4 V(q)+2 V(qbar) V(wr_en)+10 V(din)+8
+.endc
+.end
+

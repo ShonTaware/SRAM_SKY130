@@ -26,8 +26,8 @@
       2. [Pre-charge Circuit](#2-pre-charge-circuit)
       3. [Sense Amplifier](#3-sense-amplifier)
       4. [Write Driver](#4-write-driver)
-      5. [Tri-State Buffer](#5-tri-state-buffer)      
-      6. [D-Flip-Flop](#6-d-flip-flop)      
+      5. [Tri-State Buffer](#5-tri-state-buffer)
+      6. [D-Flip-Flop](#6-d-flip-flop)
       - [1-bit SRAM](#1-bit-sram)
 <!--  - [Layout and Post-Layout Simulations](#layout-and-post-layout-simulations)
       1. [6-T SRAM Cell](#1-6-t-sram-cell)
@@ -125,14 +125,14 @@ The detailed OpenRAM project can be found [here](https://github.com/VLSIDA/OpenR
 2. **Configure Path**
   Add following lines in `.bashrc` file.
   ```
-    $    export OPENRAM_HOME="$HOME/openram/compiler"
-    $    export OPENRAM_TECH="$HOME/openram/technology"
+    $    export OPENRAM_HOME="$<path-to-openram>/openram/compiler"
+    $    export OPENRAM_TECH="$<path-to-openram>/openram/technology"
 
     # Add Python Path of OpenRAM compiler
     $    export PYTHONPATH="$PYTHONPATH:$OPENRAM_HOME"
 
     # Set Path to PDKs
-    $    export SKY130A="/path-to-pdks/sky130"
+    $    export SKY130A="/<path-to-pdks>/sky130"
 
   ```
 
@@ -581,7 +581,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_hold_snm.png">
 
-        $    ngspice hold_snm.spice
+        $    ngspice Prelayout/Spice_models/SRAM_Cell_hold_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_hold_snm_waveform.JPG">
   SNM<sub>high</sub> = 1.0879 V <br />
@@ -592,7 +592,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_read_snm.png">
 
-        $    ngspice read_snm.spice
+        $    ngspice Prelayout/Spice_models/SRAM_Cell_read_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_read_snm_waveform.JPG">
   SNM<sub>high</sub> = 0.5511 V <br />
@@ -603,7 +603,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_write_snm.png">
 
-        $    ngspice write_snm.spice
+        $    ngspice Prelayout/Spice_models/SRAM_Cell_write_snm.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_write_snm_waveform.JPG">
   Write SNM = 1.3494 V  <br /><br />
@@ -613,7 +613,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_sram_6t_cell_n_curve.png">
 
-        $    ngspice n_curve.spice
+        $    ngspice Prelayout/Spice_models/SRAM_Cell_n_curve.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_n_curve_waveform.JPG">
 
@@ -638,7 +638,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_precharge_circuit.png">
 
-      $    ngspice precharge_circuit.spice
+	$    ngspice Prelayout/Spice_models/precharge_circuit.spice
 
   <img src="Prelayout/Simulations/precharge_circuit_waveform.JPG">
 
@@ -651,7 +651,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_sense_amplifier.png">
 
-        $    ngspice sense_amplifier.spice
+        $    ngspice Prelayout/Spice_models/sense_amplifier.spice
 
   <img src="Prelayout/Simulations/sense_amplifier_waveform.JPG">
 
@@ -662,7 +662,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_write_driver.png">
 
-      $    ngspice write_driver.spice
+      	$    ngspice Prelayout/Spice_models/write_driver.spice
 
   <img src="Prelayout/Simulations/write_driver_waveform.JPG">
 
@@ -673,7 +673,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_tristate_buffer.png">
 
-      $    ngspice tristate_buffer.spice
+      	$    ngspice Prelayout/Spice_models/tristate_buffer.spice
 
   <img src="Prelayout/Simulations/tristate_buffer_waveform.JPG">
 
@@ -682,7 +682,7 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Prelayout/Schematic/xschem_d_ff.png">
 
-      $    ngspice d_ff.spice
+      	$    ngspice Prelayout/Spice_models/d_ff.spice
 
   <img src="Prelayout/Simulations/d_ff_waveform.JPG">
 
@@ -693,13 +693,13 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   * Read Operation
 
-        $    ngspice sram_1bit_read.spice
+        $    ngspice Prelayout/Spice_models/SRAM_1bit_read.spice
 
   <img src="Prelayout/Simulations/sram_1bit_cell_read_waveform.JPG">
 
   * Write Operation
 
-        $    ngspice sram_1bit_write.spice
+        $    ngspice Prelayout/Spice_models/SRAM_1bit_write.spice
 
   <img src="Prelayout/Simulations/sram_1bit_cell_write_waveform.JPG">
 

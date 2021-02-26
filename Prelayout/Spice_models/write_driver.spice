@@ -1,0 +1,41 @@
+SRAM Cell Write Driver
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+.subckt inv ip op vdd gnd
+XM1 op ip vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM2 op ip gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+.ends inv
+
+.subckt nor_gate in1 in2 out vdd gnd
+XM1 out in1 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM2 out in2 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM3 out in1 temp vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM4 temp in2 vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+.ends nor_gate
+
+
+*Precharge circuit
+XM1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM2 blbar gnd vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+V1 vdd gnd dc 1.8V
+V2 wr_en gnd pulse 0 1.8 0 60ps 60ps 2ns 4ns
+V3 din gnd pulse 0 1.8 0 60ps 60ps 0.5ns 1ns
+
+xinv1 din dinb vdd gnd inv
+xinv2 dinb dinbb vdd gnd inv
+xnor1 wr_en dinb out1 vdd gnd nor_gate
+xnor2 wr_en dinbb out2 vdd gnd nor_gate
+XM3 blbar out1 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+XM4 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+
+
+.tran 0.1p 10n
+.control
+run
+plot V(wr_en)+6 V(din)+4 V(bl)+2 V(blbar)
+.endc
+.end 
+

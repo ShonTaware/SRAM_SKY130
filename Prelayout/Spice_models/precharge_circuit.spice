@@ -1,0 +1,19 @@
+Pre-Charge Circuit
+
+.lib "./libs/models/sky130.lib.spice" tt
+
+XM1 bl pre_charge vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+XM2 blbar pre_charge vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+
+V1 vdd gnd dc 1.8
+V2 pre_charge gnd pulse 0 1.8 0 60ps 60ps 5ns 10ns
+
+.tran 1n 50n
+.control
+run
+plot V(pre_charge)+6 V(bl)+2 V(blbar)
+.endc
+.end
+
+
+
