@@ -5,8 +5,6 @@
 # (acting for and on behalf of Oklahoma State University)
 # All rights reserved.
 #
-# This file manipulated using the file from FreePDK45
-
 import os
 from design_rules import *
 from module_type import *
@@ -14,7 +12,7 @@ from custom_cell_properties import cell_properties
 from custom_layer_properties import layer_properties
 
 """
-File containing the process technology parameters for SKY130A
+File containing the process technology parameters for SCMOS 4m, 0.35um
 """
 
 ###################################################
@@ -60,9 +58,9 @@ GDS["zoom"] = 0.5
 # Interconnect stacks
 ###################################################
 
-poly_stack = ("poly", "licon", "m1")
-active_stack = ("active", "tap", "m1")
-m1_stack = ("m1", "via", "m2")
+poly_stack = ("poly", "poly_contact", "m1")
+active_stack = ("active", "active_contact", "m1")
+m1_stack = ("m1", "via1", "m2")
 m2_stack = ("m2", "via2", "m3")
 m3_stack = ("m3", "via3", "m4")
 
@@ -95,7 +93,7 @@ preferred_directions = {"poly": "V",
 # Power grid
 ###################################################
 # Use M3/M4
-power_grid = m1_stack
+power_grid = m3_stack
 
 ###################################################
 ##GDS Layer Map
@@ -103,87 +101,48 @@ power_grid = m1_stack
 
 # create the GDS layer map
 layer={}
-layer["diff"]        = (65, 20)
-layer["tap"]         = (65, 44)
-layer["nwell"]       = (64, 20)
-layer["dnwell"]      = (64, 18)
-layer["pwbm"]        = (19, 44)
-layer["pwde"]        = (124, 20)
-layer["natfet"]      = (124, 21)
-layer["hvtr"]        = (18, 20)
-layer["hvtp"]        = (78, 44)
-layer["ldntm"]       = (11, 44)
-layer["hvi"]         = (75, 20)
-layer["tunm"]        = (80, 20)
-layer["lvtn"]        = (125, 44)
-layer["poly"]        = (66, 20)
-layer["hvntm"]       = (125, 20)
-layer["nsdm"]        = (93, 44)
-layer["psdm"]        = (94, 20)
-layer["rpm"]         = (86, 20)
-layer["urpm"]        = (79, 20)
-layer["npc"]         = (95, 20)
-layer["licon"]       = (66, 44)
-layer["li"]          = (67, 20)
-layer["mcon"]        = (67, 44)
-layer["m1"]          = (68, 20)
-layer["via"]         = (68, 44)
-layer["m2"]          = (69, 20)
-layer["via2"]        = (69, 44)
-layer["m3"]          = (70, 20)
-layer["via3"]        = (70, 44)
-layer["m4"]          = (71, 20)
-layer["via4"]        = (71, 44)
-layer["m5"]          = (72, 20)
-layer["via5"]        = (72, 44)
-layer["boundary"]        = (72, 44)
-layer["pad"]         = (76, 20)
-
-#layer["text"]   = (83, 44)
-#layer["boundary"] = (81, 4)
+layer["pwell"]          = (41, 0)
+layer["nwell"]          = (42, 0)
+layer["active"]         = (43, 0)
+layer["pimplant"]       = (44, 0)
+layer["nimplant"]       = (45, 0)
+layer["poly"]           = (46, 0)
+layer["poly_contact"]   = (47, 0)
+layer["active_contact"] = (48, 0)
+layer["m1"]         = (49, 0)
+layer["via1"]           = (50, 0)
+layer["m2"]         = (51, 0)
+layer["via2"]           = (61, 0)
+layer["m3"]         = (62, 0)
+layer["via3"]           = (30, 0)
+layer["m4"]         = (31, 0)
+layer["text"]           = (63, 0)
+layer["boundary"]       = (63, 0)
 
 # Layer names for external PDKs
 layer_names = {}
-layer["diff"]        = "active"
-layer["tap"]         = "tap"
-layer["nwell"]       = "nwell"
-layer["dnwell"]      = "dnwell"
-layer["pwbm"]        = "pwbm"
-layer["pwde"]        = "pwde"
-layer["natfet"]      = "natfet"
-layer["hvtr"]        = "hvtr"
-layer["hvtp"]        = "hvtp"
-layer["ldntm"]       = "ldntm"
-layer["hvi"]         = "hvi"
-layer["tunm"]        = "tunm"
-layer["lvtn"]        = "lvtn"
-layer["poly"]        = "poly"
-layer["hvntm"]       = "hvntm"
-layer["nimplant"]        = "nsdm"
-layer["pimplant"]        = "psdm"
-layer["rpm"]         = "rpm"
-layer["urpm"]        = "urpm"
-layer["npc"]         = "npc"
-layer["licon"]       = "licon"
-layer["li"]          = "li"
-layer["mcon"]        = "mcon"
-layer["m1"]          = "m1"
-layer["via"]         = "via"
-layer["m2"]          = "m2"
-layer["via2"]        = "via2"
-layer["m3"]          = "m3"
-layer["via3"]        = "via3"
-layer["m4"]          = "m4"
-layer["via4"]        = "via4"
-layer["m5"]          = "m5"
-layer["via5"]        = "via5"
-layer["boundary"]        = "boundary"
-layer["pad"]         = "pad"
+layer_names["active"]  = "active"
+layer_names["pwell"]   = "pwell"
+layer_names["nwell"]   = "nwell"
+layer_names["nimplant"]= "nimplant"
+layer_names["pimplant"]= "pimplant"
+layer_names["poly"]    = "poly"
+layer_names["poly_contact"] = "poly_contact"
+layer_names["active_contact"] = "active_contact"
+layer_names["m1"]      = "metal1"
+layer_names["via1"]    = "via1"
+layer_names["m2"]      = "metal2"
+layer_names["via2"]    = "via2"
+layer_names["m3"]      = "metal3"
+layer_names["via3"]    = "via3"
+layer_names["m4"]      = "metal4"
+layer_names["text"]    = "text"
+layer_names["boundary"]= "boundary"
 
 ###################################################
 # DRC/LVS Rules Setup
 ###################################################
-_lambda_ = 0.5
+_lambda_ = 0.2
 
 #technology parameter
 parameter={}
@@ -197,7 +156,7 @@ parameter["6T_access_size"] = 4*_lambda_
 
 drclvs_home=os.environ.get("DRCLVS_HOME")
 
-drc = design_rules("sky130")
+drc = design_rules("sky130A")
 
 #grid size is 1/2 a lambda
 drc["grid"]=0.5*_lambda_
@@ -271,48 +230,34 @@ drc.add_layer("implant",
 
 # 6.1 Exact contact size
 # 5.3 Minimum contact spacing
-drc.add_layer("tap",
+drc.add_layer("active_contact",
               width = 2*_lambda_,
               spacing = 3*_lambda_)
 # 6.2.b Minimum active overlap
 drc.add_enclosure("active",
-                  layer = "tap",
+                  layer = "active_contact",
                   enclosure = _lambda_)
 drc.add_enclosure("active",
                   layer = "contact",
                   enclosure = _lambda_)
 # Reserved for other technologies
-drc["tap_to_gate"] = 2*_lambda_
+drc["active_contact_to_gate"] = 2*_lambda_
 # 5.4 Minimum spacing to gate of transistor
-drc["licon_to_gate"] = 2*_lambda_
+drc["poly_contact_to_gate"] = 2*_lambda_
 
 # 6.1 Exact contact size
 # 5.3 Minimum contact spacing
-drc.add_layer("licon",
+drc.add_layer("poly_contact",
               width = 2*_lambda_,
               spacing = 3*_lambda_)
-drc["minwidth_licon"] = 3*_lambda_    
-drc["minwidth_via"] = 3*_lambda_    
-drc["via_to_via"] = 3*_lambda_    
-
-drc.add_enclosure("npc",
-                  layer = "poly",
-                  enclosure = _lambda_)
-
-# 8.3 Minimum overlap by m1
-drc.add_enclosure("m1",
-                  layer = "via",
-                  enclosure = _lambda_)
-
-              
 # 5.2.b Minimum poly overlap
 drc.add_enclosure("poly",
-                  layer = "licon",
+                  layer = "poly_contact",
                   enclosure = _lambda_)
 # Reserved for other technologies
-drc["licon_to_gate"] = 2*_lambda_
+drc["poly_contact_to_gate"] = 2*_lambda_
 # 5.4 Minimum spacing to gate of transistor
-drc["licon_to_poly"] = 2*_lambda_
+drc["poly_contact_to_poly"] = 2*_lambda_
 
 # 7.1 Minimum width
 # 7.2 Minimum spacing
@@ -321,15 +266,19 @@ drc.add_layer("m1",
               spacing = 3*_lambda_)
 # 7.3 Minimum overlap of any contact
 drc.add_enclosure("m1",
-                  layer = "licon",
+                  layer = "poly_contact",
                   enclosure = _lambda_)
 drc.add_enclosure("m1",
-                  layer = "tap",
+                  layer = "active_contact",
+                  enclosure = _lambda_)
+# 8.3 Minimum overlap by m1
+drc.add_enclosure("m1",
+                  layer = "via1",
                   enclosure = _lambda_)
 
 # 8.1 Exact size
-# 8.2 Minimum via spacing
-drc.add_layer("via",
+# 8.2 Minimum via1 spacing
+drc.add_layer("via1",
               width = 2*_lambda_,
               spacing = 3*_lambda_)
 
@@ -338,9 +287,9 @@ drc.add_layer("via",
 drc.add_layer("m2",
               width = 3*_lambda_,
               spacing = 3*_lambda_)
-# 9.3 Minimum overlap of via
+# 9.3 Minimum overlap of via1
 drc.add_enclosure("m2",
-                  layer = "via",
+                  layer = "via1",
                   enclosure = _lambda_)
 # 14.3 Minimum overlap by m2
 drc.add_enclosure("m2",
@@ -392,19 +341,19 @@ drc.add_enclosure("m4",
 
 # spice model info
 spice={}
-spice["sky130_fd_pr__nfet_01v8"]="sky130_fd_pr__nfet_01v8"
-spice["sky130_fd_pr__pfet_01v8"]="sky130_fd_pr__nfet_01v8"
+spice["nmos"]="n"
+spice["pmos"]="p"
 # This is a map of corners to model files
 SPICE_MODEL_DIR=os.environ.get("SPICE_MODEL_DIR")
-spice["fet_models"] = {"TT": [SPICE_MODEL_DIR + "/tt.sp"],
-                       "FF": [SPICE_MODEL_DIR + "/ff.sp"],
-                       "FS": [SPICE_MODEL_DIR + "/ff.sp"],
-                       "SF": [SPICE_MODEL_DIR + "/ss.sp"],
-                       "SS": [SPICE_MODEL_DIR + "/ss.sp"],
-                       "ST": [SPICE_MODEL_DIR + "/ss.sp"],
-                       "TS": [SPICE_MODEL_DIR + "/tt.sp"],
-                       "FT": [SPICE_MODEL_DIR + "/ff.sp"],
-                       "TF": [SPICE_MODEL_DIR + "/tt.sp"],
+spice["fet_models"] = {"TT": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                       "FF": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
+                       "FS": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                       "SF": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
+                       "SS": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                       "ST": [SPICE_MODEL_DIR + "/ss/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                       "TS": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ss/nmos.sp"],
+                       "FT": [SPICE_MODEL_DIR + "/ff/pmos.sp", SPICE_MODEL_DIR + "/nom/nmos.sp"],
+                       "TF": [SPICE_MODEL_DIR + "/nom/pmos.sp", SPICE_MODEL_DIR + "/ff/nmos.sp"],
                        }
 
 
@@ -419,7 +368,7 @@ spice["nom_temperature"] = 25        # Nominal temperature (celcius)
 
 # analytical delay parameters
 spice["nom_threshold"] = 1.3   # Nominal Threshold voltage in Volts
-# FIXME: These need to be updated for SKY130, they are copied from FreePDK45.
+# FIXME: These need to be updated for SCMOS, they are copied from FreePDK45.
 spice["wire_unit_r"] = 0.075    # Unit wire resistance in ohms/square
 spice["wire_unit_c"] = 0.64     # Unit wire capacitance ff/um^2
 spice["min_tx_drain_c"] = 0.7   # Minimum transistor drain capacitance in ff

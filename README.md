@@ -462,6 +462,12 @@ The `layers.map` file is added to the repository and can be found [here](https:/
 
   ```
 
+## Sample OpenRAM Configurations
+  Two sample OpenRAM configurations are added to the repository. To use it, copy the `sky130A` directory into the `technology` directory of OpenRAM.
+  
+  * [Sample 1](https://github.com/ShonTaware/SRAM_SKY130/tree/main/OpenRAM/Sample1/sky130A): It contains the default OpenRAM configurations with only modified technology file.
+  * [Sample 2](https://github.com/ShonTaware/SRAM_SKY130/tree/main/OpenRAM/Sample2/sky130A): It modified technology files, mag_lib, sp_lib, gds_lib, tech.py and layers.map files.
+
 ## Usage of OpenRAM
   A configuration file need to be generated in python which contains all parameters required for the compiler. Every parameter mentioned in the configuration file overrides the default value of the parameter. If a parameter is not mentioned in the file, compiler will take a default value.
   
