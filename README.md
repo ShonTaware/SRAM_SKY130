@@ -19,6 +19,7 @@
       - [sp_lib directory](#sp_lib-directory)
       - [layers.map](#layersmap)
       - [tech Directory](#tech-directory)
+    - [Sample OpenRAM Configurations](#sample-openram-configurations)
     - [Usage of OpenRAM](#usage-of-openram)
     - [Issues, Challenges and Fixes in configuring OpenRAM for SKY130](#issues-challenges-and-fixes-in-configuring-openram-for-sky130)
   - [Pre-Layout Schematic and Simulations](#pre-layout-schematic-and-simulations)
