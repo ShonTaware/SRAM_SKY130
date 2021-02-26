@@ -78,7 +78,7 @@
           $    cd xschem
           $    ./configure
           $    make
-          $    make install
+          $    sudo make install
 
   3. **Magic:** Following commands can be used for installing only the Magic Layout tool.
 
@@ -87,7 +87,7 @@
           $    cd magic
           $    ./configure
           $    make
-          $    make install      
+          $    sudo make install      
 
 # SRAM Memory Architecture
   SRAM Memory is a block which designed by integrating several sub-blocks. This SRAM memory architecture for a multi-port SRAM memory is shown in the diagram below.
