@@ -564,10 +564,14 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 ### Read Operation
   The read operation is a critical one in SRAM cell. This is becuase, before enabling the access transistors, the bit-lines are first pre-charged to high logic. Depending upon the bit store, one of the bit-line is pulled back to logic low when the access transistors are enabled. 
 
+	$    ngspice Prelayout/Spice_models/SRAM_6T_Cell_read.spice
+
   <img src="Prelayout/Simulations/sram_cell_6T_read_waveform.JPG">
 
 ### Write Operation
   The bit to be written is first loaded to the bit-line and its inverted bit is loaded on the other bit-line. Once the access transistors are enabled the bit values on bit-lines are over-written on the inverter logic.
+
+	$    ngspice Prelayout/Spice_models/SRAM_6T_Cell_write.spice
 
   <img src="Prelayout/Simulations/sram_cell_6T_write_waveform.JPG">
 
