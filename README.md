@@ -63,6 +63,9 @@
       $    sudo apt-get install git
       $    git clone https://github.com/ShonTaware/SRAM_SKY130.git
       $    cd SRAM_SKY130
+
+  To install Ngspice, Magic and Xschem at once use commands below. It can be skipped otherwise.   
+
       $    chmod +777 setup_environment.sh
       $    ./setup_environment.sh
 
@@ -115,26 +118,13 @@
 The detailed OpenRAM configuration, usage and issues for SKY130 pdk is documented in this section.
 
 ## Installation and Setup of OpenRAM
-The detailed OpenRAM project can be found [here](https://github.com/VLSIDA/OpenRAM). The steps to the installation and setup are mentioned below.
-
-1. **Clone the OpenRAM project**
-  ```
-    $    git clone https://github.com/VLSIDA/OpenRAM.git
+The detailed OpenRAM project can be found [here](https://github.com/VLSIDA/OpenRAM). The steps to the installation and setup are mentioned below. The steps following will clone the OpenRAM compiler project and setup paths in `.bashrc` file.
 
   ```
-
-2. **Configure Path**
-  Add following lines in `.bashrc` file.
-  ```
-    $    export OPENRAM_HOME="$<path-to-openram>/openram/compiler"
-    $    export OPENRAM_TECH="$<path-to-openram>/openram/technology"
-
-    # Add Python Path of OpenRAM compiler
-    $    export PYTHONPATH="$PYTHONPATH:$OPENRAM_HOME"
-
-    # Set Path to PDKs
-    $    export SKY130A="/<path-to-pdks>/sky130"
-
+    $    chmod 777 openram_setup.sh
+    $    ./openram_setup.sh
+    $    source ~/.bashrc
+      
   ```
 
 ## OpenRAM Directory Structure
