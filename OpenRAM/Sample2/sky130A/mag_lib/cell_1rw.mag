@@ -1,8 +1,6 @@
 magic
 tech sky130A
-timestamp 1613392491
-<< fence >>
-rect -83 -413 251 133
+timestamp 1615126494
 << nwell >>
 rect -41 -23 243 119
 << nmos >>
@@ -234,8 +232,7 @@ rect 119 -363 229 -362
 rect 246 -363 250 -345
 rect 119 -371 161 -363
 rect 225 -372 250 -363
-rect 56 -391 87 -383
-rect 63 -413 81 -391
+rect 56 -413 87 -383
 << viali >>
 rect -15 69 9 93
 rect 131 69 155 93
@@ -265,12 +262,14 @@ rect 223 -363 229 -345
 rect 246 -363 251 -345
 rect -83 -388 -56 -369
 rect 224 -381 251 -363
+<< comment >>
+rect -83 -413 251 133
 << labels >>
 flabel metal1 45 65 99 94 0 FreeSans 152 0 0 0 vdd
 flabel locali 184 -51 213 -37 0 FreeSans 104 0 0 0 qbar
 flabel locali -49 -87 -25 -72 0 FreeSans 104 0 0 0 q
 flabel metal1 46 -243 81 -226 0 FreeSans 120 0 0 0 gnd
 flabel locali -55 -368 -31 -353 0 FreeSans 120 0 0 0 bl
-flabel locali 171 -363 216 -346 0 FreeSans 120 0 0 0 blbar
+flabel locali 171 -363 216 -346 0 FreeSans 120 0 0 0 br
 flabel locali 64 -407 79 -393 0 FreeSans 72 0 0 0 wl
 << end >>

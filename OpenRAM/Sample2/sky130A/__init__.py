@@ -1,9 +1,5 @@
-# See LICENSE for licensing information.
-#
-# Copyright (c) 2016-2019 Regents of the University of California and The Board
-# of Regents for the Oklahoma Agricultural and Mechanical College
-# (acting for and on behalf of Oklahoma State University)
-# All rights reserved.
+# Created by: ShoanT (taware.shon@gmail.com)
+# Saturday 06 March 2021 10∶52∶14 PM
 #
 #!/usr/bin/python
 """
