@@ -5,6 +5,8 @@ load cell_1rw
 gds write ../gds_lib/cell_1rw.gds
 load replica_cell_1rw
 gds write ../gds_lib/replica_cell_1rw.gds
+load dummy_cell_1rw
+gds write ../gds_lib/dummy_cell_1rw.gds
 load sense_amp
 gds write ../gds_lib/sense_amp.gds
 load tri_gate

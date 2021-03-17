@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1615133637
+timestamp 1615986123
 << nwell >>
 rect 117 564 564 771
 rect 748 564 1341 771
@@ -402,16 +402,10 @@ rect 351 495 766 511
 rect 215 494 766 495
 rect 783 494 791 511
 rect 215 493 791 494
-rect 47 327 77 332
 rect 127 327 160 335
-rect 47 325 135 327
-rect 47 308 54 325
-rect 71 310 135 325
+rect 127 310 135 327
 rect 152 310 160 327
-rect 71 308 160 310
-rect 47 307 160 308
-rect 47 302 77 307
-rect 127 302 160 307
+rect 127 302 160 310
 rect 215 255 235 493
 rect 326 487 359 493
 rect 758 486 791 493
@@ -604,7 +598,7 @@ rect 1016 709 1033 726
 rect 1162 709 1179 726
 rect 1300 709 1317 726
 rect 515 547 532 564
-rect 54 308 71 325
+rect 135 310 152 327
 rect 1146 547 1163 564
 rect 685 447 702 464
 rect 284 361 301 378
@@ -652,14 +646,15 @@ rect 508 564 538 570
 rect 508 547 515 564
 rect 532 547 538 564
 rect 277 380 307 385
-rect 104 378 307 380
-rect 104 361 284 378
+rect 117 378 307 380
+rect 117 361 284 378
 rect 301 361 307 378
-rect 104 360 307 361
+rect 117 360 307 361
 rect 277 355 307 360
-rect 47 325 77 332
-rect 47 308 54 325
-rect 71 308 77 325
+rect 127 327 160 335
+rect 127 310 135 327
+rect 152 310 160 327
+rect 127 302 160 310
 rect 508 331 538 547
 rect 1139 564 1169 570
 rect 1139 547 1146 564
@@ -693,7 +688,6 @@ rect 1139 308 1169 314
 rect 1310 327 1340 333
 rect 1310 310 1317 327
 rect 1334 310 1340 327
-rect 47 302 77 308
 rect 1310 304 1340 310
 rect 117 144 1341 152
 rect 117 127 150 144
@@ -714,10 +708,8 @@ rect 1172 127 1241 144
 rect 1258 127 1319 144
 rect 1336 127 1341 144
 rect 117 119 1341 127
-<< comment >>
-rect 47 115 1341 771
 << labels >>
-flabel locali s 1304 451 1314 460 0 FreeSans 600 0 0 0 blb
+flabel locali s 1304 451 1314 460 0 FreeSans 600 0 0 0 br
 port 0 nsew
 flabel locali s 1321 315 1331 324 0 FreeSans 600 0 0 0 bl
 port 1 nsew
@@ -727,7 +719,7 @@ flabel metal1 s 569 714 608 733 0 FreeSans 400 0 0 0 vdd
 port 3 nsew
 flabel locali s 136 311 146 322 0 FreeSans 400 0 0 0 din
 port 4 nsew
-flabel locali s 482 368 492 379 0 FreeSans 400 0 0 0 wb
+flabel locali s 482 368 492 379 0 FreeSans 400 0 0 0 en
 port 5 nsew
 flabel locali s 223 440 233 451 0 FreeSans 200 0 0 0 net1
 flabel locali s 871 499 881 510 0 FreeSans 200 0 0 0 net3
@@ -735,4 +727,6 @@ flabel locali s 1149 318 1159 329 0 FreeSans 200 0 0 0 net4
 flabel locali s 517 316 527 327 0 FreeSans 200 0 0 0 net2
 flabel locali s 406 606 416 617 0 FreeSans 200 0 0 0 net5
 flabel locali s 1038 606 1048 617 0 FreeSans 200 0 0 0 net6
+<< properties >>
+string FIXED_BBOX 117 135 1341 717
 << end >>

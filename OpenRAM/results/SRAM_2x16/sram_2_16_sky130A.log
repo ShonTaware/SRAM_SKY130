@@ -1,0 +1,78 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.14                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========           Temp dir: /tmp/openram_shon_5164_temp/           =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 03/17/2021 18:36:51
+Technology: sky130A
+Total size: 32 bits
+Word size: 2
+Words: 16
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 1
+Output files are: 
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lvs
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.sp
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.v
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lib
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.py
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.html
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.log
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lef
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.gds
+** Submodules: 3.2 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.2 seconds
+**** Finding blockages: 0.4 seconds
+**** Converting blockages: 0.1 seconds
+**** Converting pins: 1.7 seconds
+**** Separating adjacent pins: 0.1 seconds
+**** Enclosing pins: 0.5 seconds
+*** Finding pins and blockages: 3.1 seconds
+*** Maze routing supplies: 24.6 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.7 seconds
+**** Converting blockages: 0.3 seconds
+**** Converting pins: 0.1 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.0 seconds
+*** Finding pins and blockages: 1.1 seconds
+*** Maze routing pins: 11.0 seconds
+** Routing: 71.1 seconds
+** Verification: 0.0 seconds
+** SRAM creation: 75.0 seconds
+SP: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.sp
+** Spice writing: 0.2 seconds
+GDS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.gds
+** GDS: 0.2 seconds
+LEF: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lef
+** LEF: 0.7 seconds
+LVS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+** Characterization: 1.5 seconds
+Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.py
+** Config: 0.0 seconds
+Datasheet: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.html
+** Datasheet: 0.2 seconds
+Verilog: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.v
+** Verilog: 0.0 seconds
+Extended Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_extended.py
+** Extended Config: 0.0 seconds
+** End: 78.3 seconds

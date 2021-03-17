@@ -1,6 +1,6 @@
 
 *********************** "dummy_cell_1rw" ******************************
-.SUBCKT dummy_cell_1rw bl blbar wl vdd gnd
+.SUBCKT dummy_cell_1rw bl br wl vdd gnd
 
 X0 qbar wl blbar_noconn gnd sky130_fd_pr__nfet_01v8 w=0.42u l=0.15u
 X1 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=0.42u l=0.15u

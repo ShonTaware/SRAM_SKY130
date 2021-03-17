@@ -1,0 +1,86 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.14                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========           Temp dir: /tmp/openram_shon_2736_temp/           =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 03/14/2021 16:54:46
+Technology: sky130A
+Total size: 32768 bits
+Word size: 32
+Words: 1024
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 8
+Output files are: 
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lvs
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.sp
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.v
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lib
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.py
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.html
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.log
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lef
+/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.gds
+** Submodules: 34.3 seconds
+** Placement: 0.1 seconds
+**** Retrieving pins: 0.3 seconds
+**** Analyzing pins: 25.9 seconds
+**** Finding blockages: 22.0 seconds
+**** Converting blockages: 0.1 seconds
+WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[37.06,31.400000000000002] ur=v[37.39,31.73])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[37.04,31.38] ur=v[37.42,31.76])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[49.58,31.400000000000002] ur=v[49.910000000000004,31.73])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[49.56,31.38] ur=v[49.94,31.76])
+
+**** Converting pins: 17.3 seconds
+**** Separating adjacent pins: 23.5 seconds
+**** Enclosing pins: 26.4 seconds
+*** Finding pins and blockages: 115.9 seconds
+*** Maze routing supplies: 683.3 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 23.7 seconds
+**** Converting blockages: 1.6 seconds
+**** Converting pins: 0.6 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.1 seconds
+*** Finding pins and blockages: 26.3 seconds
+*** Maze routing pins: 502.0 seconds
+** Routing: 3110.2 seconds
+** Verification: 0.0 seconds
+** SRAM creation: 3144.7 seconds
+SP: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.sp
+** Spice writing: 4.7 seconds
+GDS: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.gds
+** GDS: 3.7 seconds
+LEF: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lef
+** LEF: 83.4 seconds
+LVS: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lvs.sp
+** LVS writing: 0.2 seconds
+LIB: Characterizing... 
+** Characterization: 19.3 seconds
+Config: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.py
+** Config: 0.0 seconds
+Datasheet: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.html
+** Datasheet: 0.4 seconds
+Verilog: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.v
+** Verilog: 0.0 seconds
+Extended Config: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A_extended.py
+** Extended Config: 0.0 seconds
+** End: 3256.5 seconds

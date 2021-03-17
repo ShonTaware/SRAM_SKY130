@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1615136781
+timestamp 1615985205
 << nwell >>
 rect -106 271 1165 451
 << nmos >>
@@ -738,35 +738,35 @@ rect 21 234 47 260
 rect -59 152 -33 178
 rect 910 203 936 229
 << metal2 >>
-rect 17 260 80 263
+rect 17 260 51 263
 rect 17 234 21 260
-rect 47 234 80 260
-rect 17 231 80 234
-rect 907 229 970 232
+rect 47 234 51 260
+rect 17 231 51 234
+rect 907 229 939 232
 rect 907 203 910 229
-rect 936 203 970 229
-rect 907 200 970 203
-rect -98 178 -30 181
-rect -98 152 -59 178
+rect 936 203 939 229
+rect 907 200 939 203
+rect -61 178 -30 181
+rect -61 152 -59 178
 rect -33 152 -30 178
-rect -98 149 -30 152
-<< comment >>
-rect -106 -23 1165 451
+rect -61 149 -30 152
 << labels >>
-flabel metal2 s 47 231 80 263 0 FreeSans 400 0 0 0 D
+flabel metal2 s 21 234 47 260 0 FreeSans 400 0 0 0 D
 port 2 nsew
 flabel locali s 183 134 191 141 0 FreeSans 200 0 0 0 net1
 flabel locali s 273 160 281 168 0 FreeSans 200 0 0 0 net2
 flabel metal1 s 486 396 525 416 0 FreeSans 400 0 0 0 vdd
 port 0 nsew
-flabel metal1 s 472 -14 511 6 0 FreeSans 400 0 0 0 gnd
+flabel metal1 s 433 -19 568 14 0 FreeSans 400 0 0 0 gnd
 port 1 nsew
 flabel locali s 529 128 537 136 0 FreeSans 200 0 0 0 net3
 flabel locali s 765 134 773 141 0 FreeSans 200 0 0 0 net4
 flabel locali s 852 310 862 322 0 FreeSans 200 0 0 0 net5
-flabel metal2 s 936 200 970 232 0 FreeSans 400 0 0 0 Q
+flabel metal2 s 910 203 936 229 0 FreeSans 400 0 0 0 Q
 port 9 nsew
-flabel metal2 s -98 149 -59 181 0 FreeSans 240 0 0 0 clk
+flabel metal2 s -59 152 -33 178 0 FreeSans 240 0 0 0 clk
 port 10 nsew
 flabel locali s 111 144 122 157 0 FreeSans 240 0 0 0 clkb
+<< properties >>
+string FIXED_BBOX -106 -3 1165 406
 << end >>
