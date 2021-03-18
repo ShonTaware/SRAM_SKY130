@@ -721,9 +721,12 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
   - Efabless OpenLANE: https://github.com/efabless/openlane
   - OpenRAM: https://vlsida.github.io/OpenRAM/
   - M. Guthaus et al., “OpenRAM: An open-source memory compiler,” *2016 IEEE/ACM International Conference on Computer-Aided Design(ICCAD)*, Austin, TX, 2016, pp. 1-6.
+  - Nickson Jose: [Standard cell design and characterization using openlane flow](https://github.com/nickson-jose/vsdstdcelldesign)
 
 # Acknowledgement
   - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+  - Matthew R. Guthaus, University of California, Santa Cruz.
+  - [Pradeepkumar S K](https://github.com/pradeepsk13), Assistant Professor, Electronics and Communication Engineering, Kalpataru Institute of Technology, Tiptur, Karnataka.
   
 # Contact Information
   - [Shon Taware](https://www.linkedin.com/in/Shon-Taware/), M.Tech. Embedded Systems and VLSI Design
