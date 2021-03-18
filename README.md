@@ -457,7 +457,7 @@ The `layers.map` file is added to the repository and can be found [here](https:/
   The sample OpenRAM configurations are added to the repository. To use it, copy the `sky130A` directory into the `technology` directory of OpenRAM.
 
 ```
-  cp -rf OpenRAM/Sample2/sky130A $OPENRAM_TECH/
+  cp -rf OpenRAM/sky130A $OPENRAM_TECH/
 ```
   * [Sample 2](https://github.com/ShonTaware/SRAM_SKY130/tree/main/OpenRAM/Sample2/sky130A): It modified technology files, mag_lib, sp_lib, gds_lib, tech.py and layers.map files.
 

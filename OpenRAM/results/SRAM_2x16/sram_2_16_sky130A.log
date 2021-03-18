@@ -1,3 +1,17 @@
+[globals/init_openram]: Initializing OpenRAM...
+[globals/setup_paths]: Setting up paths...
+[globals/setup_paths]: Temporary files saved in /tmp/openram_shon_4308_temp/
+[globals/read_config]: Configuration file is /home/shon/vsd_workshop/work/tools/OpenRAM_files/myconfig_sky130_2.py
+[globals/read_config]: Output saved in /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/
+[globals/import_tech]: Importing technology: sky130A
+[globals/import_tech]: Adding technology path: /home/shon/vsd_workshop/work/tools/OpenRAM/technology
+[globals/init_paths]: Creating temp directory: /tmp/openram_shon_4308_temp/
+[globals/setup_bitcell]: Using bitcell: bitcell_1port
+[characterizer/<module>]: Initializing characterizer...
+[characterizer/<module>]: Analytical model enabled.
+[verify/<module>]: Initializing verify...
+[verify/<module>]: LVS/DRC/PEX disabled.
+[globals/setup_bitcell]: Using bitcell: bitcell_1port
 |==============================================================================|
 |=========                      OpenRAM v1.1.14                       =========|
 |=========                                                            =========|
@@ -7,10 +21,10 @@
 |=========                                                            =========|
 |=========          Usage help: openram-user-group@ucsc.edu           =========|
 |=========        Development help: openram-dev-group@ucsc.edu        =========|
-|=========           Temp dir: /tmp/openram_shon_5164_temp/           =========|
+|=========           Temp dir: /tmp/openram_shon_4308_temp/           =========|
 |=========                See LICENSE for license info                =========|
 |==============================================================================|
-** Start: 03/17/2021 18:36:51
+** Start: 03/18/2021 18:13:26
 Technology: sky130A
 Total size: 32 bits
 Word size: 2
@@ -23,6 +37,10 @@ W-only ports: 0
 DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
 DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
 Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+[bitcell_1port/__init__]: Create bitcell
+[sram_config/recompute_sizes]: Recomputing with words per row: 1
+[sram_config/recompute_sizes]: Rows: 16 Cols: 2
+[sram_config/recompute_sizes]: Row addr size: 4 Col addr size: 0 Bank addr size: 4
 Words per row: 1
 Output files are: 
 /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lvs
@@ -34,45 +52,895 @@ Output files are:
 /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.log
 /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lef
 /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.gds
-** Submodules: 3.2 seconds
+[sram/__init__]: Changed OPTS wpr=1
+[sram/__init__]: OPTS wpr=1
+[sram/__init__]: create sram of size 2 with 16 num of words 1 banks
+[dff_array/__init__]: Creating row_addr_dff rows=4 cols=1
+[dff_array/__init__]: Creating data_dff rows=1 cols=2
+[bank/__init__]: create sram of size 2 with 16 words
+[port_address/__init__]: create data port of cols 2 rows 16
+[and2_dec/__init__]: Creating and2_dec and2_dec
+[pnand2/__init__]: creating pnand2 structure pnand2 with size of 1
+[pinv/__init__]: creating pinv structure pinv with size of 1
+[pinv/determine_tx_mults]: Height avail 3.7400 PMOS 1.7650 NMOS 1.7650
+[and3_dec/__init__]: Creating and3_dec and3_dec
+[pnand3/__init__]: creating pnand3 structure pnand3 with size of 1
+[and4_dec/__init__]: Creating and4_dec and4_dec
+[pnand4/__init__]: creating pnand4 structure pnand4 with size of 1
+[wordline_driver_array/__init__]: Creating wordline_driver_array
+[wordline_driver/__init__]: Creating wordline_driver wordline_driver
+[and2_dec/__init__]: Creating and2_dec and2_dec_0
+[bitcell_base_array/__init__]: Creating replica_bitcell_array 16 x 2
+[replica_bitcell_array/__init__]: Creating replica_bitcell_array 16 x 2 rbls: None left_rbl: None right_rbl: None
+[bitcell_base_array/__init__]: Creating bitcell_array 16 x 2
+[bitcell_array/__init__]: Creating bitcell_array 16 x 2
+[bitcell_base_array/__init__]: Creating replica_column 19 x 1
+[replica_bitcell_1port/__init__]: Create replica bitcell object
+[dummy_bitcell_1port/__init__]: Create dummy bitcell
+[bitcell_base_array/__init__]: Creating dummy_array 1 x 2
+[bitcell_base_array/__init__]: Creating dummy_array_0 1 x 2
+[bitcell_base_array/__init__]: Creating dummy_array_1 1 x 2
+[bitcell_base_array/__init__]: Creating dummy_array_2 19 x 1
+[bitcell_base_array/__init__]: Creating dummy_array_3 19 x 1
+[port_data/__init__]: create data port of size 2 with 1 words per row
+[precharge/__init__]: creating precharge cell precharge
+[precharge_array/__init__]: Creating precharge_array
+[precharge/__init__]: creating precharge cell precharge_0
+[sense_amp_array/__init__]: Creating sense_amp_array
+[sense_amp/__init__]: Create sense_amp
+[write_driver_array/__init__]: Creating write_driver_array
+[write_driver/__init__]: Create write_driver
+[control_logic/__init__]: Creating control_logic_rw
+[dff_buf/__init__]: Creating dff_buf
+[pinv/__init__]: creating pinv structure pinv_0 with size of 2
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pinv/__init__]: creating pinv structure pinv_1 with size of 4
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[dff_buf_array/__init__]: Creating dff_buf_array
+[dff_buf/__init__]: Creating dff_buf_0
+[pand2/__init__]: Creating pand2 pand2
+[pnand2/__init__]: creating pnand2 structure pnand2_0 with size of 1
+[pdriver/__init__]: creating pdriver pdriver
+[pinv/__init__]: creating pinv structure pinv_2 with size of 12
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pbuf/__init__]: creating pbuf with size of 2
+[pinv/__init__]: creating pinv structure pinv_3 with size of 1
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pinv/__init__]: creating pinv structure pinv_4 with size of 2
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pdriver/__init__]: creating pdriver pdriver_0
+[pinv/__init__]: creating pinv structure pinv_5 with size of 1
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pinv/__init__]: creating pinv structure pinv_6 with size of 5
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pinv/__init__]: creating pinv structure pinv_7 with size of 15
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pdriver/__init__]: creating pdriver pdriver_1
+[pinv/__init__]: creating pinv structure pinv_8 with size of 1
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pand3/__init__]: Creating pand3 pand3
+[pnand3/__init__]: creating pnand3 structure pnand3_0 with size of 1
+[pdriver/__init__]: creating pdriver pdriver_2
+[pinv/__init__]: creating pinv structure pinv_9 with size of 10
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pand3/__init__]: Creating pand3 pand3_0
+[pdriver/__init__]: creating pdriver pdriver_3
+[pinv/__init__]: creating pinv structure pinv_10 with size of 2
+[pinv/determine_tx_mults]: Height avail 2.7100 PMOS 1.2500 NMOS 1.2500
+[pdriver/__init__]: creating pdriver pdriver_4
+[pnand2/__init__]: creating pnand2 structure pnand2_1 with size of 1
+[delay_chain/__init__]: creating delay chain [4, 4, 4, 4, 4, 4, 4, 4, 4]
+[pinv/__init__]: creating pinv structure pinv_11 with size of 1
+[pinv/determine_tx_mults]: Height avail 7.0500 PMOS 3.4200 NMOS 3.4200
+** Submodules: 1.7 seconds
 ** Placement: 0.0 seconds
+[router_tech/__init__]: Minimum track width: 0.820
+[router_tech/__init__]: Minimum track space: 0.300
+[router_tech/__init__]: Minimum track wire width: 0.520
+[router_tech/__init__]: Track factor: v[1.2195121951219512,1.2195121951219512]
+[router/init_bbox]: Size: 121.57 x 131.195
+[supply_tree_router/route]: Running supply router on vdd and gnd...
+[router/init_bbox]: Size: 121.57 x 131.195
+[router/retrieve_pins]: Retrieving pins for vdd.
+[router/retrieve_pins]: Retrieving pins for gnd.
 **** Retrieving pins: 0.0 seconds
-**** Analyzing pins: 0.2 seconds
-**** Finding blockages: 0.4 seconds
-**** Converting blockages: 0.1 seconds
-**** Converting pins: 1.7 seconds
+[router/analyze_pins]: Analyzing pin groups for vdd.
+[router/analyze_pins]: Analyzing pin groups for gnd.
+**** Analyzing pins: 0.1 seconds
+[router/find_blockages]: Finding blockages.
+**** Finding blockages: 0.3 seconds
+[router/convert_blockages]: Converting blockages.
+**** Converting blockages: 0.0 seconds
+[router/convert_pins]: Converting pins for vdd.
+[router/convert_pins]: Converting pins for gnd.
+**** Converting pins: 1.1 seconds
+[router/separate_adjacent_pin]: Comparing vdd and gnd adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
 **** Separating adjacent pins: 0.1 seconds
-**** Enclosing pins: 0.5 seconds
-*** Finding pins and blockages: 3.1 seconds
-*** Maze routing supplies: 24.6 seconds
+[router/enclose_pins]: Enclosing pins for vdd
+[router/enclose_pins]: Enclosing pins for gnd
+**** Enclosing pins: 0.4 seconds
+*** Finding pins and blockages: 2.0 seconds
+[supply_tree_router/route_pins]: Routing vdd with 74 pin components to connect.
+[supply_tree_router/route_pins]: Creating adjacency matrix
+[supply_tree_router/route_pins]: Finding MinimumSpanning Tree
+[supply_tree_router/route_signal]: Routing 0 to 4 with scale 5
+[router/run_router]: Found path: cost=54 [[v3d[-68, -6, 0]], [v3d[-67, -6, 0]], [v3d[-66, -6, 0]], [v3d[-65, -6, 0]], [v3d[-64, -6, 0]], [v3d[-63, -6, 0]], [v3d[-63, -6, 1]], [v3d[-63, -5, 1]], [v3d[-63, -4, 1]], [v3d[-63, -3, 1]], [v3d[-63, -2, 1]], [v3d[-63, -1, 1]], [v3d[-63, 0, 1]], [v3d[-63, 1, 1]], [v3d[-63, 2, 1]], [v3d[-63, 3, 1]], [v3d[-63, 4, 1]], [v3d[-63, 5, 1]], [v3d[-63, 6, 1]], [v3d[-63, 7, 1]], [v3d[-63, 8, 1]], [v3d[-63, 9, 1]], [v3d[-63, 10, 1]], [v3d[-63, 11, 1]], [v3d[-63, 12, 1]], [v3d[-63, 13, 1]], [v3d[-63, 14, 1]], [v3d[-63, 15, 1]], [v3d[-63, 16, 1]], [v3d[-63, 17, 1]], [v3d[-63, 18, 1]], [v3d[-63, 19, 1]], [v3d[-63, 20, 1]], [v3d[-63, 21, 1]], [v3d[-63, 22, 1]], [v3d[-63, 23, 1]], [v3d[-63, 24, 1]], [v3d[-63, 25, 1]], [v3d[-63, 26, 1]], [v3d[-63, 27, 1]], [v3d[-63, 28, 1]], [v3d[-63, 29, 1]], [v3d[-63, 30, 1]], [v3d[-63, 31, 1]], [v3d[-63, 32, 1]], [v3d[-63, 33, 1]], [v3d[-63, 34, 1]], [v3d[-63, 35, 1]], [v3d[-63, 36, 1]], [v3d[-63, 37, 1]], [v3d[-63, 38, 1]], [v3d[-63, 39, 1]], [v3d[-63, 39, 0]]]
+[supply_tree_router/route_signal]: Routing 1 to 3 with scale 5
+[router/run_router]: Found path: cost=24 [[v3d[-63, 101, 0]], [v3d[-63, 101, 1]], [v3d[-63, 100, 1]], [v3d[-63, 99, 1]], [v3d[-63, 98, 1]], [v3d[-63, 97, 1]], [v3d[-63, 96, 1]], [v3d[-63, 95, 1]], [v3d[-63, 94, 1]], [v3d[-63, 93, 1]], [v3d[-63, 92, 1]], [v3d[-63, 91, 1]], [v3d[-63, 90, 1]], [v3d[-63, 89, 1]], [v3d[-63, 88, 1]], [v3d[-63, 87, 1]], [v3d[-63, 86, 1]], [v3d[-63, 85, 1]], [v3d[-63, 84, 1]], [v3d[-63, 83, 1]], [v3d[-63, 82, 1]], [v3d[-63, 81, 1]], [v3d[-63, 81, 0]]]
+[supply_tree_router/route_signal]: Routing 1 to 10 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 102, 0]], [v3d[-61, 102, 0]], [v3d[-60, 102, 0]], [v3d[-59, 102, 0]], [v3d[-58, 102, 0]], [v3d[-57, 102, 0]], [v3d[-56, 102, 0]]]
+[supply_tree_router/route_signal]: Routing 2 to 8 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 121, 0]], [v3d[-61, 121, 0]], [v3d[-60, 121, 0]], [v3d[-59, 121, 0]], [v3d[-58, 121, 0]], [v3d[-57, 121, 0]], [v3d[-56, 121, 0]]]
+[supply_tree_router/route_signal]: Routing 2 to 10 with scale 5
+[router/run_router]: Found path: cost=32 [[v3d[-62, 121, 0]], [v3d[-62, 120, 0]], [v3d[-61, 120, 0]], [v3d[-60, 120, 0]], [v3d[-59, 120, 0]], [v3d[-58, 120, 0]], [v3d[-57, 120, 0]], [v3d[-56, 120, 0]], [v3d[-56, 120, 1]], [v3d[-56, 119, 1]], [v3d[-56, 118, 1]], [v3d[-56, 117, 1]], [v3d[-56, 116, 1]], [v3d[-56, 115, 1]], [v3d[-56, 114, 1]], [v3d[-56, 113, 1]], [v3d[-56, 112, 1]], [v3d[-56, 111, 1]], [v3d[-56, 110, 1]], [v3d[-56, 109, 1]], [v3d[-56, 108, 1]], [v3d[-56, 107, 1]], [v3d[-56, 106, 1]], [v3d[-56, 105, 1]], [v3d[-56, 104, 1]], [v3d[-56, 103, 1]], [v3d[-56, 102, 1]], [v3d[-56, 102, 0]]]
+[supply_tree_router/route_signal]: Routing 3 to 5 with scale 5
+[router/run_router]: Found path: cost=23 [[v3d[-63, 80, 0]], [v3d[-63, 80, 1]], [v3d[-63, 79, 1]], [v3d[-63, 78, 1]], [v3d[-63, 77, 1]], [v3d[-63, 76, 1]], [v3d[-63, 75, 1]], [v3d[-63, 74, 1]], [v3d[-63, 73, 1]], [v3d[-63, 72, 1]], [v3d[-63, 71, 1]], [v3d[-63, 70, 1]], [v3d[-63, 69, 1]], [v3d[-63, 68, 1]], [v3d[-63, 67, 1]], [v3d[-63, 66, 1]], [v3d[-63, 65, 1]], [v3d[-63, 64, 1]], [v3d[-63, 63, 1]], [v3d[-63, 62, 1]], [v3d[-63, 61, 1]], [v3d[-63, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 3 to 9 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 81, 0]], [v3d[-61, 81, 0]], [v3d[-60, 81, 0]], [v3d[-59, 81, 0]], [v3d[-58, 81, 0]], [v3d[-57, 81, 0]], [v3d[-56, 81, 0]]]
+[supply_tree_router/route_signal]: Routing 4 to 7 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 40, 0]], [v3d[-61, 40, 0]], [v3d[-60, 40, 0]], [v3d[-59, 40, 0]], [v3d[-58, 40, 0]], [v3d[-57, 40, 0]], [v3d[-56, 40, 0]]]
+[supply_tree_router/route_signal]: Routing 5 to 6 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 61, 0]], [v3d[-61, 61, 0]], [v3d[-60, 61, 0]], [v3d[-59, 61, 0]], [v3d[-58, 61, 0]], [v3d[-57, 61, 0]], [v3d[-56, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 6 to 7 with scale 5
+[router/run_router]: Found path: cost=24 [[v3d[-56, 60, 0]], [v3d[-56, 60, 1]], [v3d[-56, 59, 1]], [v3d[-56, 58, 1]], [v3d[-56, 57, 1]], [v3d[-56, 56, 1]], [v3d[-56, 55, 1]], [v3d[-56, 54, 1]], [v3d[-56, 53, 1]], [v3d[-56, 52, 1]], [v3d[-56, 51, 1]], [v3d[-56, 50, 1]], [v3d[-56, 49, 1]], [v3d[-56, 48, 1]], [v3d[-56, 47, 1]], [v3d[-56, 46, 1]], [v3d[-56, 45, 1]], [v3d[-56, 44, 1]], [v3d[-56, 43, 1]], [v3d[-56, 42, 1]], [v3d[-56, 41, 1]], [v3d[-56, 40, 1]], [v3d[-56, 40, 0]]]
+[supply_tree_router/route_signal]: Routing 8 to 12 with scale 5
+[router/run_router]: Found path: cost=55 [[v3d[-55, 122, 0]], [v3d[-54, 122, 0]], [v3d[-53, 122, 0]], [v3d[-52, 122, 0]], [v3d[-51, 122, 0]], [v3d[-50, 122, 0]], [v3d[-49, 122, 0]], [v3d[-48, 122, 0]], [v3d[-47, 122, 0]], [v3d[-46, 122, 0]], [v3d[-45, 122, 0]], [v3d[-44, 122, 0]], [v3d[-43, 122, 0]], [v3d[-42, 122, 0]], [v3d[-41, 122, 0]], [v3d[-40, 122, 0]], [v3d[-39, 122, 0]], [v3d[-38, 122, 0]], [v3d[-37, 122, 0]], [v3d[-36, 122, 0]], [v3d[-35, 122, 0]], [v3d[-34, 122, 0]], [v3d[-33, 122, 0]], [v3d[-32, 122, 0]], [v3d[-31, 122, 0]], [v3d[-30, 122, 0]], [v3d[-29, 122, 0]], [v3d[-28, 122, 0]], [v3d[-27, 122, 0]], [v3d[-26, 122, 0]], [v3d[-25, 122, 0]], [v3d[-24, 122, 0]], [v3d[-23, 122, 0]], [v3d[-22, 122, 0]], [v3d[-21, 122, 0]], [v3d[-20, 122, 0]], [v3d[-19, 122, 0]], [v3d[-18, 122, 0]], [v3d[-17, 122, 0]], [v3d[-16, 122, 0]], [v3d[-15, 122, 0]], [v3d[-14, 122, 0]], [v3d[-13, 122, 0]], [v3d[-12, 122, 0]], [v3d[-11, 122, 0]], [v3d[-10, 122, 0]], [v3d[-10, 122, 1]], [v3d[-10, 123, 1]], [v3d[-10, 124, 1]], [v3d[-10, 125, 1]], [v3d[-10, 126, 1]], [v3d[-10, 127, 1]], [v3d[-10, 128, 1]], [v3d[-10, 128, 0]]]
+[supply_tree_router/route_signal]: Routing 11 to 12 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[-10, 137, 0]], [v3d[-10, 137, 1]], [v3d[-10, 136, 1]], [v3d[-10, 135, 1]], [v3d[-10, 134, 1]], [v3d[-10, 133, 1]], [v3d[-10, 132, 1]], [v3d[-10, 131, 1]], [v3d[-10, 130, 1]], [v3d[-10, 129, 1]], [v3d[-10, 129, 0]]]
+[supply_tree_router/route_signal]: Routing 12 to 14 with scale 5
+[router/run_router]: Found path: cost=49 [[v3d[-9, 128, 0]], [v3d[-8, 128, 0]], [v3d[-7, 128, 0]], [v3d[-6, 128, 0]], [v3d[-5, 128, 0]], [v3d[-4, 128, 0]], [v3d[-3, 128, 0]], [v3d[-2, 128, 0]], [v3d[-1, 128, 0]], [v3d[0, 128, 0]], [v3d[1, 128, 0]], [v3d[2, 128, 0]], [v3d[3, 128, 0]], [v3d[4, 128, 0]], [v3d[5, 128, 0]], [v3d[6, 128, 0]], [v3d[6, 128, 1]], [v3d[6, 127, 1]], [v3d[6, 126, 1]], [v3d[6, 125, 1]], [v3d[6, 124, 1]], [v3d[6, 123, 1]], [v3d[6, 122, 1]], [v3d[6, 121, 1]], [v3d[6, 120, 1]], [v3d[6, 119, 1]], [v3d[6, 118, 1]], [v3d[6, 117, 1]], [v3d[6, 116, 1]], [v3d[6, 115, 1]], [v3d[6, 114, 1]], [v3d[6, 113, 1]], [v3d[6, 112, 1]], [v3d[6, 111, 1]], [v3d[6, 110, 1]], [v3d[6, 109, 1]], [v3d[6, 108, 1]], [v3d[6, 107, 1]], [v3d[6, 106, 1]], [v3d[6, 105, 1]], [v3d[6, 104, 1]], [v3d[6, 103, 1]], [v3d[6, 102, 1]], [v3d[6, 101, 1]], [v3d[6, 100, 1]], [v3d[6, 99, 1]], [v3d[6, 98, 1]], [v3d[6, 98, 0]]]
+[supply_tree_router/route_signal]: Routing 13 to 17 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 48, 0]], [v3d[8, 48, 0]], [v3d[9, 48, 0]], [v3d[10, 48, 0]], [v3d[11, 48, 0]], [v3d[12, 48, 0]], [v3d[13, 48, 0]], [v3d[14, 48, 0]], [v3d[15, 48, 0]]]
+[supply_tree_router/route_signal]: Routing 14 to 15 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[7, 97, 0]], [v3d[7, 97, 1]], [v3d[7, 96, 1]], [v3d[7, 95, 1]], [v3d[7, 94, 1]], [v3d[7, 93, 1]], [v3d[7, 92, 1]], [v3d[7, 91, 1]], [v3d[7, 90, 1]], [v3d[7, 89, 1]], [v3d[7, 88, 1]], [v3d[7, 87, 1]], [v3d[7, 86, 1]], [v3d[7, 86, 0]]]
+[supply_tree_router/route_signal]: Routing 14 to 19 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 97, 0]], [v3d[8, 97, 0]], [v3d[9, 97, 0]], [v3d[10, 97, 0]], [v3d[11, 97, 0]], [v3d[12, 97, 0]], [v3d[13, 97, 0]], [v3d[14, 97, 0]], [v3d[15, 97, 0]]]
+[supply_tree_router/route_signal]: Routing 15 to 18 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 85, 0]], [v3d[8, 85, 0]], [v3d[9, 85, 0]], [v3d[10, 85, 0]], [v3d[11, 85, 0]], [v3d[12, 85, 0]], [v3d[13, 85, 0]], [v3d[14, 85, 0]], [v3d[15, 85, 0]]]
+[supply_tree_router/route_signal]: Routing 16 to 20 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 61, 0]], [v3d[8, 61, 0]], [v3d[9, 61, 0]], [v3d[10, 61, 0]], [v3d[11, 61, 0]], [v3d[12, 61, 0]], [v3d[13, 61, 0]], [v3d[14, 61, 0]], [v3d[15, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 17 to 20 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[16, 49, 0]], [v3d[16, 49, 1]], [v3d[16, 50, 1]], [v3d[16, 51, 1]], [v3d[16, 52, 1]], [v3d[16, 53, 1]], [v3d[16, 54, 1]], [v3d[16, 55, 1]], [v3d[16, 56, 1]], [v3d[16, 57, 1]], [v3d[16, 58, 1]], [v3d[16, 59, 1]], [v3d[16, 60, 1]], [v3d[16, 60, 0]]]
+[supply_tree_router/route_signal]: Routing 17 to 26 with scale 5
+[router/run_router]: Found path: cost=31 [[v3d[16, 48, 0]], [v3d[17, 48, 0]], [v3d[18, 48, 0]], [v3d[19, 48, 0]], [v3d[20, 48, 0]], [v3d[21, 48, 0]], [v3d[22, 48, 0]], [v3d[23, 48, 0]], [v3d[23, 47, 0]], [v3d[24, 47, 0]], [v3d[25, 47, 0]], [v3d[26, 47, 0]], [v3d[27, 47, 0]], [v3d[28, 47, 0]], [v3d[29, 47, 0]], [v3d[30, 47, 0]], [v3d[31, 47, 0]], [v3d[32, 47, 0]], [v3d[33, 47, 0]], [v3d[34, 47, 0]], [v3d[35, 47, 0]], [v3d[36, 47, 0]], [v3d[37, 47, 0]], [v3d[38, 47, 0]], [v3d[39, 47, 0]], [v3d[39, 48, 0]]]
+[supply_tree_router/route_signal]: Routing 18 to 25 with scale 5
+[router/run_router]: Found path: cost=31 [[v3d[16, 85, 0]], [v3d[17, 85, 0]], [v3d[18, 85, 0]], [v3d[19, 85, 0]], [v3d[20, 85, 0]], [v3d[21, 85, 0]], [v3d[22, 85, 0]], [v3d[23, 85, 0]], [v3d[23, 84, 0]], [v3d[24, 84, 0]], [v3d[25, 84, 0]], [v3d[26, 84, 0]], [v3d[27, 84, 0]], [v3d[28, 84, 0]], [v3d[29, 84, 0]], [v3d[30, 84, 0]], [v3d[31, 84, 0]], [v3d[32, 84, 0]], [v3d[33, 84, 0]], [v3d[34, 84, 0]], [v3d[35, 84, 0]], [v3d[36, 84, 0]], [v3d[37, 84, 0]], [v3d[38, 84, 0]], [v3d[39, 84, 0]], [v3d[39, 85, 0]]]
+[supply_tree_router/route_signal]: Routing 21 to 22 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[20, -7, 0]], [v3d[21, -7, 0]], [v3d[22, -7, 0]], [v3d[23, -7, 0]], [v3d[24, -7, 0]], [v3d[25, -7, 0]], [v3d[26, -7, 0]], [v3d[27, -7, 0]], [v3d[28, -7, 0]], [v3d[29, -7, 0]], [v3d[30, -7, 0]], [v3d[31, -7, 0]], [v3d[32, -7, 0]], [v3d[33, -7, 0]]]
+[supply_tree_router/route_signal]: Routing 22 to 57 with scale 5
+[router/run_router]: Found path: cost=54 [[v3d[34, -6, 0]], [v3d[35, -6, 0]], [v3d[36, -6, 0]], [v3d[37, -6, 0]], [v3d[38, -6, 0]], [v3d[39, -6, 0]], [v3d[40, -6, 0]], [v3d[41, -6, 0]], [v3d[42, -6, 0]], [v3d[43, -6, 0]], [v3d[44, -6, 0]], [v3d[45, -6, 0]], [v3d[46, -6, 0]], [v3d[47, -6, 0]], [v3d[48, -6, 0]], [v3d[49, -6, 0]], [v3d[50, -6, 0]], [v3d[51, -6, 0]], [v3d[52, -6, 0]], [v3d[53, -6, 0]], [v3d[54, -6, 0]], [v3d[55, -6, 0]], [v3d[56, -6, 0]], [v3d[57, -6, 0]], [v3d[58, -6, 0]], [v3d[59, -6, 0]], [v3d[60, -6, 0]], [v3d[61, -6, 0]], [v3d[62, -6, 0]], [v3d[62, -6, 1]], [v3d[62, -5, 1]], [v3d[62, -4, 1]], [v3d[62, -3, 1]], [v3d[62, -2, 1]], [v3d[62, -1, 1]], [v3d[62, 0, 1]], [v3d[62, 1, 1]], [v3d[62, 2, 1]], [v3d[62, 3, 1]], [v3d[62, 4, 1]], [v3d[62, 5, 1]], [v3d[62, 6, 1]], [v3d[62, 7, 1]], [v3d[62, 8, 1]], [v3d[62, 9, 1]], [v3d[62, 10, 1]], [v3d[62, 11, 1]], [v3d[62, 12, 1]], [v3d[62, 13, 1]], [v3d[62, 14, 1]], [v3d[62, 15, 1]], [v3d[62, 16, 1]], [v3d[62, 16, 0]]]
+[supply_tree_router/route_signal]: Routing 23 to 27 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[39, 110, 0]], [v3d[39, 110, 1]], [v3d[39, 109, 1]], [v3d[39, 108, 1]], [v3d[39, 107, 1]], [v3d[39, 106, 1]], [v3d[39, 105, 1]], [v3d[39, 104, 1]], [v3d[39, 103, 1]], [v3d[39, 102, 1]], [v3d[39, 101, 1]], [v3d[39, 100, 1]], [v3d[39, 99, 1]], [v3d[39, 98, 1]], [v3d[39, 98, 0]]]
+[supply_tree_router/route_signal]: Routing 23 to 38 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 111, 0]], [v3d[41, 111, 0]], [v3d[42, 111, 0]], [v3d[43, 111, 0]], [v3d[44, 111, 0]], [v3d[45, 111, 0]], [v3d[46, 111, 0]], [v3d[47, 111, 0]]]
+[supply_tree_router/route_signal]: Routing 24 to 30 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[40, 123, 0]], [v3d[40, 123, 1]], [v3d[40, 124, 1]], [v3d[40, 125, 1]], [v3d[40, 126, 1]], [v3d[40, 127, 1]], [v3d[40, 128, 1]], [v3d[40, 129, 1]], [v3d[40, 130, 1]], [v3d[40, 131, 1]], [v3d[40, 132, 1]], [v3d[40, 133, 1]], [v3d[40, 134, 1]], [v3d[40, 134, 0]]]
+[supply_tree_router/route_signal]: Routing 24 to 40 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 122, 0]], [v3d[41, 122, 0]], [v3d[42, 122, 0]], [v3d[43, 122, 0]], [v3d[44, 122, 0]], [v3d[45, 122, 0]], [v3d[46, 122, 0]], [v3d[47, 122, 0]]]
+[supply_tree_router/route_signal]: Routing 25 to 27 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[40, 86, 0]], [v3d[40, 86, 1]], [v3d[40, 87, 1]], [v3d[40, 88, 1]], [v3d[40, 89, 1]], [v3d[40, 90, 1]], [v3d[40, 91, 1]], [v3d[40, 92, 1]], [v3d[40, 93, 1]], [v3d[40, 94, 1]], [v3d[40, 95, 1]], [v3d[40, 96, 1]], [v3d[40, 97, 1]], [v3d[40, 97, 0]]]
+[supply_tree_router/route_signal]: Routing 25 to 34 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 86, 0]], [v3d[41, 86, 0]], [v3d[42, 86, 0]], [v3d[43, 86, 0]], [v3d[44, 86, 0]], [v3d[45, 86, 0]], [v3d[46, 86, 0]], [v3d[47, 86, 0]]]
+[supply_tree_router/route_signal]: Routing 26 to 32 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[40, 48, 0]], [v3d[40, 48, 1]], [v3d[40, 47, 1]], [v3d[40, 46, 1]], [v3d[40, 45, 1]], [v3d[40, 44, 1]], [v3d[40, 43, 1]], [v3d[40, 42, 1]], [v3d[40, 41, 1]], [v3d[40, 40, 1]], [v3d[40, 39, 1]], [v3d[40, 39, 0]]]
+[supply_tree_router/route_signal]: Routing 26 to 33 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 48, 0]], [v3d[41, 48, 0]], [v3d[42, 48, 0]], [v3d[43, 48, 0]], [v3d[44, 48, 0]], [v3d[45, 48, 0]], [v3d[46, 48, 0]], [v3d[47, 48, 0]]]
+[supply_tree_router/route_signal]: Routing 27 to 36 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 97, 0]], [v3d[41, 97, 0]], [v3d[42, 97, 0]], [v3d[43, 97, 0]], [v3d[44, 97, 0]], [v3d[45, 97, 0]], [v3d[46, 97, 0]], [v3d[47, 97, 0]]]
+[supply_tree_router/route_signal]: Routing 28 to 32 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[40, 36, 0]], [v3d[40, 36, 1]], [v3d[40, 37, 1]], [v3d[40, 38, 1]], [v3d[40, 38, 0]]]
+[supply_tree_router/route_signal]: Routing 29 to 39 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 60, 0]], [v3d[41, 60, 0]], [v3d[42, 60, 0]], [v3d[43, 60, 0]], [v3d[44, 60, 0]], [v3d[45, 60, 0]], [v3d[46, 60, 0]], [v3d[47, 60, 0]]]
+[supply_tree_router/route_signal]: Routing 30 to 35 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 134, 0]], [v3d[41, 134, 0]], [v3d[42, 134, 0]], [v3d[43, 134, 0]], [v3d[44, 134, 0]], [v3d[45, 134, 0]], [v3d[46, 134, 0]], [v3d[47, 134, 0]]]
+[supply_tree_router/route_signal]: Routing 31 to 37 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 73, 0]], [v3d[41, 73, 0]], [v3d[42, 73, 0]], [v3d[43, 73, 0]], [v3d[44, 73, 0]], [v3d[45, 73, 0]], [v3d[46, 73, 0]], [v3d[47, 73, 0]]]
+[supply_tree_router/route_signal]: Routing 33 to 45 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 48, 0]], [v3d[49, 48, 0]], [v3d[50, 48, 0]], [v3d[51, 48, 0]], [v3d[52, 48, 0]], [v3d[53, 48, 0]], [v3d[54, 48, 0]]]
+[supply_tree_router/route_signal]: Routing 34 to 37 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[48, 85, 0]], [v3d[48, 85, 1]], [v3d[48, 84, 1]], [v3d[48, 83, 1]], [v3d[48, 82, 1]], [v3d[48, 81, 1]], [v3d[48, 80, 1]], [v3d[48, 79, 1]], [v3d[48, 78, 1]], [v3d[48, 77, 1]], [v3d[48, 76, 1]], [v3d[48, 75, 1]], [v3d[48, 74, 1]], [v3d[48, 73, 1]], [v3d[48, 73, 0]]]
+[supply_tree_router/route_signal]: Routing 34 to 50 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 85, 0]], [v3d[49, 85, 0]], [v3d[50, 85, 0]], [v3d[51, 85, 0]], [v3d[52, 85, 0]], [v3d[53, 85, 0]], [v3d[54, 85, 0]]]
+[supply_tree_router/route_signal]: Routing 35 to 49 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 136, 0]], [v3d[49, 136, 0]], [v3d[50, 136, 0]], [v3d[51, 136, 0]], [v3d[52, 136, 0]], [v3d[53, 136, 0]], [v3d[54, 136, 0]]]
+[supply_tree_router/route_signal]: Routing 36 to 48 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 97, 0]], [v3d[49, 97, 0]], [v3d[50, 97, 0]], [v3d[51, 97, 0]], [v3d[52, 97, 0]], [v3d[53, 97, 0]], [v3d[54, 97, 0]]]
+[supply_tree_router/route_signal]: Routing 37 to 39 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[47, 72, 0]], [v3d[47, 72, 1]], [v3d[47, 71, 1]], [v3d[47, 70, 1]], [v3d[47, 69, 1]], [v3d[47, 68, 1]], [v3d[47, 67, 1]], [v3d[47, 66, 1]], [v3d[47, 65, 1]], [v3d[47, 64, 1]], [v3d[47, 63, 1]], [v3d[47, 62, 1]], [v3d[47, 61, 1]], [v3d[47, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 37 to 42 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 72, 0]], [v3d[49, 72, 0]], [v3d[50, 72, 0]], [v3d[51, 72, 0]], [v3d[52, 72, 0]], [v3d[53, 72, 0]], [v3d[54, 72, 0]]]
+[supply_tree_router/route_signal]: Routing 38 to 47 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 110, 0]], [v3d[49, 110, 0]], [v3d[50, 110, 0]], [v3d[51, 110, 0]], [v3d[52, 110, 0]], [v3d[53, 110, 0]], [v3d[54, 110, 0]]]
+[supply_tree_router/route_signal]: Routing 39 to 43 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 61, 0]], [v3d[49, 61, 0]], [v3d[50, 61, 0]], [v3d[51, 61, 0]], [v3d[52, 61, 0]], [v3d[53, 61, 0]], [v3d[54, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 40 to 46 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 123, 0]], [v3d[49, 123, 0]], [v3d[50, 123, 0]], [v3d[51, 123, 0]], [v3d[52, 123, 0]], [v3d[53, 123, 0]], [v3d[54, 123, 0]]]
+[supply_tree_router/route_signal]: Routing 41 to 51 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[55, 36, 0]], [v3d[56, 36, 0]], [v3d[57, 36, 0]]]
+[supply_tree_router/route_signal]: Routing 41 to 53 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[55, 35, 0]], [v3d[56, 35, 0]], [v3d[56, 35, 1]], [v3d[56, 34, 1]], [v3d[56, 33, 1]], [v3d[56, 32, 1]], [v3d[56, 31, 1]], [v3d[56, 30, 1]], [v3d[56, 29, 1]], [v3d[56, 28, 1]], [v3d[56, 27, 1]], [v3d[56, 27, 0]], [v3d[57, 27, 0]], [v3d[58, 27, 0]]]
+[supply_tree_router/route_signal]: Routing 43 to 45 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[55, 60, 0]], [v3d[55, 60, 1]], [v3d[55, 59, 1]], [v3d[55, 58, 1]], [v3d[55, 57, 1]], [v3d[55, 56, 1]], [v3d[55, 55, 1]], [v3d[55, 54, 1]], [v3d[55, 53, 1]], [v3d[55, 52, 1]], [v3d[55, 51, 1]], [v3d[55, 50, 1]], [v3d[55, 49, 1]], [v3d[55, 49, 0]]]
+[supply_tree_router/route_signal]: Routing 43 to 71 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[55, 60, 0]], [v3d[56, 60, 0]], [v3d[57, 60, 0]], [v3d[58, 60, 0]], [v3d[59, 60, 0]], [v3d[60, 60, 0]], [v3d[61, 60, 0]], [v3d[62, 60, 0]], [v3d[63, 60, 0]], [v3d[64, 60, 0]], [v3d[65, 60, 0]], [v3d[66, 60, 0]], [v3d[67, 60, 0]]]
+[supply_tree_router/route_signal]: Routing 44 to 49 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[54, 147, 0]], [v3d[54, 147, 1]], [v3d[54, 146, 1]], [v3d[54, 145, 1]], [v3d[54, 144, 1]], [v3d[54, 143, 1]], [v3d[54, 142, 1]], [v3d[54, 141, 1]], [v3d[54, 140, 1]], [v3d[54, 139, 1]], [v3d[54, 138, 1]], [v3d[54, 137, 1]], [v3d[54, 136, 1]], [v3d[54, 136, 0]]]
+[supply_tree_router/route_signal]: Routing 44 to 52 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[55, 148, 0]], [v3d[56, 148, 0]], [v3d[57, 148, 0]]]
+[supply_tree_router/route_signal]: Routing 46 to 47 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[54, 122, 0]], [v3d[54, 122, 1]], [v3d[54, 121, 1]], [v3d[54, 120, 1]], [v3d[54, 119, 1]], [v3d[54, 118, 1]], [v3d[54, 117, 1]], [v3d[54, 116, 1]], [v3d[54, 115, 1]], [v3d[54, 114, 1]], [v3d[54, 113, 1]], [v3d[54, 112, 1]], [v3d[54, 111, 1]], [v3d[54, 111, 0]]]
+[supply_tree_router/route_signal]: Routing 51 to 55 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[58, 35, 0]], [v3d[59, 35, 0]], [v3d[60, 35, 0]]]
+[supply_tree_router/route_signal]: Routing 52 to 54 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[58, 148, 0]], [v3d[59, 148, 0]], [v3d[60, 148, 0]]]
+[supply_tree_router/route_signal]: Routing 53 to 56 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[59, 27, 0]], [v3d[60, 27, 0]], [v3d[61, 27, 0]]]
+[supply_tree_router/route_signal]: Routing 54 to 59 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[61, 148, 0]], [v3d[62, 148, 0]], [v3d[63, 148, 0]], [v3d[64, 148, 0]]]
+[supply_tree_router/route_signal]: Routing 55 to 58 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[61, 36, 0]], [v3d[62, 36, 0]], [v3d[63, 36, 0]], [v3d[64, 36, 0]]]
+[supply_tree_router/route_signal]: Routing 56 to 60 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[62, 26, 0]], [v3d[63, 26, 0]], [v3d[64, 26, 0]], [v3d[65, 26, 0]]]
+[supply_tree_router/route_signal]: Routing 57 to 61 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[63, 17, 0]], [v3d[64, 17, 0]], [v3d[65, 17, 0]]]
+[supply_tree_router/route_signal]: Routing 58 to 62 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[65, 36, 0]], [v3d[66, 36, 0]], [v3d[67, 36, 0]]]
+[supply_tree_router/route_signal]: Routing 59 to 70 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[65, 148, 0]], [v3d[66, 148, 0]], [v3d[67, 148, 0]]]
+[supply_tree_router/route_signal]: Routing 60 to 61 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[66, 26, 0]], [v3d[66, 26, 1]], [v3d[66, 25, 1]], [v3d[66, 24, 1]], [v3d[66, 23, 1]], [v3d[66, 22, 1]], [v3d[66, 21, 1]], [v3d[66, 20, 1]], [v3d[66, 19, 1]], [v3d[66, 18, 1]], [v3d[66, 17, 1]], [v3d[66, 17, 0]]]
+[supply_tree_router/route_signal]: Routing 61 to 72 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[66, 16, 0]], [v3d[67, 16, 0]], [v3d[68, 16, 0]], [v3d[68, 16, 1]], [v3d[68, 15, 1]], [v3d[68, 14, 1]], [v3d[68, 13, 1]], [v3d[68, 12, 1]], [v3d[68, 11, 1]], [v3d[68, 10, 1]], [v3d[68, 9, 1]], [v3d[68, 9, 0]]]
+[supply_tree_router/route_signal]: Routing 62 to 67 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[67, 36, 0]], [v3d[67, 36, 1]], [v3d[67, 37, 1]], [v3d[67, 38, 1]], [v3d[67, 39, 1]], [v3d[67, 40, 1]], [v3d[67, 41, 1]], [v3d[67, 42, 1]], [v3d[67, 43, 1]], [v3d[67, 44, 1]], [v3d[67, 45, 1]], [v3d[67, 46, 1]], [v3d[67, 47, 1]], [v3d[67, 48, 1]], [v3d[67, 48, 0]]]
+[supply_tree_router/route_signal]: Routing 63 to 64 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[67, 123, 0]], [v3d[67, 123, 1]], [v3d[67, 124, 1]], [v3d[67, 125, 1]], [v3d[67, 126, 1]], [v3d[67, 127, 1]], [v3d[67, 128, 1]], [v3d[67, 129, 1]], [v3d[67, 130, 1]], [v3d[67, 131, 1]], [v3d[67, 132, 1]], [v3d[67, 133, 1]], [v3d[67, 134, 1]], [v3d[67, 134, 0]]]
+[supply_tree_router/route_signal]: Routing 63 to 66 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[68, 122, 0]], [v3d[68, 122, 1]], [v3d[68, 121, 1]], [v3d[68, 120, 1]], [v3d[68, 119, 1]], [v3d[68, 118, 1]], [v3d[68, 117, 1]], [v3d[68, 116, 1]], [v3d[68, 115, 1]], [v3d[68, 114, 1]], [v3d[68, 113, 1]], [v3d[68, 112, 1]], [v3d[68, 111, 1]], [v3d[68, 111, 0]]]
+[supply_tree_router/route_signal]: Routing 64 to 70 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[67, 136, 0]], [v3d[67, 136, 1]], [v3d[67, 137, 1]], [v3d[67, 138, 1]], [v3d[67, 139, 1]], [v3d[67, 140, 1]], [v3d[67, 141, 1]], [v3d[67, 142, 1]], [v3d[67, 143, 1]], [v3d[67, 144, 1]], [v3d[67, 145, 1]], [v3d[67, 146, 1]], [v3d[67, 147, 1]], [v3d[67, 147, 0]]]
+[supply_tree_router/route_signal]: Routing 65 to 71 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[67, 72, 0]], [v3d[67, 72, 1]], [v3d[67, 71, 1]], [v3d[67, 70, 1]], [v3d[67, 69, 1]], [v3d[67, 68, 1]], [v3d[67, 67, 1]], [v3d[67, 66, 1]], [v3d[67, 65, 1]], [v3d[67, 64, 1]], [v3d[67, 63, 1]], [v3d[67, 62, 1]], [v3d[67, 61, 1]], [v3d[67, 61, 0]]]
+[supply_tree_router/route_signal]: Routing 66 to 68 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[67, 110, 0]], [v3d[67, 110, 1]], [v3d[67, 109, 1]], [v3d[67, 108, 1]], [v3d[67, 107, 1]], [v3d[67, 106, 1]], [v3d[67, 105, 1]], [v3d[67, 104, 1]], [v3d[67, 103, 1]], [v3d[67, 102, 1]], [v3d[67, 101, 1]], [v3d[67, 100, 1]], [v3d[67, 99, 1]], [v3d[67, 98, 1]], [v3d[67, 98, 0]]]
+[supply_tree_router/route_signal]: Routing 67 to 71 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[68, 49, 0]], [v3d[68, 49, 1]], [v3d[68, 50, 1]], [v3d[68, 51, 1]], [v3d[68, 52, 1]], [v3d[68, 53, 1]], [v3d[68, 54, 1]], [v3d[68, 55, 1]], [v3d[68, 56, 1]], [v3d[68, 57, 1]], [v3d[68, 58, 1]], [v3d[68, 59, 1]], [v3d[68, 60, 1]], [v3d[68, 60, 0]]]
+[supply_tree_router/route_signal]: Routing 68 to 69 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[67, 97, 0]], [v3d[67, 97, 1]], [v3d[67, 96, 1]], [v3d[67, 95, 1]], [v3d[67, 94, 1]], [v3d[67, 93, 1]], [v3d[67, 92, 1]], [v3d[67, 91, 1]], [v3d[67, 90, 1]], [v3d[67, 89, 1]], [v3d[67, 88, 1]], [v3d[67, 87, 1]], [v3d[67, 86, 1]], [v3d[67, 86, 0]]]
+[supply_tree_router/route_signal]: Routing 72 to 73 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[69, 8, 0]], [v3d[70, 8, 0]], [v3d[71, 8, 0]]]
+[supply_tree_router/route_pins]: Routing gnd with 81 pin components to connect.
+[supply_tree_router/route_pins]: Creating adjacency matrix
+[supply_tree_router/route_pins]: Finding MinimumSpanning Tree
+[supply_tree_router/route_signal]: Routing 0 to 1 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[-69, -2, 0]], [v3d[-69, -2, 1]], [v3d[-69, -3, 1]], [v3d[-69, -4, 1]], [v3d[-69, -5, 1]], [v3d[-69, -6, 1]], [v3d[-69, -7, 1]], [v3d[-69, -8, 1]], [v3d[-69, -9, 1]], [v3d[-69, -10, 1]], [v3d[-69, -11, 1]], [v3d[-69, -11, 0]]]
+[supply_tree_router/route_signal]: Routing 0 to 6 with scale 5
+[router/run_router]: Found path: cost=40 [[v3d[-68, -1, 0]], [v3d[-67, -1, 0]], [v3d[-66, -1, 0]], [v3d[-65, -1, 0]], [v3d[-64, -1, 0]], [v3d[-63, -1, 0]], [v3d[-62, -1, 0]], [v3d[-62, -1, 1]], [v3d[-62, 0, 1]], [v3d[-62, 1, 1]], [v3d[-62, 2, 1]], [v3d[-62, 3, 1]], [v3d[-62, 4, 1]], [v3d[-62, 5, 1]], [v3d[-62, 6, 1]], [v3d[-62, 7, 1]], [v3d[-62, 8, 1]], [v3d[-62, 9, 1]], [v3d[-62, 10, 1]], [v3d[-62, 11, 1]], [v3d[-62, 12, 1]], [v3d[-62, 13, 1]], [v3d[-62, 14, 1]], [v3d[-62, 15, 1]], [v3d[-62, 16, 1]], [v3d[-62, 17, 1]], [v3d[-62, 18, 1]], [v3d[-62, 19, 1]], [v3d[-62, 20, 1]], [v3d[-62, 21, 1]], [v3d[-62, 22, 1]], [v3d[-62, 23, 1]], [v3d[-62, 24, 1]], [v3d[-62, 25, 1]], [v3d[-62, 26, 1]], [v3d[-62, 27, 1]], [v3d[-62, 28, 1]], [v3d[-62, 29, 1]], [v3d[-62, 29, 0]]]
+[supply_tree_router/route_signal]: Routing 2 to 11 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 91, 0]], [v3d[-61, 91, 0]], [v3d[-60, 91, 0]], [v3d[-59, 91, 0]], [v3d[-58, 91, 0]], [v3d[-57, 91, 0]], [v3d[-56, 91, 0]]]
+[supply_tree_router/route_signal]: Routing 3 to 5 with scale 5
+[router/run_router]: Found path: cost=24 [[v3d[-62, 50, 0]], [v3d[-62, 50, 1]], [v3d[-62, 51, 1]], [v3d[-62, 52, 1]], [v3d[-62, 53, 1]], [v3d[-62, 54, 1]], [v3d[-62, 55, 1]], [v3d[-62, 56, 1]], [v3d[-62, 57, 1]], [v3d[-62, 58, 1]], [v3d[-62, 59, 1]], [v3d[-62, 60, 1]], [v3d[-62, 61, 1]], [v3d[-62, 62, 1]], [v3d[-62, 63, 1]], [v3d[-62, 64, 1]], [v3d[-62, 65, 1]], [v3d[-62, 66, 1]], [v3d[-62, 67, 1]], [v3d[-62, 68, 1]], [v3d[-62, 69, 1]], [v3d[-62, 70, 1]], [v3d[-62, 70, 0]]]
+[supply_tree_router/route_signal]: Routing 3 to 9 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 50, 0]], [v3d[-61, 50, 0]], [v3d[-60, 50, 0]], [v3d[-59, 50, 0]], [v3d[-58, 50, 0]], [v3d[-57, 50, 0]], [v3d[-56, 50, 0]]]
+[supply_tree_router/route_signal]: Routing 4 to 8 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 111, 0]], [v3d[-61, 111, 0]], [v3d[-60, 111, 0]], [v3d[-59, 111, 0]], [v3d[-58, 111, 0]], [v3d[-57, 111, 0]], [v3d[-56, 111, 0]]]
+[supply_tree_router/route_signal]: Routing 5 to 10 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 70, 0]], [v3d[-61, 70, 0]], [v3d[-60, 70, 0]], [v3d[-59, 70, 0]], [v3d[-58, 70, 0]], [v3d[-57, 70, 0]], [v3d[-56, 70, 0]]]
+[supply_tree_router/route_signal]: Routing 6 to 7 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[-62, 30, 0]], [v3d[-61, 30, 0]], [v3d[-60, 30, 0]], [v3d[-59, 30, 0]], [v3d[-58, 30, 0]], [v3d[-57, 30, 0]], [v3d[-56, 30, 0]]]
+[supply_tree_router/route_signal]: Routing 7 to 9 with scale 5
+[router/run_router]: Found path: cost=23 [[v3d[-55, 30, 0]], [v3d[-55, 30, 1]], [v3d[-55, 31, 1]], [v3d[-55, 32, 1]], [v3d[-55, 33, 1]], [v3d[-55, 34, 1]], [v3d[-55, 35, 1]], [v3d[-55, 36, 1]], [v3d[-55, 37, 1]], [v3d[-55, 38, 1]], [v3d[-55, 39, 1]], [v3d[-55, 40, 1]], [v3d[-55, 41, 1]], [v3d[-55, 42, 1]], [v3d[-55, 43, 1]], [v3d[-55, 44, 1]], [v3d[-55, 45, 1]], [v3d[-55, 46, 1]], [v3d[-55, 47, 1]], [v3d[-55, 48, 1]], [v3d[-55, 49, 1]], [v3d[-55, 49, 0]]]
+[supply_tree_router/route_signal]: Routing 8 to 11 with scale 5
+[router/run_router]: Found path: cost=24 [[v3d[-55, 111, 0]], [v3d[-55, 111, 1]], [v3d[-55, 110, 1]], [v3d[-55, 109, 1]], [v3d[-55, 108, 1]], [v3d[-55, 107, 1]], [v3d[-55, 106, 1]], [v3d[-55, 105, 1]], [v3d[-55, 104, 1]], [v3d[-55, 103, 1]], [v3d[-55, 102, 1]], [v3d[-55, 101, 1]], [v3d[-55, 100, 1]], [v3d[-55, 99, 1]], [v3d[-55, 98, 1]], [v3d[-55, 97, 1]], [v3d[-55, 96, 1]], [v3d[-55, 95, 1]], [v3d[-55, 94, 1]], [v3d[-55, 93, 1]], [v3d[-55, 92, 1]], [v3d[-55, 91, 1]], [v3d[-55, 91, 0]]]
+[supply_tree_router/route_signal]: Routing 8 to 14 with scale 5
+[router/run_router]: Found path: cost=61 [[v3d[-55, 112, 0]], [v3d[-54, 112, 0]], [v3d[-53, 112, 0]], [v3d[-52, 112, 0]], [v3d[-51, 112, 0]], [v3d[-50, 112, 0]], [v3d[-49, 112, 0]], [v3d[-48, 112, 0]], [v3d[-47, 112, 0]], [v3d[-46, 112, 0]], [v3d[-45, 112, 0]], [v3d[-44, 112, 0]], [v3d[-43, 112, 0]], [v3d[-42, 112, 0]], [v3d[-41, 112, 0]], [v3d[-40, 112, 0]], [v3d[-39, 112, 0]], [v3d[-38, 112, 0]], [v3d[-37, 112, 0]], [v3d[-36, 112, 0]], [v3d[-35, 112, 0]], [v3d[-34, 112, 0]], [v3d[-33, 112, 0]], [v3d[-32, 112, 0]], [v3d[-31, 112, 0]], [v3d[-30, 112, 0]], [v3d[-29, 112, 0]], [v3d[-28, 112, 0]], [v3d[-27, 112, 0]], [v3d[-26, 112, 0]], [v3d[-25, 112, 0]], [v3d[-24, 112, 0]], [v3d[-23, 112, 0]], [v3d[-22, 112, 0]], [v3d[-21, 112, 0]], [v3d[-20, 112, 0]], [v3d[-19, 112, 0]], [v3d[-18, 112, 0]], [v3d[-17, 112, 0]], [v3d[-16, 112, 0]], [v3d[-15, 112, 0]], [v3d[-14, 112, 0]], [v3d[-13, 112, 0]], [v3d[-12, 112, 0]], [v3d[-11, 112, 0]], [v3d[-10, 112, 0]], [v3d[-9, 112, 0]], [v3d[-9, 112, 1]], [v3d[-9, 113, 1]], [v3d[-9, 114, 1]], [v3d[-9, 115, 1]], [v3d[-9, 116, 1]], [v3d[-9, 117, 1]], [v3d[-9, 118, 1]], [v3d[-9, 119, 1]], [v3d[-9, 120, 1]], [v3d[-9, 121, 1]], [v3d[-9, 122, 1]], [v3d[-9, 123, 1]], [v3d[-9, 123, 0]]]
+[supply_tree_router/route_signal]: Routing 10 to 11 with scale 5
+[router/run_router]: Found path: cost=23 [[v3d[-55, 71, 0]], [v3d[-55, 71, 1]], [v3d[-55, 72, 1]], [v3d[-55, 73, 1]], [v3d[-55, 74, 1]], [v3d[-55, 75, 1]], [v3d[-55, 76, 1]], [v3d[-55, 77, 1]], [v3d[-55, 78, 1]], [v3d[-55, 79, 1]], [v3d[-55, 80, 1]], [v3d[-55, 81, 1]], [v3d[-55, 82, 1]], [v3d[-55, 83, 1]], [v3d[-55, 84, 1]], [v3d[-55, 85, 1]], [v3d[-55, 86, 1]], [v3d[-55, 87, 1]], [v3d[-55, 88, 1]], [v3d[-55, 89, 1]], [v3d[-55, 90, 1]], [v3d[-55, 90, 0]]]
+[supply_tree_router/route_signal]: Routing 12 to 13 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[-9, 134, 0]], [v3d[-9, 134, 1]], [v3d[-9, 135, 1]], [v3d[-9, 136, 1]], [v3d[-9, 137, 1]], [v3d[-9, 138, 1]], [v3d[-9, 139, 1]], [v3d[-9, 140, 1]], [v3d[-9, 141, 1]], [v3d[-9, 142, 1]], [v3d[-9, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 12 to 14 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[-9, 133, 0]], [v3d[-9, 133, 1]], [v3d[-9, 132, 1]], [v3d[-9, 131, 1]], [v3d[-9, 130, 1]], [v3d[-9, 129, 1]], [v3d[-9, 128, 1]], [v3d[-9, 127, 1]], [v3d[-9, 126, 1]], [v3d[-9, 125, 1]], [v3d[-9, 124, 1]], [v3d[-9, 124, 0]]]
+[supply_tree_router/route_signal]: Routing 14 to 15 with scale 5
+[router/run_router]: Found path: cost=39 [[v3d[-9, 123, 0]], [v3d[-8, 123, 0]], [v3d[-7, 123, 0]], [v3d[-6, 123, 0]], [v3d[-5, 123, 0]], [v3d[-4, 123, 0]], [v3d[-3, 123, 0]], [v3d[-2, 123, 0]], [v3d[-1, 123, 0]], [v3d[0, 123, 0]], [v3d[1, 123, 0]], [v3d[2, 123, 0]], [v3d[3, 123, 0]], [v3d[4, 123, 0]], [v3d[5, 123, 0]], [v3d[6, 123, 0]], [v3d[7, 123, 0]], [v3d[7, 123, 1]], [v3d[7, 122, 1]], [v3d[7, 121, 1]], [v3d[7, 120, 1]], [v3d[7, 119, 1]], [v3d[7, 118, 1]], [v3d[7, 117, 1]], [v3d[7, 116, 1]], [v3d[7, 115, 1]], [v3d[7, 114, 1]], [v3d[7, 113, 1]], [v3d[7, 112, 1]], [v3d[7, 111, 1]], [v3d[7, 110, 1]], [v3d[7, 109, 1]], [v3d[7, 108, 1]], [v3d[7, 107, 1]], [v3d[7, 106, 1]], [v3d[7, 105, 1]], [v3d[7, 104, 1]], [v3d[7, 104, 0]]]
+[supply_tree_router/route_signal]: Routing 15 to 25 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 103, 0]], [v3d[8, 103, 0]], [v3d[9, 103, 0]], [v3d[10, 103, 0]], [v3d[11, 103, 0]], [v3d[12, 103, 0]], [v3d[13, 103, 0]], [v3d[14, 103, 0]], [v3d[15, 103, 0]]]
+[supply_tree_router/route_signal]: Routing 16 to 17 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[7, 54, 0]], [v3d[7, 54, 1]], [v3d[7, 53, 1]], [v3d[7, 52, 1]], [v3d[7, 51, 1]], [v3d[7, 50, 1]], [v3d[7, 49, 1]], [v3d[7, 48, 1]], [v3d[7, 47, 1]], [v3d[7, 46, 1]], [v3d[7, 45, 1]], [v3d[7, 44, 1]], [v3d[7, 43, 1]], [v3d[7, 42, 1]], [v3d[7, 42, 0]]]
+[supply_tree_router/route_signal]: Routing 16 to 26 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 54, 0]], [v3d[8, 54, 0]], [v3d[9, 54, 0]], [v3d[10, 54, 0]], [v3d[11, 54, 0]], [v3d[12, 54, 0]], [v3d[13, 54, 0]], [v3d[14, 54, 0]], [v3d[15, 54, 0]]]
+[supply_tree_router/route_signal]: Routing 17 to 24 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 42, 0]], [v3d[8, 42, 0]], [v3d[9, 42, 0]], [v3d[10, 42, 0]], [v3d[11, 42, 0]], [v3d[12, 42, 0]], [v3d[13, 42, 0]], [v3d[14, 42, 0]], [v3d[15, 42, 0]]]
+[supply_tree_router/route_signal]: Routing 18 to 19 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[6, 91, 0]], [v3d[6, 91, 1]], [v3d[6, 90, 1]], [v3d[6, 89, 1]], [v3d[6, 88, 1]], [v3d[6, 87, 1]], [v3d[6, 86, 1]], [v3d[6, 85, 1]], [v3d[6, 84, 1]], [v3d[6, 83, 1]], [v3d[6, 82, 1]], [v3d[6, 81, 1]], [v3d[6, 80, 1]], [v3d[6, 80, 0]]]
+[supply_tree_router/route_signal]: Routing 18 to 23 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 91, 0]], [v3d[8, 91, 0]], [v3d[9, 91, 0]], [v3d[10, 91, 0]], [v3d[11, 91, 0]], [v3d[12, 91, 0]], [v3d[13, 91, 0]], [v3d[14, 91, 0]], [v3d[15, 91, 0]]]
+[supply_tree_router/route_signal]: Routing 19 to 21 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 80, 0]], [v3d[8, 80, 0]], [v3d[9, 80, 0]], [v3d[10, 80, 0]], [v3d[11, 80, 0]], [v3d[12, 80, 0]], [v3d[13, 80, 0]], [v3d[14, 80, 0]], [v3d[15, 80, 0]]]
+[supply_tree_router/route_signal]: Routing 20 to 22 with scale 5
+[router/run_router]: Found path: cost=8 [[v3d[7, 67, 0]], [v3d[8, 67, 0]], [v3d[9, 67, 0]], [v3d[10, 67, 0]], [v3d[11, 67, 0]], [v3d[12, 67, 0]], [v3d[13, 67, 0]], [v3d[14, 67, 0]], [v3d[15, 67, 0]]]
+[supply_tree_router/route_signal]: Routing 21 to 22 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[16, 79, 0]], [v3d[16, 79, 1]], [v3d[16, 78, 1]], [v3d[16, 77, 1]], [v3d[16, 76, 1]], [v3d[16, 75, 1]], [v3d[16, 74, 1]], [v3d[16, 73, 1]], [v3d[16, 72, 1]], [v3d[16, 71, 1]], [v3d[16, 70, 1]], [v3d[16, 69, 1]], [v3d[16, 68, 1]], [v3d[16, 67, 1]], [v3d[16, 67, 0]]]
+[supply_tree_router/route_signal]: Routing 22 to 26 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[15, 66, 0]], [v3d[15, 66, 1]], [v3d[15, 65, 1]], [v3d[15, 64, 1]], [v3d[15, 63, 1]], [v3d[15, 62, 1]], [v3d[15, 61, 1]], [v3d[15, 60, 1]], [v3d[15, 59, 1]], [v3d[15, 58, 1]], [v3d[15, 57, 1]], [v3d[15, 56, 1]], [v3d[15, 55, 1]], [v3d[15, 55, 0]]]
+[supply_tree_router/route_signal]: Routing 22 to 35 with scale 5
+[router/run_router]: Found path: cost=23 [[v3d[16, 66, 0]], [v3d[17, 66, 0]], [v3d[18, 66, 0]], [v3d[19, 66, 0]], [v3d[20, 66, 0]], [v3d[21, 66, 0]], [v3d[22, 66, 0]], [v3d[23, 66, 0]], [v3d[24, 66, 0]], [v3d[25, 66, 0]], [v3d[26, 66, 0]], [v3d[27, 66, 0]], [v3d[28, 66, 0]], [v3d[29, 66, 0]], [v3d[30, 66, 0]], [v3d[31, 66, 0]], [v3d[32, 66, 0]], [v3d[33, 66, 0]], [v3d[34, 66, 0]], [v3d[35, 66, 0]], [v3d[36, 66, 0]], [v3d[37, 66, 0]], [v3d[38, 66, 0]], [v3d[39, 66, 0]]]
+[supply_tree_router/route_signal]: Routing 23 to 25 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[15, 92, 0]], [v3d[15, 92, 1]], [v3d[15, 93, 1]], [v3d[15, 94, 1]], [v3d[15, 95, 1]], [v3d[15, 96, 1]], [v3d[15, 97, 1]], [v3d[15, 98, 1]], [v3d[15, 99, 1]], [v3d[15, 100, 1]], [v3d[15, 101, 1]], [v3d[15, 102, 1]], [v3d[15, 103, 1]], [v3d[15, 103, 0]]]
+[supply_tree_router/route_signal]: Routing 27 to 28 with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[20, -11, 0]], [v3d[21, -11, 0]], [v3d[22, -11, 0]], [v3d[23, -11, 0]], [v3d[24, -11, 0]], [v3d[25, -11, 0]], [v3d[26, -11, 0]], [v3d[27, -11, 0]], [v3d[28, -11, 0]], [v3d[29, -11, 0]], [v3d[30, -11, 0]], [v3d[31, -11, 0]], [v3d[32, -11, 0]], [v3d[33, -11, 0]]]
+[supply_tree_router/route_signal]: Routing 28 to 63 with scale 5
+[router/run_router]: Found path: cost=54 [[v3d[34, -11, 0]], [v3d[35, -11, 0]], [v3d[36, -11, 0]], [v3d[37, -11, 0]], [v3d[38, -11, 0]], [v3d[39, -11, 0]], [v3d[40, -11, 0]], [v3d[41, -11, 0]], [v3d[42, -11, 0]], [v3d[43, -11, 0]], [v3d[44, -11, 0]], [v3d[45, -11, 0]], [v3d[46, -11, 0]], [v3d[47, -11, 0]], [v3d[48, -11, 0]], [v3d[49, -11, 0]], [v3d[50, -11, 0]], [v3d[51, -11, 0]], [v3d[52, -11, 0]], [v3d[53, -11, 0]], [v3d[54, -11, 0]], [v3d[55, -11, 0]], [v3d[56, -11, 0]], [v3d[57, -11, 0]], [v3d[58, -11, 0]], [v3d[59, -11, 0]], [v3d[60, -11, 0]], [v3d[61, -11, 0]], [v3d[62, -11, 0]], [v3d[63, -11, 0]], [v3d[63, -11, 1]], [v3d[63, -10, 1]], [v3d[63, -9, 1]], [v3d[63, -8, 1]], [v3d[63, -7, 1]], [v3d[63, -6, 1]], [v3d[63, -5, 1]], [v3d[63, -4, 1]], [v3d[63, -3, 1]], [v3d[63, -2, 1]], [v3d[63, -1, 1]], [v3d[63, 0, 1]], [v3d[63, 1, 1]], [v3d[63, 2, 1]], [v3d[63, 3, 1]], [v3d[63, 4, 1]], [v3d[63, 5, 1]], [v3d[63, 6, 1]], [v3d[63, 7, 1]], [v3d[63, 8, 1]], [v3d[63, 9, 1]], [v3d[63, 10, 1]], [v3d[63, 10, 0]]]
+[supply_tree_router/route_signal]: Routing 29 to 46 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 128, 0]], [v3d[41, 128, 0]], [v3d[42, 128, 0]], [v3d[43, 128, 0]], [v3d[44, 128, 0]], [v3d[45, 128, 0]], [v3d[46, 128, 0]], [v3d[47, 128, 0]]]
+[supply_tree_router/route_signal]: Routing 30 to 41 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 117, 0]], [v3d[41, 117, 0]], [v3d[42, 117, 0]], [v3d[43, 117, 0]], [v3d[44, 117, 0]], [v3d[45, 117, 0]], [v3d[46, 117, 0]], [v3d[47, 117, 0]]]
+[supply_tree_router/route_signal]: Routing 31 to 42 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 41, 0]], [v3d[41, 41, 0]], [v3d[42, 41, 0]], [v3d[43, 41, 0]], [v3d[44, 41, 0]], [v3d[45, 41, 0]], [v3d[46, 41, 0]], [v3d[47, 41, 0]]]
+[supply_tree_router/route_signal]: Routing 32 to 44 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 79, 0]], [v3d[41, 79, 0]], [v3d[42, 79, 0]], [v3d[43, 79, 0]], [v3d[44, 79, 0]], [v3d[45, 79, 0]], [v3d[46, 79, 0]], [v3d[47, 79, 0]]]
+[supply_tree_router/route_signal]: Routing 33 to 38 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 141, 0]], [v3d[41, 141, 0]], [v3d[42, 141, 0]], [v3d[43, 141, 0]], [v3d[44, 141, 0]], [v3d[45, 141, 0]], [v3d[46, 141, 0]], [v3d[47, 141, 0]]]
+[supply_tree_router/route_signal]: Routing 34 to 40 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 54, 0]], [v3d[41, 54, 0]], [v3d[42, 54, 0]], [v3d[43, 54, 0]], [v3d[44, 54, 0]], [v3d[45, 54, 0]], [v3d[46, 54, 0]], [v3d[47, 54, 0]]]
+[supply_tree_router/route_signal]: Routing 35 to 45 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 66, 0]], [v3d[41, 66, 0]], [v3d[42, 66, 0]], [v3d[43, 66, 0]], [v3d[44, 66, 0]], [v3d[45, 66, 0]], [v3d[46, 66, 0]], [v3d[47, 66, 0]]]
+[supply_tree_router/route_signal]: Routing 36 to 39 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 92, 0]], [v3d[41, 92, 0]], [v3d[42, 92, 0]], [v3d[43, 92, 0]], [v3d[44, 92, 0]], [v3d[45, 92, 0]], [v3d[46, 92, 0]], [v3d[47, 92, 0]]]
+[supply_tree_router/route_signal]: Routing 37 to 43 with scale 5
+[router/run_router]: Found path: cost=7 [[v3d[40, 103, 0]], [v3d[41, 103, 0]], [v3d[42, 103, 0]], [v3d[43, 103, 0]], [v3d[44, 103, 0]], [v3d[45, 103, 0]], [v3d[46, 103, 0]], [v3d[47, 103, 0]]]
+[supply_tree_router/route_signal]: Routing 38 to 47 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[48, 142, 0]], [v3d[49, 142, 0]], [v3d[50, 142, 0]], [v3d[51, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 39 to 44 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[47, 91, 0]], [v3d[47, 91, 1]], [v3d[47, 90, 1]], [v3d[47, 89, 1]], [v3d[47, 88, 1]], [v3d[47, 87, 1]], [v3d[47, 86, 1]], [v3d[47, 85, 1]], [v3d[47, 84, 1]], [v3d[47, 83, 1]], [v3d[47, 82, 1]], [v3d[47, 81, 1]], [v3d[47, 80, 1]], [v3d[47, 80, 0]]]
+[supply_tree_router/route_signal]: Routing 39 to 51 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 91, 0]], [v3d[49, 91, 0]], [v3d[50, 91, 0]], [v3d[51, 91, 0]], [v3d[52, 91, 0]], [v3d[53, 91, 0]], [v3d[54, 91, 0]]]
+[supply_tree_router/route_signal]: Routing 40 to 45 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[48, 55, 0]], [v3d[48, 55, 1]], [v3d[48, 56, 1]], [v3d[48, 57, 1]], [v3d[48, 58, 1]], [v3d[48, 59, 1]], [v3d[48, 60, 1]], [v3d[48, 61, 1]], [v3d[48, 62, 1]], [v3d[48, 63, 1]], [v3d[48, 64, 1]], [v3d[48, 65, 1]], [v3d[48, 66, 1]], [v3d[48, 66, 0]]]
+[supply_tree_router/route_signal]: Routing 40 to 55 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 54, 0]], [v3d[49, 54, 0]], [v3d[50, 54, 0]], [v3d[51, 54, 0]], [v3d[52, 54, 0]], [v3d[53, 54, 0]], [v3d[54, 54, 0]]]
+[supply_tree_router/route_signal]: Routing 41 to 57 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 117, 0]], [v3d[49, 117, 0]], [v3d[50, 117, 0]], [v3d[51, 117, 0]], [v3d[52, 117, 0]], [v3d[53, 117, 0]], [v3d[54, 117, 0]]]
+[supply_tree_router/route_signal]: Routing 42 to 49 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 42, 0]], [v3d[49, 42, 0]], [v3d[50, 42, 0]], [v3d[51, 42, 0]], [v3d[52, 42, 0]], [v3d[53, 42, 0]], [v3d[54, 42, 0]]]
+[supply_tree_router/route_signal]: Routing 43 to 54 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 104, 0]], [v3d[49, 104, 0]], [v3d[50, 104, 0]], [v3d[51, 104, 0]], [v3d[52, 104, 0]], [v3d[53, 104, 0]], [v3d[54, 104, 0]]]
+[supply_tree_router/route_signal]: Routing 44 to 58 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 79, 0]], [v3d[49, 79, 0]], [v3d[50, 79, 0]], [v3d[51, 79, 0]], [v3d[52, 79, 0]], [v3d[53, 79, 0]], [v3d[54, 79, 0]]]
+[supply_tree_router/route_signal]: Routing 45 to 52 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 67, 0]], [v3d[49, 67, 0]], [v3d[50, 67, 0]], [v3d[51, 67, 0]], [v3d[52, 67, 0]], [v3d[53, 67, 0]], [v3d[54, 67, 0]]]
+[supply_tree_router/route_signal]: Routing 46 to 56 with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[48, 129, 0]], [v3d[49, 129, 0]], [v3d[50, 129, 0]], [v3d[51, 129, 0]], [v3d[52, 129, 0]], [v3d[53, 129, 0]], [v3d[54, 129, 0]]]
+[supply_tree_router/route_signal]: Routing 47 to 53 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[52, 142, 0]], [v3d[53, 142, 0]], [v3d[54, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 48 to 49 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[52, 31, 0]], [v3d[53, 31, 0]], [v3d[54, 31, 0]], [v3d[54, 31, 1]], [v3d[54, 32, 1]], [v3d[54, 33, 1]], [v3d[54, 34, 1]], [v3d[54, 35, 1]], [v3d[54, 36, 1]], [v3d[54, 37, 1]], [v3d[54, 38, 1]], [v3d[54, 39, 1]], [v3d[54, 40, 1]], [v3d[54, 41, 1]], [v3d[54, 41, 0]]]
+[supply_tree_router/route_signal]: Routing 48 to 50 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[52, 30, 0]], [v3d[53, 30, 0]], [v3d[54, 30, 0]]]
+[supply_tree_router/route_signal]: Routing 49 to 55 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[54, 42, 0]], [v3d[54, 42, 1]], [v3d[54, 43, 1]], [v3d[54, 44, 1]], [v3d[54, 45, 1]], [v3d[54, 46, 1]], [v3d[54, 47, 1]], [v3d[54, 48, 1]], [v3d[54, 49, 1]], [v3d[54, 50, 1]], [v3d[54, 51, 1]], [v3d[54, 52, 1]], [v3d[54, 53, 1]], [v3d[54, 54, 1]], [v3d[54, 54, 0]]]
+[supply_tree_router/route_signal]: Routing 50 to 59 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[55, 30, 0]], [v3d[56, 30, 0]], [v3d[57, 30, 0]]]
+[supply_tree_router/route_signal]: Routing 51 to 54 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[55, 92, 0]], [v3d[55, 92, 1]], [v3d[55, 93, 1]], [v3d[55, 94, 1]], [v3d[55, 95, 1]], [v3d[55, 96, 1]], [v3d[55, 97, 1]], [v3d[55, 98, 1]], [v3d[55, 99, 1]], [v3d[55, 100, 1]], [v3d[55, 101, 1]], [v3d[55, 102, 1]], [v3d[55, 103, 1]], [v3d[55, 103, 0]]]
+[supply_tree_router/route_signal]: Routing 51 to 74 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[55, 92, 0]], [v3d[56, 92, 0]], [v3d[57, 92, 0]], [v3d[58, 92, 0]], [v3d[59, 92, 0]], [v3d[60, 92, 0]], [v3d[61, 92, 0]], [v3d[62, 92, 0]], [v3d[63, 92, 0]], [v3d[64, 92, 0]], [v3d[65, 92, 0]], [v3d[66, 92, 0]], [v3d[67, 92, 0]]]
+[supply_tree_router/route_signal]: Routing 52 to 58 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[54, 67, 0]], [v3d[54, 67, 1]], [v3d[54, 68, 1]], [v3d[54, 69, 1]], [v3d[54, 70, 1]], [v3d[54, 71, 1]], [v3d[54, 72, 1]], [v3d[54, 73, 1]], [v3d[54, 74, 1]], [v3d[54, 75, 1]], [v3d[54, 76, 1]], [v3d[54, 77, 1]], [v3d[54, 78, 1]], [v3d[54, 79, 1]], [v3d[54, 79, 0]]]
+[supply_tree_router/route_signal]: Routing 53 to 56 with scale 5
+[router/run_router]: Found path: cost=16 [[v3d[55, 141, 0]], [v3d[55, 141, 1]], [v3d[55, 140, 1]], [v3d[55, 139, 1]], [v3d[55, 138, 1]], [v3d[55, 137, 1]], [v3d[55, 136, 1]], [v3d[55, 135, 1]], [v3d[55, 134, 1]], [v3d[55, 133, 1]], [v3d[55, 132, 1]], [v3d[55, 131, 1]], [v3d[55, 130, 1]], [v3d[55, 129, 1]], [v3d[55, 129, 0]]]
+[supply_tree_router/route_signal]: Routing 53 to 60 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[55, 141, 0]], [v3d[56, 141, 0]], [v3d[57, 141, 0]]]
+[supply_tree_router/route_signal]: Routing 54 to 69 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[55, 103, 0]], [v3d[56, 103, 0]], [v3d[57, 103, 0]], [v3d[58, 103, 0]], [v3d[59, 103, 0]], [v3d[60, 103, 0]], [v3d[61, 103, 0]], [v3d[62, 103, 0]], [v3d[63, 103, 0]], [v3d[64, 103, 0]], [v3d[65, 103, 0]], [v3d[66, 103, 0]], [v3d[67, 103, 0]]]
+[supply_tree_router/route_signal]: Routing 55 to 67 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[55, 54, 0]], [v3d[56, 54, 0]], [v3d[57, 54, 0]], [v3d[58, 54, 0]], [v3d[59, 54, 0]], [v3d[60, 54, 0]], [v3d[61, 54, 0]], [v3d[62, 54, 0]], [v3d[63, 54, 0]], [v3d[64, 54, 0]], [v3d[65, 54, 0]], [v3d[66, 54, 0]], [v3d[67, 54, 0]]]
+[supply_tree_router/route_signal]: Routing 56 to 57 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[55, 128, 0]], [v3d[55, 128, 1]], [v3d[55, 127, 1]], [v3d[55, 126, 1]], [v3d[55, 125, 1]], [v3d[55, 124, 1]], [v3d[55, 123, 1]], [v3d[55, 122, 1]], [v3d[55, 121, 1]], [v3d[55, 120, 1]], [v3d[55, 119, 1]], [v3d[55, 118, 1]], [v3d[55, 117, 1]], [v3d[55, 117, 0]]]
+[supply_tree_router/route_signal]: Routing 56 to 68 with scale 5
+[router/run_router]: Found path: cost=12 [[v3d[55, 128, 0]], [v3d[56, 128, 0]], [v3d[57, 128, 0]], [v3d[58, 128, 0]], [v3d[59, 128, 0]], [v3d[60, 128, 0]], [v3d[61, 128, 0]], [v3d[62, 128, 0]], [v3d[63, 128, 0]], [v3d[64, 128, 0]], [v3d[65, 128, 0]], [v3d[66, 128, 0]], [v3d[67, 128, 0]]]
+[supply_tree_router/route_signal]: Routing 59 to 62 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[58, 29, 0]], [v3d[59, 29, 0]], [v3d[60, 29, 0]]]
+[supply_tree_router/route_signal]: Routing 60 to 61 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[58, 141, 0]], [v3d[59, 141, 0]], [v3d[60, 141, 0]]]
+[supply_tree_router/route_signal]: Routing 61 to 64 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[61, 142, 0]], [v3d[62, 142, 0]], [v3d[63, 142, 0]], [v3d[64, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 62 to 65 with scale 5
+[router/run_router]: Found path: cost=3 [[v3d[61, 29, 0]], [v3d[62, 29, 0]], [v3d[63, 29, 0]], [v3d[64, 29, 0]]]
+[supply_tree_router/route_signal]: Routing 63 to 66 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[63, 10, 0]], [v3d[64, 10, 0]], [v3d[65, 10, 0]]]
+[supply_tree_router/route_signal]: Routing 64 to 73 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[65, 142, 0]], [v3d[66, 142, 0]], [v3d[67, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 65 to 66 with scale 5
+[router/run_router]: Found path: cost=22 [[v3d[65, 29, 0]], [v3d[65, 29, 1]], [v3d[65, 28, 1]], [v3d[65, 27, 1]], [v3d[65, 26, 1]], [v3d[65, 25, 1]], [v3d[65, 24, 1]], [v3d[65, 23, 1]], [v3d[65, 22, 1]], [v3d[65, 21, 1]], [v3d[65, 20, 1]], [v3d[65, 19, 1]], [v3d[65, 18, 1]], [v3d[65, 17, 1]], [v3d[65, 16, 1]], [v3d[65, 15, 1]], [v3d[65, 14, 1]], [v3d[65, 13, 1]], [v3d[65, 12, 1]], [v3d[65, 11, 1]], [v3d[65, 11, 0]]]
+[supply_tree_router/route_signal]: Routing 65 to 75 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[65, 29, 0]], [v3d[66, 29, 0]], [v3d[67, 29, 0]]]
+[supply_tree_router/route_signal]: Routing 66 to 77 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[66, 10, 0]], [v3d[67, 10, 0]], [v3d[68, 10, 0]], [v3d[69, 10, 0]], [v3d[69, 10, 1]], [v3d[69, 9, 1]], [v3d[69, 8, 1]], [v3d[69, 7, 1]], [v3d[69, 6, 1]], [v3d[69, 5, 1]], [v3d[69, 4, 1]], [v3d[69, 3, 1]], [v3d[69, 2, 1]], [v3d[69, 2, 0]]]
+[supply_tree_router/route_signal]: Routing 67 to 72 with scale 5
+[router/run_router]: Found path: cost=17 [[v3d[67, 55, 0]], [v3d[66, 55, 0]], [v3d[66, 55, 1]], [v3d[66, 56, 1]], [v3d[66, 57, 1]], [v3d[66, 58, 1]], [v3d[66, 59, 1]], [v3d[66, 60, 1]], [v3d[66, 61, 1]], [v3d[66, 62, 1]], [v3d[66, 63, 1]], [v3d[66, 64, 1]], [v3d[66, 65, 1]], [v3d[66, 66, 1]], [v3d[66, 66, 0]], [v3d[67, 66, 0]]]
+[supply_tree_router/route_signal]: Routing 68 to 70 with scale 5
+[router/run_router]: Found path: cost=17 [[v3d[68, 128, 0]], [v3d[69, 128, 0]], [v3d[69, 128, 1]], [v3d[69, 127, 1]], [v3d[69, 126, 1]], [v3d[69, 125, 1]], [v3d[69, 124, 1]], [v3d[69, 123, 1]], [v3d[69, 122, 1]], [v3d[69, 121, 1]], [v3d[69, 120, 1]], [v3d[69, 119, 1]], [v3d[69, 118, 1]], [v3d[69, 117, 1]], [v3d[69, 117, 0]], [v3d[68, 117, 0]]]
+[supply_tree_router/route_signal]: Routing 69 to 70 with scale 5
+[router/run_router]: Found path: cost=18 [[v3d[67, 104, 0]], [v3d[66, 104, 0]], [v3d[66, 104, 1]], [v3d[66, 105, 1]], [v3d[66, 106, 1]], [v3d[66, 107, 1]], [v3d[66, 108, 1]], [v3d[66, 109, 1]], [v3d[66, 110, 1]], [v3d[66, 111, 1]], [v3d[66, 112, 1]], [v3d[66, 113, 1]], [v3d[66, 114, 1]], [v3d[66, 115, 1]], [v3d[66, 116, 1]], [v3d[66, 116, 0]], [v3d[67, 116, 0]]]
+[supply_tree_router/route_signal]: Routing 71 to 78 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[68, 41, 0]], [v3d[69, 41, 0]], [v3d[69, 41, 1]], [v3d[69, 40, 1]], [v3d[69, 39, 1]], [v3d[69, 38, 1]], [v3d[69, 37, 1]], [v3d[69, 36, 1]], [v3d[69, 35, 1]], [v3d[69, 34, 1]], [v3d[69, 33, 1]], [v3d[69, 32, 1]], [v3d[69, 31, 1]], [v3d[69, 31, 0]]]
+[supply_tree_router/route_signal]: Routing 73 to 79 with scale 5
+[router/run_router]: Found path: cost=1 [[v3d[68, 142, 0]], [v3d[69, 142, 0]]]
+[supply_tree_router/route_signal]: Routing 74 to 76 with scale 5
+[router/run_router]: Found path: cost=15 [[v3d[68, 91, 0]], [v3d[68, 91, 1]], [v3d[68, 90, 1]], [v3d[68, 89, 1]], [v3d[68, 88, 1]], [v3d[68, 87, 1]], [v3d[68, 86, 1]], [v3d[68, 85, 1]], [v3d[68, 84, 1]], [v3d[68, 83, 1]], [v3d[68, 82, 1]], [v3d[68, 81, 1]], [v3d[68, 80, 1]], [v3d[68, 80, 0]]]
+[supply_tree_router/route_signal]: Routing 75 to 78 with scale 5
+[router/run_router]: Found path: cost=1 [[v3d[68, 30, 0]], [v3d[69, 30, 0]]]
+[supply_tree_router/route_signal]: Routing 77 to 80 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[69, 1, 0]], [v3d[70, 1, 0]], [v3d[71, 1, 0]]]
+*** Maze routing supplies: 9.6 seconds
+[router_tech/__init__]: Minimum track width: 0.820
+[router_tech/__init__]: Minimum track space: 0.300
+[router_tech/__init__]: Minimum track wire width: 0.520
+[router_tech/__init__]: Track factor: v[1.2195121951219512,1.2195121951219512]
+[router/init_bbox]: Size: 121.92 x 131.72
+[router/init_bbox]: Size: 121.92 x 131.72
+[router/retrieve_pins]: Retrieving pins for csb0.
+[router/retrieve_pins]: Retrieving pins for web0.
+[router/retrieve_pins]: Retrieving pins for clk0.
+[router/retrieve_pins]: Retrieving pins for din0[0].
+[router/retrieve_pins]: Retrieving pins for din0[1].
+[router/retrieve_pins]: Retrieving pins for dout0[0].
+[router/retrieve_pins]: Retrieving pins for dout0[1].
+[router/retrieve_pins]: Retrieving pins for addr0[0].
+[router/retrieve_pins]: Retrieving pins for addr0[1].
+[router/retrieve_pins]: Retrieving pins for addr0[2].
+[router/retrieve_pins]: Retrieving pins for addr0[3].
 **** Retrieving pins: 0.0 seconds
+[router/analyze_pins]: Analyzing pin groups for csb0.
+[router/analyze_pins]: Analyzing pin groups for web0.
+[router/analyze_pins]: Analyzing pin groups for clk0.
+[router/analyze_pins]: Analyzing pin groups for din0[0].
+[router/analyze_pins]: Analyzing pin groups for din0[1].
+[router/analyze_pins]: Analyzing pin groups for dout0[0].
+[router/analyze_pins]: Analyzing pin groups for dout0[1].
+[router/analyze_pins]: Analyzing pin groups for addr0[0].
+[router/analyze_pins]: Analyzing pin groups for addr0[1].
+[router/analyze_pins]: Analyzing pin groups for addr0[2].
+[router/analyze_pins]: Analyzing pin groups for addr0[3].
 **** Analyzing pins: 0.0 seconds
-**** Finding blockages: 0.7 seconds
-**** Converting blockages: 0.3 seconds
+[router/find_blockages]: Finding blockages.
+**** Finding blockages: 0.4 seconds
+[router/convert_blockages]: Converting blockages.
+**** Converting blockages: 0.1 seconds
+[router/convert_pins]: Converting pins for csb0.
+[router/convert_pins]: Converting pins for web0.
+[router/convert_pins]: Converting pins for clk0.
+[router/convert_pins]: Converting pins for din0[0].
+[router/convert_pins]: Converting pins for din0[1].
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[22.06,-7.3] ur=v[22.580000000000002,-6.78])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[22.1,-7.26] ur=v[22.54,-6.82])
+
+[router/convert_pins]: Converting pins for dout0[0].
+[router/convert_pins]: Converting pins for dout0[1].
+[router/convert_pins]: Converting pins for addr0[0].
+[router/convert_pins]: Converting pins for addr0[1].
+[router/convert_pins]: Converting pins for addr0[2].
+[router/convert_pins]: Converting pins for addr0[3].
 **** Converting pins: 0.1 seconds
-**** Separating adjacent pins: 0.0 seconds
+[router/separate_adjacent_pin]: Comparing csb0 and web0 adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and clk0 adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and din0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and din0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and dout0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing csb0 and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and clk0 adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and din0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and din0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and dout0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing web0 and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and din0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and din0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and dout0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing clk0 and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and din0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and dout0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[0] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and dout0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing din0[1] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[0] and dout0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[0] and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[0] and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[0] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[0] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[1] and addr0[0] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[1] and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[1] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing dout0[1] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[0] and addr0[1] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[0] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[0] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[1] and addr0[2] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[1] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+[router/separate_adjacent_pin]: Comparing addr0[2] and addr0[3] adjacency
+[router/separate_adjacent_pin]: Removed 0 adjacent grids.
+**** Separating adjacent pins: 0.1 seconds
+[router/enclose_pins]: Enclosing pins for csb0
+[router/enclose_pins]: Enclosing pins for web0
+[router/enclose_pins]: Enclosing pins for clk0
+[router/enclose_pins]: Enclosing pins for din0[0]
+[router/enclose_pins]: Enclosing pins for din0[1]
+[router/enclose_pins]: Enclosing pins for dout0[0]
+[router/enclose_pins]: Enclosing pins for dout0[1]
+[router/enclose_pins]: Enclosing pins for addr0[0]
+[router/enclose_pins]: Enclosing pins for addr0[1]
+[router/enclose_pins]: Enclosing pins for addr0[2]
+[router/enclose_pins]: Enclosing pins for addr0[3]
 **** Enclosing pins: 0.0 seconds
-*** Finding pins and blockages: 1.1 seconds
-*** Maze routing pins: 11.0 seconds
-** Routing: 71.1 seconds
+*** Finding pins and blockages: 0.8 seconds
+[signal_escape_router/route_signal]: Escape routing csb0 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[-67, -9, 0]], [v3d[-68, -9, 0]], [v3d[-69, -9, 0]]]
+[signal_escape_router/route_signal]: Escape routing web0 with scale 5
+[router/run_router]: Found path: cost=2 [[v3d[-67, -5, 0]], [v3d[-68, -5, 0]], [v3d[-69, -5, 0]]]
+[signal_escape_router/route_signal]: Escape routing clk0 with scale 5
+[router/run_router]: Found path: cost=4 [[v3d[-31, -10, 0]], [v3d[-31, -10, 1]], [v3d[-31, -11, 1]], [v3d[-31, -12, 1]]]
+[signal_escape_router/route_signal]: Escape routing din0[0] with scale 5
+[router/run_router]: Found path: cost=6 [[v3d[14, -8, 0]], [v3d[14, -8, 1]], [v3d[14, -9, 1]], [v3d[14, -10, 1]], [v3d[14, -11, 1]], [v3d[14, -12, 1]]]
+[signal_escape_router/route_signal]: Escape routing din0[1] with scale 5
+[router/run_router]: Found path: cost=5 [[v3d[27, -9, 0]], [v3d[27, -9, 1]], [v3d[27, -10, 1]], [v3d[27, -11, 1]], [v3d[27, -12, 1]]]
+[signal_escape_router/route_signal]: Escape routing addr0[3] with scale 5
+[router/run_router]: Found path: cost=10 [[v3d[-15, 140, 0]], [v3d[-15, 140, 1]], [v3d[-15, 141, 1]], [v3d[-15, 142, 1]], [v3d[-15, 143, 1]], [v3d[-15, 144, 1]], [v3d[-15, 145, 1]], [v3d[-15, 146, 1]], [v3d[-15, 147, 1]], [v3d[-15, 148, 1]]]
+[signal_escape_router/route_signal]: Escape routing dout0[1] with scale 5
+[router/run_router]: Found path: cost=9 [[v3d[70, 14, 0]], [v3d[71, 14, 0]], [v3d[72, 14, 0]], [v3d[73, 14, 0]], [v3d[74, 14, 0]], [v3d[75, 14, 0]], [v3d[76, 14, 0]], [v3d[77, 14, 0]], [v3d[78, 14, 0]], [v3d[79, 14, 0]]]
+[signal_escape_router/route_signal]: Escape routing addr0[2] with scale 5
+[router/run_router]: Found path: cost=13 [[v3d[-16, 137, 0]], [v3d[-16, 137, 1]], [v3d[-16, 138, 1]], [v3d[-16, 139, 1]], [v3d[-16, 140, 1]], [v3d[-16, 141, 1]], [v3d[-16, 142, 1]], [v3d[-16, 143, 1]], [v3d[-16, 144, 1]], [v3d[-16, 145, 1]], [v3d[-16, 146, 1]], [v3d[-16, 147, 1]], [v3d[-16, 148, 1]]]
+[signal_escape_router/route_signal]: Escape routing dout0[0] with scale 5
+[router/run_router]: Found path: cost=17 [[v3d[66, 13, 0]], [v3d[67, 13, 0]], [v3d[68, 13, 0]], [v3d[68, 12, 0]], [v3d[69, 12, 0]], [v3d[70, 12, 0]], [v3d[71, 12, 0]], [v3d[72, 12, 0]], [v3d[73, 12, 0]], [v3d[74, 12, 0]], [v3d[75, 12, 0]], [v3d[76, 12, 0]], [v3d[77, 12, 0]], [v3d[78, 12, 0]], [v3d[79, 12, 0]]]
+[signal_escape_router/route_signal]: Escape routing addr0[1] with scale 5
+[router/run_router]: Found path: cost=20 [[v3d[-15, 131, 0]], [v3d[-14, 131, 0]], [v3d[-14, 131, 1]], [v3d[-14, 132, 1]], [v3d[-14, 133, 1]], [v3d[-14, 134, 1]], [v3d[-14, 135, 1]], [v3d[-14, 136, 1]], [v3d[-14, 137, 1]], [v3d[-14, 138, 1]], [v3d[-14, 139, 1]], [v3d[-14, 140, 1]], [v3d[-14, 141, 1]], [v3d[-14, 142, 1]], [v3d[-14, 143, 1]], [v3d[-14, 144, 1]], [v3d[-14, 145, 1]], [v3d[-14, 146, 1]], [v3d[-14, 147, 1]], [v3d[-14, 148, 1]]]
+[signal_escape_router/route_signal]: Escape routing addr0[0] with scale 5
+[router/run_router]: Found path: cost=24 [[v3d[-16, 127, 0]], [v3d[-17, 127, 0]], [v3d[-17, 127, 1]], [v3d[-17, 128, 1]], [v3d[-17, 129, 1]], [v3d[-17, 130, 1]], [v3d[-17, 131, 1]], [v3d[-17, 132, 1]], [v3d[-17, 133, 1]], [v3d[-17, 134, 1]], [v3d[-17, 135, 1]], [v3d[-17, 136, 1]], [v3d[-17, 137, 1]], [v3d[-17, 138, 1]], [v3d[-17, 139, 1]], [v3d[-17, 140, 1]], [v3d[-17, 141, 1]], [v3d[-17, 142, 1]], [v3d[-17, 143, 1]], [v3d[-17, 144, 1]], [v3d[-17, 145, 1]], [v3d[-17, 146, 1]], [v3d[-17, 147, 1]], [v3d[-17, 148, 1]]]
+*** Maze routing pins: 2.8 seconds
+** Routing: 32.2 seconds
 ** Verification: 0.0 seconds
-** SRAM creation: 75.0 seconds
+** SRAM creation: 34.0 seconds
 SP: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.sp
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[characterizer.functional/__init__]: q name=xsram_2_16_sky130A.xbank0.xbitcell_array.xbitcell_array.xbit_r0_c0.Q
+qbar name=xsram_2_16_sky130A.xbank0.xbitcell_array.xbitcell_array.xbit_r0_c0.Q_bar
+[characterizer.simulation/add_noop_all_ports]: 	Idle during cycle 0 (0ns - 20ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1100 (from port 0) during cycle 1 (20ns - 40ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1100 (from port 0) during cycle 4 (80ns - 100ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 0101 (from port 0) during cycle 5 (100ns - 120ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0100 (from port 0) during cycle 7 (140ns - 160ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 8 (160ns - 180ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 9 (180ns - 200ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 11 (220ns - 240ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 12 (240ns - 260ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1100 (from port 0) during cycle 14 (280ns - 300ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1100 (from port 0) during cycle 16 (320ns - 340ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 20 (400ns - 420ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1100 (from port 0) during cycle 22 (440ns - 460ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 23 (460ns - 480ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 24 (480ns - 500ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1100 (from port 0) during cycle 25 (500ns - 520ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0001 (from port 0) during cycle 28 (560ns - 580ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 29 (580ns - 600ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1110 (from port 0) during cycle 30 (600ns - 620ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1011 (from port 0) during cycle 31 (620ns - 640ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0001 (from port 0) during cycle 33 (660ns - 680ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 34 (680ns - 700ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 11 from address 0101 (from port 0) during cycle 35 (700ns - 720ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1100 (from port 0) during cycle 38 (760ns - 780ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 41 (820ns - 840ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 1101 (from port 0) during cycle 42 (840ns - 860ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1111 (from port 0) during cycle 43 (860ns - 880ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0001 (from port 0) during cycle 45 (900ns - 920ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1101 (from port 0) during cycle 46 (920ns - 940ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 0001 (from port 0) during cycle 48 (960ns - 980ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1101 (from port 0) during cycle 50 (1000ns - 1020ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 53 (1060ns - 1080ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1101 (from port 0) during cycle 54 (1080ns - 1100ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 55 (1100ns - 1120ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0011 (from port 0) during cycle 57 (1140ns - 1160ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0001 (from port 0) during cycle 58 (1160ns - 1180ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1111 (from port 0) during cycle 59 (1180ns - 1200ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1000 (from port 0) during cycle 60 (1200ns - 1220ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1001 (from port 0) during cycle 61 (1220ns - 1240ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 0011 (from port 0) during cycle 62 (1240ns - 1260ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 11 from address 0011 (from port 0) during cycle 63 (1260ns - 1280ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0001 (from port 0) during cycle 65 (1300ns - 1320ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1111 (from port 0) during cycle 66 (1320ns - 1340ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1001 (from port 0) during cycle 68 (1360ns - 1380ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 11 from address 0101 (from port 0) during cycle 69 (1380ns - 1400ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 0101 (from port 0) during cycle 70 (1400ns - 1420ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1010 (from port 0) during cycle 71 (1420ns - 1440ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 1010 (from port 0) during cycle 72 (1440ns - 1460ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0101 (from port 0) during cycle 73 (1460ns - 1480ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1111 (from port 0) during cycle 74 (1480ns - 1500ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 75 (1500ns - 1520ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 1101 (from port 0) during cycle 76 (1520ns - 1540ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0001 (from port 0) during cycle 78 (1560ns - 1580ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 1111 (from port 0) during cycle 80 (1600ns - 1620ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1100 (from port 0) during cycle 81 (1620ns - 1640ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0111 (from port 0) during cycle 83 (1660ns - 1680ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 0101 (from port 0) during cycle 84 (1680ns - 1700ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0111 (from port 0) during cycle 86 (1720ns - 1740ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 0011 (from port 0) during cycle 92 (1840ns - 1860ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0111 (from port 0) during cycle 93 (1860ns - 1880ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 0101 (from port 0) during cycle 96 (1920ns - 1940ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1100 (from port 0) during cycle 97 (1940ns - 1960ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1001 (from port 0) during cycle 98 (1960ns - 1980ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0101 (from port 0) during cycle 99 (1980ns - 2000ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1001 (from port 0) during cycle 100 (2000ns - 2020ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0000 (from port 0) during cycle 101 (2020ns - 2040ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1000 (from port 0) during cycle 105 (2100ns - 2120ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 106 (2120ns - 2140ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0101 (from port 0) during cycle 108 (2160ns - 2180ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1011 (from port 0) during cycle 110 (2200ns - 2220ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 11 from address 1111 (from port 0) during cycle 112 (2240ns - 2260ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1001 (from port 0) during cycle 113 (2260ns - 2280ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1101 (from port 0) during cycle 114 (2280ns - 2300ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 117 (2340ns - 2360ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1100 (from port 0) during cycle 118 (2360ns - 2380ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0011 (from port 0) during cycle 119 (2380ns - 2400ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1100 (from port 0) during cycle 120 (2400ns - 2420ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0111 (from port 0) during cycle 121 (2420ns - 2440ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1110 (from port 0) during cycle 122 (2440ns - 2460ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1000 (from port 0) during cycle 123 (2460ns - 2480ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0001 (from port 0) during cycle 124 (2480ns - 2500ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1100 (from port 0) during cycle 125 (2500ns - 2520ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1101 (from port 0) during cycle 126 (2520ns - 2540ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0011 (from port 0) during cycle 127 (2540ns - 2560ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0001 (from port 0) during cycle 129 (2580ns - 2600ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 130 (2600ns - 2620ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 1010 (from port 0) during cycle 131 (2620ns - 2640ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1000 (from port 0) during cycle 132 (2640ns - 2660ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0111 (from port 0) during cycle 133 (2660ns - 2680ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0010 (from port 0) during cycle 135 (2700ns - 2720ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1001 (from port 0) during cycle 137 (2740ns - 2760ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 1000 (from port 0) during cycle 138 (2760ns - 2780ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 0110 (from port 0) during cycle 140 (2800ns - 2820ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0000 (from port 0) during cycle 144 (2880ns - 2900ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0110 (from port 0) during cycle 145 (2900ns - 2920ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1001 (from port 0) during cycle 147 (2940ns - 2960ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0000 (from port 0) during cycle 149 (2980ns - 3000ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1010 (from port 0) during cycle 150 (3000ns - 3020ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0111 (from port 0) during cycle 153 (3060ns - 3080ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0010 (from port 0) during cycle 154 (3080ns - 3100ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1111 (from port 0) during cycle 156 (3120ns - 3140ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1101 (from port 0) during cycle 157 (3140ns - 3160ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0110 (from port 0) during cycle 158 (3160ns - 3180ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 10 from address 0101 (from port 0) during cycle 160 (3200ns - 3220ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1011 (from port 0) during cycle 161 (3220ns - 3240ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1101 (from port 0) during cycle 165 (3300ns - 3320ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1001 (from port 0) during cycle 166 (3320ns - 3340ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1010 (from port 0) during cycle 167 (3340ns - 3360ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0001 (from port 0) during cycle 168 (3360ns - 3380ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1011 (from port 0) during cycle 169 (3380ns - 3400ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0001 (from port 0) during cycle 171 (3420ns - 3440ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1011 (from port 0) during cycle 173 (3460ns - 3480ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 0000 (from port 0) during cycle 176 (3520ns - 3540ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1110 (from port 0) during cycle 178 (3560ns - 3580ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 1011 (from port 0) during cycle 179 (3580ns - 3600ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 180 (3600ns - 3620ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0001 (from port 0) during cycle 181 (3620ns - 3640ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0000 (from port 0) during cycle 182 (3640ns - 3660ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1100 (from port 0) during cycle 184 (3680ns - 3700ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0001 (from port 0) during cycle 185 (3700ns - 3720ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 01  to  address 1111 (from port 0) during cycle 188 (3760ns - 3780ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0100 (from port 0) during cycle 190 (3800ns - 3820ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 1111 (from port 0) during cycle 192 (3840ns - 3860ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1010 (from port 0) during cycle 193 (3860ns - 3880ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 10  to  address 1001 (from port 0) during cycle 194 (3880ns - 3900ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 01 from address 0000 (from port 0) during cycle 196 (3920ns - 3940ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 0010 (from port 0) during cycle 197 (3940ns - 3960ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 11  to  address 0110 (from port 0) during cycle 198 (3960ns - 3980ns)
+[characterizer.simulation/add_read_one_port]: 	Reading 00 from address 1110 (from port 0) during cycle 199 (3980ns - 4000ns)
+[characterizer.simulation/add_write_one_port]: 	Writing 00  to  address 0000 (from port 0) during cycle 202 (4040ns - 4060ns)
+[characterizer.simulation/add_noop_all_ports]: 	Idle during cycle 203 (4060ns - 4080ns)
 ** Spice writing: 0.2 seconds
 GDS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.gds
-** GDS: 0.2 seconds
+** GDS: 0.1 seconds
 LEF: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lef
-** LEF: 0.7 seconds
+** LEF: 0.5 seconds
 LVS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.lvs.sp
 ** LVS writing: 0.0 seconds
 LIB: Characterizing... 
-** Characterization: 1.5 seconds
+[characterizer.lib/prepare_tables]: Loads: [ 2.45605  9.8242  39.2968 ]
+[characterizer.lib/prepare_tables]: Slews: [0.0125 0.05   0.4   ]
+[characterizer.lib/characterize_corners]: Characterizing corners: [('TT', 1.8, 25), ('TT', 1.8, 100), ('FF', 1.8, 25), ('SS', 1.8, 25), ('TT', 1.8, 0)]
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_TT_1p8V_25C.lib
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.delay/analytical_power]: Dynamic Power: 0.92417840649216 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.000196 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 1.344316712518016, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 1.384926762453016, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 1.5473669621930157, 0.026818684885968253
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 1.344316712518016, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 1.384926762453016, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 1.5473669621930157, 0.026818684885968253
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 1.344316712518016, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 1.384926762453016, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 1.5473669621930157, 0.026818684885968253
+[characterizer.delay/analytical_delay]: SRAM Data:
+{'min_period': 5.725257760114158, 'leakage_power': 0.000196}
+[characterizer.delay/analytical_delay]: Port Data:
+[{'delay_lh': [1.344316712518016, 1.384926762453016, 1.5473669621930157, 1.344316712518016, 1.384926762453016, 1.5473669621930157, 1.344316712518016, 1.384926762453016, 1.5473669621930157], 'delay_hl': [1.344316712518016, 1.384926762453016, 1.5473669621930157, 1.344316712518016, 1.384926762453016, 1.5473669621930157, 1.344316712518016, 1.384926762453016, 1.5473669621930157], 'slew_lh': [0.006513659918468256, 0.010574664911968254, 0.026818684885968253, 0.006513659918468256, 0.010574664911968254, 0.026818684885968253, 0.006513659918468256, 0.010574664911968254, 0.026818684885968253], 'slew_hl': [0.006513659918468256, 0.010574664911968254, 0.026818684885968253, 0.006513659918468256, 0.010574664911968254, 0.026818684885968253, 0.006513659918468256, 0.010574664911968254, 0.026818684885968253], 'read0_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'read1_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'write0_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'write1_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'disabled_read0_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'disabled_read1_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'disabled_write0_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216], 'disabled_write1_power': [0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216, 0.92417840649216]}]
+[characterizer.setup_hold/__init__]: Feasible period from technology file: 20 
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 100)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_TT_1p8V_100C.lib
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.delay/analytical_power]: Dynamic Power: -1.4671332203063043 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.000196 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, -0.846813677176703, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, -0.8723948109940258, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, -0.9747193462633172, -0.016893659770688664
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, -0.846813677176703, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, -0.8723948109940258, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, -0.9747193462633172, -0.016893659770688664
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, -0.846813677176703, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, -0.8723948109940258, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, -0.9747193462633172, -0.016893659770688664
+[characterizer.delay/analytical_delay]: SRAM Data:
+{'min_period': 0.0, 'leakage_power': 0.000196}
+[characterizer.delay/analytical_delay]: Port Data:
+[{'delay_lh': [-0.846813677176703, -0.8723948109940258, -0.9747193462633172, -0.846813677176703, -0.8723948109940258, -0.9747193462633172, -0.846813677176703, -0.8723948109940258, -0.9747193462633172], 'delay_hl': [-0.846813677176703, -0.8723948109940258, -0.9747193462633172, -0.846813677176703, -0.8723948109940258, -0.9747193462633172, -0.846813677176703, -0.8723948109940258, -0.9747193462633172], 'slew_lh': [-0.004103092862027248, -0.00666120624375953, -0.016893659770688664, -0.004103092862027248, -0.00666120624375953, -0.016893659770688664, -0.004103092862027248, -0.00666120624375953, -0.016893659770688664], 'slew_hl': [-0.004103092862027248, -0.00666120624375953, -0.016893659770688664, -0.004103092862027248, -0.00666120624375953, -0.016893659770688664, -0.004103092862027248, -0.00666120624375953, -0.016893659770688664], 'read0_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'read1_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'write0_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'write1_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'disabled_read0_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'disabled_read1_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'disabled_write0_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043], 'disabled_write1_power': [-1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043, -1.4671332203063043]}]
+[characterizer.lib/characterize_corners]: Corner: ('FF', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_FF_1p8V_25C.lib
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.delay/analytical_power]: Dynamic Power: 1.0268648961023996 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.000196 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 1.2098850412662145, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 1.2464340862077148, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 1.3926302659737146, 0.02413681639737143
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 1.2098850412662145, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 1.2464340862077148, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 1.3926302659737146, 0.02413681639737143
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 1.2098850412662145, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 1.2464340862077148, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 1.3926302659737146, 0.02413681639737143
+[characterizer.delay/analytical_delay]: SRAM Data:
+{'min_period': 5.152731984102744, 'leakage_power': 0.000196}
+[characterizer.delay/analytical_delay]: Port Data:
+[{'delay_lh': [1.2098850412662145, 1.2464340862077148, 1.3926302659737146, 1.2098850412662145, 1.2464340862077148, 1.3926302659737146, 1.2098850412662145, 1.2464340862077148, 1.3926302659737146], 'delay_hl': [1.2098850412662145, 1.2464340862077148, 1.3926302659737146, 1.2098850412662145, 1.2464340862077148, 1.3926302659737146, 1.2098850412662145, 1.2464340862077148, 1.3926302659737146], 'slew_lh': [0.00586229392662143, 0.009517198420771427, 0.02413681639737143, 0.00586229392662143, 0.009517198420771427, 0.02413681639737143, 0.00586229392662143, 0.009517198420771427, 0.02413681639737143], 'slew_hl': [0.00586229392662143, 0.009517198420771427, 0.02413681639737143, 0.00586229392662143, 0.009517198420771427, 0.02413681639737143, 0.00586229392662143, 0.009517198420771427, 0.02413681639737143], 'read0_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'read1_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'write0_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'write1_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'disabled_read0_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'disabled_read1_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'disabled_write0_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996], 'disabled_write1_power': [1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996, 1.0268648961023996]}]
+[characterizer.lib/characterize_corners]: Corner: ('SS', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_SS_1p8V_25C.lib
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.delay/analytical_power]: Dynamic Power: 0.8401621877201456 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.000196 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 1.4787483837698179, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 1.5234194386983178, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 1.702103658412318, 0.02950055337456508
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 1.4787483837698179, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 1.5234194386983178, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 1.702103658412318, 0.02950055337456508
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 1.4787483837698179, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 1.5234194386983178, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 1.702103658412318, 0.02950055337456508
+[characterizer.delay/analytical_delay]: SRAM Data:
+{'min_period': 6.297783536125577, 'leakage_power': 0.000196}
+[characterizer.delay/analytical_delay]: Port Data:
+[{'delay_lh': [1.4787483837698179, 1.5234194386983178, 1.702103658412318, 1.4787483837698179, 1.5234194386983178, 1.702103658412318, 1.4787483837698179, 1.5234194386983178, 1.702103658412318], 'delay_hl': [1.4787483837698179, 1.5234194386983178, 1.702103658412318, 1.4787483837698179, 1.5234194386983178, 1.702103658412318, 1.4787483837698179, 1.5234194386983178, 1.702103658412318], 'slew_lh': [0.007165025910315082, 0.01163213140316508, 0.02950055337456508, 0.007165025910315082, 0.01163213140316508, 0.02950055337456508, 0.007165025910315082, 0.01163213140316508, 0.02950055337456508], 'slew_hl': [0.007165025910315082, 0.01163213140316508, 0.02950055337456508, 0.007165025910315082, 0.01163213140316508, 0.02950055337456508, 0.007165025910315082, 0.01163213140316508, 0.02950055337456508], 'read0_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'read1_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'write0_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'write1_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'disabled_read0_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'disabled_read1_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'disabled_write0_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456], 'disabled_write1_power': [0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456, 0.8401621877201456]}]
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 0)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_TT_1p8V_0C.lib
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.simulation/set_internal_spice_names]: s_en name = xsram_2_16_sky130a.s_en
+[characterizer.simulation/set_internal_spice_names]: bl name=xsram_2_16_sky130a.xbank0.bl_0_0, br name=xsram_2_16_sky130a.xbank0.br_0_0
+[graph_util/get_all_paths]: Paths found=4
+[characterizer.delay/analytical_power]: Dynamic Power: 1.7212822820916482 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.000196 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 0.7217807852445723, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 0.7435848389009482, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 0.8308010535264516, 0.014399293898506447
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 0.7217807852445723, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 0.7435848389009482, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 0.8308010535264516, 0.014399293898506447
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 0.7217807852445723, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 0.7435848389009482, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 0.8308010535264516, 0.014399293898506447
+[characterizer.delay/analytical_delay]: SRAM Data:
+{'min_period': 3.073963898047871, 'leakage_power': 0.000196}
+[characterizer.delay/analytical_delay]: Port Data:
+[{'delay_lh': [0.7217807852445723, 0.7435848389009482, 0.8308010535264516, 0.7217807852445723, 0.7435848389009482, 0.8308010535264516, 0.7217807852445723, 0.7435848389009482, 0.8308010535264516], 'delay_hl': [0.7217807852445723, 0.7435848389009482, 0.8308010535264516, 0.7217807852445723, 0.7435848389009482, 0.8308010535264516, 0.7217807852445723, 0.7435848389009482, 0.8308010535264516], 'slew_lh': [0.0034972670703185267, 0.00567767243595611, 0.014399293898506447, 0.0034972670703185267, 0.00567767243595611, 0.014399293898506447, 0.0034972670703185267, 0.00567767243595611, 0.014399293898506447], 'slew_hl': [0.0034972670703185267, 0.00567767243595611, 0.014399293898506447, 0.0034972670703185267, 0.00567767243595611, 0.014399293898506447, 0.0034972670703185267, 0.00567767243595611, 0.014399293898506447], 'read0_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'read1_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'write0_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'write1_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'disabled_read0_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'disabled_read1_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'disabled_write0_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482], 'disabled_write1_power': [1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482, 1.7212822820916482]}]
+** Characterization: 1.1 seconds
 Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.py
 ** Config: 0.0 seconds
 Datasheet: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.html
-** Datasheet: 0.2 seconds
+** Datasheet: 0.0 seconds
 Verilog: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A.v
 ** Verilog: 0.0 seconds
 Extended Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_2_16_sky130A_extended.py
 ** Extended Config: 0.0 seconds
-** End: 78.3 seconds
+[globals/purge_temp]: Purging temp directory: /tmp/openram_shon_4308_temp/
+** End: 36.2 seconds

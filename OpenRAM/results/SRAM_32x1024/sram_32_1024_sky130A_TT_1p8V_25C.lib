@@ -22,7 +22,7 @@ library (sram_32_1024_sky130A_TT_1p8V_25C_lib){
     slew_lower_threshold_pct_rise  :  10.0 ;
     slew_upper_threshold_pct_rise  :  90.0 ;
 
-    nom_voltage : 5.0;
+    nom_voltage : 1.8;
     nom_temperature : 25;
     nom_process : 1.0;
     default_cell_leakage_power    : 0.0 ;
@@ -35,7 +35,7 @@ library (sram_32_1024_sky130A_TT_1p8V_25C_lib){
     default_max_fanout   : 4.0 ;
     default_connection_class : universal ;
 
-    voltage_map ( VDD, 5.0 );
+    voltage_map ( VDD, 1.8 );
     voltage_map ( GND, 0 );
 
     lu_table_template(CELL_TABLE){
@@ -81,7 +81,7 @@ cell (sram_32_1024_sky130A){
     dont_use  : true;
     map_only   : true;
     dont_touch : true;
-    area : 599504.3229;
+    area : 534276.5616;
 
     pg_pin(vdd) {
          voltage_name : VDD;
@@ -150,24 +150,24 @@ cell (sram_32_1024_sky130A){
             related_pin : "clk0"; 
             timing_type : falling_edge; 
             cell_rise(CELL_TABLE) {
-            values("8.11, 8.122, 8.17",\
-                   "8.11, 8.122, 8.17",\
-                   "8.11, 8.122, 8.17");
+            values("2.922, 2.962, 3.125",\
+                   "2.922, 2.962, 3.125",\
+                   "2.922, 2.962, 3.125");
             }
             cell_fall(CELL_TABLE) {
-            values("8.11, 8.122, 8.17",\
-                   "8.11, 8.122, 8.17",\
-                   "8.11, 8.122, 8.17");
+            values("2.922, 2.962, 3.125",\
+                   "2.922, 2.962, 3.125",\
+                   "2.922, 2.962, 3.125");
             }
             rise_transition(CELL_TABLE) {
-            values("0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023");
+            values("0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027");
             }
             fall_transition(CELL_TABLE) {
-            values("0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023");
+            values("0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027");
             }
         }
         }
@@ -283,57 +283,57 @@ cell (sram_32_1024_sky130A){
         internal_power(){
             when : "!csb0 & !web0"; 
             rise_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
             fall_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
         }
         internal_power(){
             when : "csb0 & !web0"; 
             rise_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
             fall_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
         }
         internal_power(){
             when : "!csb0 & web0"; 
             rise_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
             fall_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
         }
         internal_power(){
             when : "csb0 & web0"; 
             rise_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
             fall_power(scalar){
-                values("1.193393e+01");
+                values("1.178790e+01");
             }
         }
         timing(){ 
             timing_type :"min_pulse_width"; 
             related_pin  : clk0; 
             rise_constraint(scalar) {
-                values("15.1135"); 
+                values("5.7805"); 
             }
             fall_constraint(scalar) {
-                values("15.1135"); 
+                values("5.7805"); 
             }
          }
         timing(){ 
             timing_type :"minimum_period"; 
             related_pin  : clk0; 
             rise_constraint(scalar) {
-                values("30.227"); 
+                values("11.561"); 
             }
             fall_constraint(scalar) {
-                values("30.227"); 
+                values("11.561"); 
             }
          }
     }

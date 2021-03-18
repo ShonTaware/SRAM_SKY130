@@ -22,7 +22,7 @@ library (sram_2_16_sky130A_TT_1p8V_25C_lib){
     slew_lower_threshold_pct_rise  :  10.0 ;
     slew_upper_threshold_pct_rise  :  90.0 ;
 
-    nom_voltage : 5.0;
+    nom_voltage : 1.8;
     nom_temperature : 25;
     nom_process : 1.0;
     default_cell_leakage_power    : 0.0 ;
@@ -35,7 +35,7 @@ library (sram_2_16_sky130A_TT_1p8V_25C_lib){
     default_max_fanout   : 4.0 ;
     default_connection_class : universal ;
 
-    voltage_map ( VDD, 5.0 );
+    voltage_map ( VDD, 1.8 );
     voltage_map ( GND, 0 );
 
     lu_table_template(CELL_TABLE){
@@ -81,7 +81,7 @@ cell (sram_2_16_sky130A){
     dont_use  : true;
     map_only   : true;
     dont_touch : true;
-    area : 13130.4213;
+    area : 7915.0296;
 
     pg_pin(vdd) {
          voltage_name : VDD;
@@ -150,24 +150,24 @@ cell (sram_2_16_sky130A){
             related_pin : "clk0"; 
             timing_type : falling_edge; 
             cell_rise(CELL_TABLE) {
-            values("3.729, 3.741, 3.788",\
-                   "3.729, 3.741, 3.788",\
-                   "3.729, 3.741, 3.788");
+            values("1.344, 1.385, 1.547",\
+                   "1.344, 1.385, 1.547",\
+                   "1.344, 1.385, 1.547");
             }
             cell_fall(CELL_TABLE) {
-            values("3.729, 3.741, 3.788",\
-                   "3.729, 3.741, 3.788",\
-                   "3.729, 3.741, 3.788");
+            values("1.344, 1.385, 1.547",\
+                   "1.344, 1.385, 1.547",\
+                   "1.344, 1.385, 1.547");
             }
             rise_transition(CELL_TABLE) {
-            values("0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023");
+            values("0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027");
             }
             fall_transition(CELL_TABLE) {
-            values("0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023",\
-                   "0.018, 0.019, 0.023");
+            values("0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027",\
+                   "0.007, 0.011, 0.027");
             }
         }
         }
@@ -320,20 +320,20 @@ cell (sram_2_16_sky130A){
             timing_type :"min_pulse_width"; 
             related_pin  : clk0; 
             rise_constraint(scalar) {
-                values("7.008"); 
+                values("2.8625"); 
             }
             fall_constraint(scalar) {
-                values("7.008"); 
+                values("2.8625"); 
             }
          }
         timing(){ 
             timing_type :"minimum_period"; 
             related_pin  : clk0; 
             rise_constraint(scalar) {
-                values("14.016"); 
+                values("5.725"); 
             }
             fall_constraint(scalar) {
-                values("14.016"); 
+                values("5.725"); 
             }
          }
     }

@@ -1,3 +1,15 @@
+[globals/init_openram]: Initializing OpenRAM...
+[globals/setup_paths]: Temporary files saved in /tmp/openram_shon_4331_temp/
+[globals/read_config]: Configuration file is /home/shon/vsd_workshop/work/tools/OpenRAM_files/myconfig_sky130.py
+[globals/read_config]: Output saved in /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/
+[globals/import_tech]: Adding technology path: /home/shon/vsd_workshop/work/tools/OpenRAM/technology
+[globals/init_paths]: Creating temp directory: /tmp/openram_shon_4331_temp/
+[globals/setup_bitcell]: Using bitcell: bitcell_1port
+[characterizer/<module>]: Initializing characterizer...
+[characterizer/<module>]: Analytical model enabled.
+[verify/<module>]: Initializing verify...
+[verify/<module>]: LVS/DRC/PEX disabled.
+[globals/setup_bitcell]: Using bitcell: bitcell_1port
 |==============================================================================|
 |=========                      OpenRAM v1.1.14                       =========|
 |=========                                                            =========|
@@ -7,10 +19,10 @@
 |=========                                                            =========|
 |=========          Usage help: openram-user-group@ucsc.edu           =========|
 |=========        Development help: openram-dev-group@ucsc.edu        =========|
-|=========           Temp dir: /tmp/openram_shon_2736_temp/           =========|
+|=========           Temp dir: /tmp/openram_shon_4331_temp/           =========|
 |=========                See LICENSE for license info                =========|
 |==============================================================================|
-** Start: 03/14/2021 16:54:46
+** Start: 03/18/2021 18:14:57
 Technology: sky130A
 Total size: 32768 bits
 Word size: 32
@@ -23,64 +35,349 @@ W-only ports: 0
 DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
 DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
 Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+[sram_config/recompute_sizes]: Recomputing with words per row: 8
+[sram_config/recompute_sizes]: Rows: 128 Cols: 256
+[sram_config/recompute_sizes]: Row addr size: 7 Col addr size: 3 Bank addr size: 10
 Words per row: 8
 Output files are: 
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lvs
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.sp
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.v
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lib
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.py
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.html
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.log
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lef
-/home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.gds
-** Submodules: 34.3 seconds
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.lvs
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.sp
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.v
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.lib
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.py
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.html
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.log
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.lef
+/home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.gds
+[sram/__init__]: Changed OPTS wpr=8
+[sram/__init__]: OPTS wpr=8
+[dff_array/__init__]: Creating row_addr_dff rows=7 cols=1
+[dff_array/__init__]: Creating col_addr_dff rows=1 cols=3
+[dff_array/__init__]: Creating data_dff rows=1 cols=32
+[and2_dec/__init__]: Creating and2_dec and2_dec
+[and3_dec/__init__]: Creating and3_dec and3_dec
+[and4_dec/__init__]: Creating and4_dec and4_dec
+[wordline_driver_array/__init__]: Creating wordline_driver_array
+[wordline_driver/__init__]: Creating wordline_driver wordline_driver
+[and2_dec/__init__]: Creating and2_dec and2_dec_0
+[bitcell_base_array/__init__]: Creating replica_bitcell_array 128 x 256
+[replica_bitcell_array/__init__]: Creating replica_bitcell_array 128 x 256 rbls: None left_rbl: None right_rbl: None
+[bitcell_base_array/__init__]: Creating bitcell_array 128 x 256
+[bitcell_array/__init__]: Creating bitcell_array 128 x 256
+[bitcell_base_array/__init__]: Creating replica_column 131 x 1
+[bitcell_base_array/__init__]: Creating dummy_array 1 x 256
+[bitcell_base_array/__init__]: Creating dummy_array_0 1 x 256
+[bitcell_base_array/__init__]: Creating dummy_array_1 1 x 256
+[bitcell_base_array/__init__]: Creating dummy_array_2 131 x 1
+[bitcell_base_array/__init__]: Creating dummy_array_3 131 x 1
+[precharge_array/__init__]: Creating precharge_array
+[sense_amp_array/__init__]: Creating sense_amp_array
+[column_mux_array/__init__]: Creating column_mux_array
+[write_driver_array/__init__]: Creating write_driver_array
+[pand3/__init__]: Creating pand3 pand3
+[pdriver/__init__]: creating pdriver pdriver
+[control_logic/__init__]: Creating control_logic_rw
+[dff_buf/__init__]: Creating dff_buf
+[dff_buf_array/__init__]: Creating dff_buf_array
+[dff_buf/__init__]: Creating dff_buf_0
+[pand2/__init__]: Creating pand2 pand2
+[pdriver/__init__]: creating pdriver pdriver_0
+[pbuf/__init__]: creating pbuf with size of 256
+[pdriver/__init__]: creating pdriver pdriver_1
+[pdriver/__init__]: creating pdriver pdriver_2
+[pand3/__init__]: Creating pand3 pand3_0
+[pdriver/__init__]: creating pdriver pdriver_3
+[pand3/__init__]: Creating pand3 pand3_1
+[pdriver/__init__]: creating pdriver pdriver_4
+[pdriver/__init__]: creating pdriver pdriver_5
+[delay_chain/__init__]: creating delay chain [4, 4, 4, 4, 4, 4, 4, 4, 4]
+** Submodules: 34.9 seconds
 ** Placement: 0.1 seconds
-**** Retrieving pins: 0.3 seconds
-**** Analyzing pins: 25.9 seconds
-**** Finding blockages: 22.0 seconds
-**** Converting blockages: 0.1 seconds
-WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[37.06,31.400000000000002] ur=v[37.39,31.73])
-
-WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[37.04,31.38] ur=v[37.42,31.76])
-
-WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[49.58,31.400000000000002] ur=v[49.910000000000004,31.73])
-
-WARNING: file pin_group.py: line 638:   Expanding conversion (vdd layer=m3 ll=v[49.56,31.38] ur=v[49.94,31.76])
-
-**** Converting pins: 17.3 seconds
-**** Separating adjacent pins: 23.5 seconds
-**** Enclosing pins: 26.4 seconds
-*** Finding pins and blockages: 115.9 seconds
-*** Maze routing supplies: 683.3 seconds
-**** Retrieving pins: 0.0 seconds
+[router_tech/__init__]: Minimum track width: 0.820
+[router_tech/__init__]: Minimum track space: 0.300
+[router_tech/__init__]: Minimum track wire width: 0.520
+[router/init_bbox]: Size: 874.1500000000001 x 725.145
+[supply_tree_router/route]: Running supply router on vdd and gnd...
+[router/init_bbox]: Size: 874.1500000000001 x 725.145
+**** Retrieving pins: 0.4 seconds
+**** Analyzing pins: 24.6 seconds
+[router/find_blockages]: Finding blockages.
+**** Finding blockages: 22.2 seconds
+[router/convert_blockages]: Converting blockages.
+**** Converting blockages: 0.0 seconds
+**** Converting pins: 13.3 seconds
+**** Separating adjacent pins: 21.5 seconds
+**** Enclosing pins: 24.1 seconds
+*** Finding pins and blockages: 106.1 seconds
+[supply_tree_router/route_pins]: Routing vdd with 1171 pin components to connect.
+[supply_tree_router/route_pins]: Routing gnd with 1183 pin components to connect.
+*** Maze routing supplies: 503.6 seconds
+[router_tech/__init__]: Minimum track width: 0.820
+[router_tech/__init__]: Minimum track space: 0.300
+[router_tech/__init__]: Minimum track wire width: 0.520
+[router/init_bbox]: Size: 875.46 x 725.4
+[router/init_bbox]: Size: 875.46 x 725.4
+**** Retrieving pins: 0.1 seconds
 **** Analyzing pins: 0.0 seconds
-**** Finding blockages: 23.7 seconds
-**** Converting blockages: 1.6 seconds
-**** Converting pins: 0.6 seconds
-**** Separating adjacent pins: 0.0 seconds
-**** Enclosing pins: 0.1 seconds
-*** Finding pins and blockages: 26.3 seconds
-*** Maze routing pins: 502.0 seconds
-** Routing: 3110.2 seconds
+[router/find_blockages]: Finding blockages.
+**** Finding blockages: 23.4 seconds
+[router/convert_blockages]: Converting blockages.
+**** Converting blockages: 1.4 seconds
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[0] layer=m3 ll=v[45.36,-14.05] ur=v[45.88,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[0] layer=m3 ll=v[45.4,-14.01] ur=v[45.84,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[57.050000000000004,-14.01] ur=v[57.49,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[1] layer=m3 ll=v[57.01,-14.05] ur=v[57.53,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[2] layer=m3 ll=v[68.7,-14.01] ur=v[69.14,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[2] layer=m3 ll=v[68.66,-14.05] ur=v[69.18,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[3] layer=m3 ll=v[80.35000000000001,-14.01] ur=v[80.79,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[3] layer=m3 ll=v[80.31,-14.05] ur=v[80.83,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[5] layer=m3 ll=v[103.65,-14.01] ur=v[104.09,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[5] layer=m3 ll=v[103.61,-14.05] ur=v[104.13,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[6] layer=m3 ll=v[115.3,-14.01] ur=v[115.74000000000001,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[6] layer=m3 ll=v[115.26,-14.05] ur=v[115.78,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[7] layer=m3 ll=v[126.91,-14.05] ur=v[127.43,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[7] layer=m3 ll=v[126.95,-14.01] ur=v[127.39,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[10] layer=m3 ll=v[161.9,-14.01] ur=v[162.34,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[10] layer=m3 ll=v[161.86,-14.05] ur=v[162.38,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[11] layer=m3 ll=v[173.55,-14.01] ur=v[173.99,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[11] layer=m3 ll=v[173.51,-14.05] ur=v[174.03,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[12] layer=m3 ll=v[185.20000000000002,-14.01] ur=v[185.64000000000001,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[12] layer=m3 ll=v[185.16,-14.05] ur=v[185.68,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[15] layer=m3 ll=v[220.11,-14.05] ur=v[220.63,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[15] layer=m3 ll=v[220.15,-14.01] ur=v[220.59,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[17] layer=m3 ll=v[243.41,-14.05] ur=v[243.93,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[17] layer=m3 ll=v[243.45000000000002,-14.01] ur=v[243.89000000000001,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[20] layer=m3 ll=v[278.36,-14.05] ur=v[278.88,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[20] layer=m3 ll=v[278.40000000000003,-14.01] ur=v[278.84000000000003,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[21] layer=m3 ll=v[290.05,-14.01] ur=v[290.49,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[21] layer=m3 ll=v[290.01,-14.05] ur=v[290.53000000000003,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[22] layer=m3 ll=v[301.66,-14.05] ur=v[302.18,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[22] layer=m3 ll=v[301.7,-14.01] ur=v[302.14,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[25] layer=m3 ll=v[336.65000000000003,-14.01] ur=v[337.09000000000003,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[25] layer=m3 ll=v[336.61,-14.05] ur=v[337.13,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[27] layer=m3 ll=v[359.91,-14.05] ur=v[360.43,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[27] layer=m3 ll=v[359.95,-14.01] ur=v[360.39,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[29] layer=m3 ll=v[383.25,-14.01] ur=v[383.69,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (din0[29] layer=m3 ll=v[383.21000000000004,-14.05] ur=v[383.73,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (addr0[1] layer=m3 ll=v[22.1,-14.01] ur=v[22.54,-13.57])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (addr0[1] layer=m3 ll=v[22.06,-14.05] ur=v[22.580000000000002,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (addr0[2] layer=m3 ll=v[33.71,-14.05] ur=v[34.230000000000004,-13.530000000000001])
+
+WARNING: file pin_group.py: line 638:   Expanding conversion (addr0[2] layer=m3 ll=v[33.75,-14.01] ur=v[34.19,-13.57])
+
+**** Converting pins: 1.2 seconds
+**** Separating adjacent pins: 0.1 seconds
+**** Enclosing pins: 0.2 seconds
+*** Finding pins and blockages: 26.5 seconds
+[signal_escape_router/route_signal]: Escape routing csb0 with scale 5
+[signal_escape_router/route_signal]: Escape routing web0 with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[0] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[1] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[2] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[3] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[4] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[5] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[6] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[7] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[8] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[9] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[10] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[11] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[12] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[13] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[14] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[15] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[16] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[17] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[18] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[19] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[20] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[21] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[22] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[23] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[24] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[25] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[26] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[27] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[28] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[29] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[30] with scale 5
+[signal_escape_router/route_signal]: Escape routing din0[31] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[0] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[1] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[2] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[31] with scale 5
+[signal_escape_router/route_signal]: Escape routing clk0 with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[0] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[1] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[2] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[3] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[4] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[5] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[6] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[7] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[8] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[9] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[10] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[11] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[12] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[13] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[14] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[15] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[16] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[17] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[18] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[19] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[20] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[21] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[22] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[23] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[24] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[25] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[26] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[27] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[28] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[29] with scale 5
+[signal_escape_router/route_signal]: Escape routing dout0[30] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[3] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[4] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[5] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[6] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[7] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[8] with scale 5
+[signal_escape_router/route_signal]: Escape routing addr0[9] with scale 5
+*** Maze routing pins: 262.7 seconds
+** Routing: 2700.6 seconds
 ** Verification: 0.0 seconds
-** SRAM creation: 3144.7 seconds
-SP: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.sp
-** Spice writing: 4.7 seconds
-GDS: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.gds
-** GDS: 3.7 seconds
-LEF: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lef
-** LEF: 83.4 seconds
-LVS: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.lvs.sp
+** SRAM creation: 2735.6 seconds
+SP: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.sp
+** Spice writing: 3.0 seconds
+GDS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.gds
+** GDS: 3.4 seconds
+LEF: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.lef
+** LEF: 96.7 seconds
+LVS: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.lvs.sp
 ** LVS writing: 0.2 seconds
 LIB: Characterizing... 
-** Characterization: 19.3 seconds
-Config: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.py
-** Config: 0.0 seconds
-Datasheet: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.html
-** Datasheet: 0.4 seconds
-Verilog: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A.v
+[characterizer.lib/prepare_tables]: Loads: [ 2.45605  9.8242  39.2968 ]
+[characterizer.lib/prepare_tables]: Slews: [0.0125 0.05   0.4   ]
+[characterizer.lib/characterize_corners]: Characterizing corners: [('TT', 1.8, 25), ('FF', 1.8, 25), ('SS', 1.8, 25), ('TT', 1.8, 100), ('TT', 1.8, 0)]
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_TT_1p8V_25C.lib
+[characterizer.delay/analytical_power]: Dynamic Power: 11.787900265543673 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.033462 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 2.9216029789201325, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 2.9622130288551327, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 3.1246532285951325, 0.026818684885968253
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 2.9216029789201325, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 2.9622130288551327, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 3.1246532285951325, 0.026818684885968253
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 2.9216029789201325, 0.006513659918468256
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 2.9622130288551327, 0.010574664911968254
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 3.1246532285951325, 0.026818684885968253
+[characterizer.lib/characterize_corners]: Corner: ('FF', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_FF_1p8V_25C.lib
+[characterizer.delay/analytical_power]: Dynamic Power: 13.097666961715209 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.033462 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 2.6294426810281197, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 2.6659917259696195, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 2.8121879057356196, 0.02413681639737143
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 2.6294426810281197, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 2.6659917259696195, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 2.8121879057356196, 0.02413681639737143
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 2.6294426810281197, 0.00586229392662143
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 2.6659917259696195, 0.009517198420771427
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 2.8121879057356196, 0.02413681639737143
+[characterizer.lib/characterize_corners]: Corner: ('SS', 1.8, 25)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_SS_1p8V_25C.lib
+[characterizer.delay/analytical_power]: Dynamic Power: 10.716272968676066 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.033462 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 3.2137632768121462, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 3.258434331740646, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 3.437118551454646, 0.02950055337456508
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 3.2137632768121462, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 3.258434331740646, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 3.437118551454646, 0.02950055337456508
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 3.2137632768121462, 0.007165025910315082
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 3.258434331740646, 0.01163213140316508
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 3.437118551454646, 0.02950055337456508
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 100)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_TT_1p8V_100C.lib
+[characterizer.delay/analytical_power]: Dynamic Power: -18.713291671550603 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.033462 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, -1.8403798292410285, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, -1.8659609630583514, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, -1.9682854983276428, -0.016893659770688664
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, -1.8403798292410285, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, -1.8659609630583514, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, -1.9682854983276428, -0.016893659770688664
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, -1.8403798292410285, -0.004103092862027248
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, -1.8659609630583514, -0.00666120624375953
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, -1.9682854983276428, -0.016893659770688664
+[characterizer.lib/characterize_corners]: Corner: ('TT', 1.8, 0)
+[characterizer.lib/characterize_corners]: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_TT_1p8V_0C.lib
+[characterizer.delay/analytical_power]: Dynamic Power: 21.954964244575105 mW
+[characterizer.delay/analytical_power]: Leakage Power: 0.033462 mW
+[characterizer.delay/analytical_delay]: Slew, Load, Delay(ns), Slew(ns)
+[characterizer.delay/analytical_delay]: 0.0125, 2.45605, 1.5686458947222186, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.0125, 9.8242, 1.5904499483785943, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.0125, 39.2968, 1.6776661630040979, 0.014399293898506447
+[characterizer.delay/analytical_delay]: 0.05, 2.45605, 1.5686458947222186, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.05, 9.8242, 1.5904499483785943, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.05, 39.2968, 1.6776661630040979, 0.014399293898506447
+[characterizer.delay/analytical_delay]: 0.4, 2.45605, 1.5686458947222186, 0.0034972670703185267
+[characterizer.delay/analytical_delay]: 0.4, 9.8242, 1.5904499483785943, 0.00567767243595611
+[characterizer.delay/analytical_delay]: 0.4, 39.2968, 1.6776661630040979, 0.014399293898506447
+** Characterization: 16.2 seconds
+Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.py
+** Config: 0.4 seconds
+Datasheet: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.html
+** Datasheet: 0.3 seconds
+Verilog: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A.v
 ** Verilog: 0.0 seconds
-Extended Config: Writing to /home/shon/vsd_workshop/work/tools/sram_project/SRAM_SKY130/temp/sram_32_1024_sky130A_extended.py
+Extended Config: Writing to /home/shon/vsd_workshop/work/tools/OpenRAM_files/temp/sram_32_1024_sky130A_extended.py
 ** Extended Config: 0.0 seconds
-** End: 3256.5 seconds
+[globals/purge_temp]: Purging temp directory: /tmp/openram_shon_4331_temp/
+** End: 2855.9 seconds
