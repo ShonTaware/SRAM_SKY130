@@ -37,6 +37,7 @@
       4. [Tri-State Buffer](#4-tri-state-buffer)      
       5. [D-Flip-Flop](#5-d-flip-flop)      
       - [1-bit Integrated SRAM](#1-bit-integrated-sram)-->
+  - [OpenRAM Compiler Output Layout](#openram-compiler-output-layout)
   - [Future Work](#future-work)
   - [References](#references)
   - [Acknowledgement](#acknowledgement)
@@ -712,6 +713,11 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="Postlayout/Layouts/magic_sram_6t_cell_read.JPG">
   <img src="Postlayout/Simulations/sram_6t_cell_read.JPG">
+
+# OpenRAM Compiler Output Layout
+
+  <img src="OpenRAM/images/sram_2x16.JPG">
+  <img src="OpenRAM/images/sram_32x1024.JPG">
 
 # Future Work
   Perform post-layout design and simulations. Also, configure the OpenRAM for new Sky130 PDKs and custom cells.
