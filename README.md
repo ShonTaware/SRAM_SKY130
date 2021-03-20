@@ -546,6 +546,11 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
 
   <img src="OpenRAM/images/openram_boundary_issue.JPG">
 
+### No Contact Placed by Compiler
+The compiler correctly placed the routing layers (p-diffusion, ndiffusion and local interconnect) but does not place a valid contact(p-diff contact or n-diff contact).
+
+  <img src="OpenRAM/images/sram_drc_errors.JPG">
+
 **Note:** We are currently working on resolving this issue. The solution will be updated to repository soon.
 
 
