@@ -715,10 +715,10 @@ One of the major issue in OpenRAM configuration is, the SKY130 PDK do not have b
   <img src="Postlayout/Simulations/sram_6t_cell_read.JPG">
 
 # OpenRAM Compiler Output Layout
-  The Layout for 2 X 16 SRAM cell is show below. The detailed report can be found [here](#https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_2x16/sram_2_16_sky130A.html)
+  The Layout for 2 X 16 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_2x16/sram_2_16_sky130A.html)
   <img src="OpenRAM/images/sram_2x16.JPG">
 
-  The Layout for 32 X 1024 SRAM cell is show below. The detailed report can be found [here](#https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_32x1024/sram_32_1024_sky130A.html)
+  The Layout for 32 X 1024 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_32x1024/sram_32_1024_sky130A.html)
   <img src="OpenRAM/images/sram_32x1024.JPG">
 
 # Future Work
